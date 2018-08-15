@@ -1,0 +1,4 @@
+Running /usr/cad/mentor/calibre/cur/pkgs/icv/pvt/v2lvs -v RF2SH64x16.v -o RF2SH64x16.spi
+
+Info: Creating Design Database ...
+Error: Fail to open file RF2SH64x16.v

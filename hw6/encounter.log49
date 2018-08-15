@@ -1,0 +1,1086 @@
+Checking out Encounter license ...
+Encounter_Digital_Impl_Sys_XL 10.1 license checkout succeeded.
+You can run 2 CPU jobs with the base license that is currently checked out.
+If required, use the setMultiCpuUsage command to enable multi-CPU processing.
+This Encounter release has been compiled with OA version 22.04-p013.
+
+*******************************************************************
+*   Copyright (c)  Cadence Design Systems, Inc.  1996 - 2011.     *
+*                     All rights reserved.                        *
+*                                                                 *
+*                                                                 *
+*                                                                 *
+* This program contains confidential and trade secret information *
+* of Cadence Design Systems, Inc. and is protected by copyright   *
+* law and international treaties.  Any reproduction, use,         *
+* distribution or disclosure of this program or any portion of it,*
+* or any attempt to obtain a human-readable version of this       *
+* program, without the express, prior written consent of          *
+* Cadence Design Systems, Inc., is strictly prohibited.           *
+*                                                                 *
+*                 Cadence Design Systems, Inc.                    *
+*                    2655 Seely Avenue                            *
+*                   San Jose, CA 95134,  USA                      *
+*                                                                 *
+*                                                                 *
+*******************************************************************
+
+@(#)CDS: Encounter v10.13-s272_1 (32bit) 04/18/2012 16:36 (Linux 2.6)
+@(#)CDS: NanoRoute v10.13-s027 NR120403-1008/10_10_USR3-UB (database version 2.30, 132.4.1) {superthreading v1.16}
+@(#)CDS: CeltIC v10.13-s063_1 (32bit) 02/29/2012 09:38:16 (Linux 2.6.9-89.0.19.ELsmp)
+@(#)CDS: AAE 10.13-s008 (32bit) 04/18/2012 (Linux 2.6.9-89.0.19.ELsmp)
+@(#)CDS: CTE 10.13-s018_1 (32bit) Feb 28 2012 22:08:25 (Linux 2.6.9-89.0.19.ELsmp)
+@(#)CDS: CPE v10.13-s225
+--- Starting "Encounter v10.13-s272_1" on Sun Jan  1 17:13:39 2017 (mem=46.1M) ---
+--- Running on eda25 (x86_64 w/Linux 3.12.21-gentoo-r1) ---
+This version was compiled on Wed Apr 18 16:36:14 PDT 2012.
+Set DBUPerIGU to 1000.
+Set net toggle Scale Factor to 1.00
+Set Shrink Factor to 1.00000
+<CMD> win
+*** Memory pool thread-safe mode activated.
+<CMD> encMessage warning 0
+Suppress "**WARN ..." messages.
+<CMD> encMessage debug 0
+<CMD> encMessage info 0
+Reading config file - finish.enc.dat/CHIP.conf
+**WARN: (ENCLF-119):	the layer 'METAL1' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'METAL2' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'METAL3' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'METAL4' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'METAL5' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'METAL6' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'METAL7' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'METAL8' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'VIA12' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'VIA23' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'VIA34' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'VIA45' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'VIA56' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'VIA67' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'VIA78' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-44):	Macro 'PDC0102CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PDC0204CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PDC0408CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PDC1216CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PDS0102CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PDS0204CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PDS0408CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PDS1216CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PRC0102CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PRC0204CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PRC0408CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PRC1216CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PRS0102CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PRS0204CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PRS0408CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PRS1216CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PVDD1CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PVSS1CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PVSS3CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PXOE1CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (EMS-62):	Message <ENCLF-44> has exceeded the default message display limit of 20.
+To avoid this warning, increase the display limit per unique message
+by using the set_message_limit <number> command.
+The message limit can be removed by using the unset_message_limit command.
+Note that setting a very large number using the set_message_limit command
+or removing the message limit using the unset_message_limit command can
+significantly increase the log file size.
+To suppress a message, use suppress_message command.
+**WARN: (ENCLF-200):	Pin 'AA[0]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'AA[1]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'AA[2]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'AA[3]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'AA[4]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'AA[5]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'AB[0]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'AB[1]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'AB[2]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'AB[3]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'AB[4]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'AB[5]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'CENA' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'CENB' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'CLKA' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'CLKB' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'DB[0]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'DB[10]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'DB[11]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'DB[12]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (EMS-62):	Message <ENCLF-200> has exceeded the default message display limit of 20.
+To avoid this warning, increase the display limit per unique message
+by using the set_message_limit <number> command.
+The message limit can be removed by using the unset_message_limit command.
+Note that setting a very large number using the set_message_limit command
+or removing the message limit using the unset_message_limit command can
+significantly increase the log file size.
+To suppress a message, use suppress_message command.
+**WARN: (ENCPP-557):	a single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. You should remove this statement from your LEF file.
+	VIARULE TURNM1 GENERATE
+**WARN: (ENCPP-557):	a single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. You should remove this statement from your LEF file.
+	VIARULE TURNM2 GENERATE
+**WARN: (ENCPP-557):	a single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. You should remove this statement from your LEF file.
+	VIARULE TURNM3 GENERATE
+**WARN: (ENCPP-557):	a single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. You should remove this statement from your LEF file.
+	VIARULE TURNM4 GENERATE
+**WARN: (ENCPP-557):	a single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. You should remove this statement from your LEF file.
+	VIARULE TURNM5 GENERATE
+**WARN: (ENCPP-557):	a single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. You should remove this statement from your LEF file.
+	VIARULE TURNM6 GENERATE
+**WARN: (ENCPP-557):	a single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. You should remove this statement from your LEF file.
+	VIARULE TURNM7 GENERATE
+**WARN: (ENCPP-557):	a single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. You should remove this statement from your LEF file.
+	VIARULE TURNM8 GENERATE
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO0' of cell 'ACCSHCINX2' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO1' of cell 'ACCSHCINX2' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO0' of cell 'ACCSHCINX4' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO1' of cell 'ACCSHCINX4' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO0N' of cell 'ACCSHCONX2' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO1N' of cell 'ACCSHCONX2' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO0N' of cell 'ACCSHCONX4' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO1N' of cell 'ACCSHCONX4' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO0N' of cell 'ACCSIHCONX2' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO1N' of cell 'ACCSIHCONX2' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO0N' of cell 'ACCSIHCONX4' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO1N' of cell 'ACCSIHCONX4' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ACHCINX2' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ACHCINX4' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CON' of cell 'ACHCONX2' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CON' of cell 'ACHCONX4' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFHX1' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFHX1' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFHX2' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFHX2' is not defined in the library.
+**WARN: (ENCSYC-2):	Timing is not defined for cell PADIZ40.
+*** End library_loading (cpu=0.02min, mem=9.2M, fe_cpu=0.14min, fe_mem=246.5M) ***
+**WARN: (TCLCMD-1013):	The SDC set_operating_conditions assertion is not supported. Please use the Encounter setOpCond command to specify library and operating condition information. Use the setAnalysisMode command to control single vs. bestCase/worstCase vs. on-chip variation timing analysis. (File CHIP.sdc, Line 21).
+
+**WARN: (ENCFP-780):	IO instance 'ipad_dat00' isn't defined in IO file, io placement might be incorrect
+**WARN: (ENCFP-780):	IO instance 'ipad_dat01' isn't defined in IO file, io placement might be incorrect
+**WARN: (ENCFP-780):	IO instance 'ipad_dat02' isn't defined in IO file, io placement might be incorrect
+**WARN: (ENCFP-780):	IO instance 'ipad_dat03' isn't defined in IO file, io placement might be incorrect
+**WARN: (ENCFP-780):	IO instance 'ipad_dat04' isn't defined in IO file, io placement might be incorrect
+**WARN: (ENCFP-780):	IO instance 'ipad_dat05' isn't defined in IO file, io placement might be incorrect
+**WARN: (ENCFP-780):	IO instance 'ipad_dat06' isn't defined in IO file, io placement might be incorrect
+**WARN: (ENCFP-780):	IO instance 'ipad_dat07' isn't defined in IO file, io placement might be incorrect
+**WARN: (ENCFP-780):	IO instance 'ipad_dat08' isn't defined in IO file, io placement might be incorrect
+**WARN: (ENCFP-780):	IO instance 'ipad_dat09' isn't defined in IO file, io placement might be incorrect
+**WARN: (ENCFP-780):	IO instance 'ipad_dat10' isn't defined in IO file, io placement might be incorrect
+**WARN: (ENCFP-780):	IO instance 'ipad_dat11' isn't defined in IO file, io placement might be incorrect
+**WARN: (ENCFP-780):	IO instance 'ipad_dat12' isn't defined in IO file, io placement might be incorrect
+**WARN: (ENCFP-780):	IO instance 'ipad_dat13' isn't defined in IO file, io placement might be incorrect
+**WARN: (ENCFP-780):	IO instance 'ipad_dat14' isn't defined in IO file, io placement might be incorrect
+**WARN: (ENCFP-780):	IO instance 'ipad_dat15' isn't defined in IO file, io placement might be incorrect
+Loading preference file finish.enc.dat/enc.pref.tcl ...
+Loading mode file finish.enc.dat/CHIP.mode ...
+**WARN: (ENCSP-509):	Option -timingDriven is set to false when -fp is true 
+**WARN: (ENCOPT-3058):	Cell slow/ACCSHCINX2 has already a dont_use attribute false.
+**WARN: (ENCOPT-3058):	Cell slow/ACCSHCINX4 has already a dont_use attribute false.
+**WARN: (ENCOPT-3058):	Cell slow/ACCSHCONX2 has already a dont_use attribute false.
+**WARN: (ENCOPT-3058):	Cell slow/ACCSHCONX4 has already a dont_use attribute false.
+**WARN: (ENCOPT-3058):	Cell slow/ACCSIHCONX2 has already a dont_use attribute false.
+**WARN: (ENCOPT-3058):	Cell slow/ACCSIHCONX4 has already a dont_use attribute false.
+**WARN: (ENCOPT-3058):	Cell slow/ACHCINX2 has already a dont_use attribute false.
+**WARN: (ENCOPT-3058):	Cell slow/ACHCINX4 has already a dont_use attribute false.
+**WARN: (ENCOPT-3058):	Cell slow/ACHCONX2 has already a dont_use attribute false.
+**WARN: (ENCOPT-3058):	Cell slow/ACHCONX4 has already a dont_use attribute false.
+**WARN: (ENCOPT-3058):	Cell slow/ADDFHX1 has already a dont_use attribute false.
+**WARN: (ENCOPT-3058):	Cell slow/ADDFHX2 has already a dont_use attribute false.
+**WARN: (ENCOPT-3058):	Cell slow/ADDFHX4 has already a dont_use attribute false.
+**WARN: (ENCOPT-3058):	Cell slow/ADDFX1 has already a dont_use attribute false.
+**WARN: (ENCOPT-3058):	Cell slow/ADDFX2 has already a dont_use attribute false.
+**WARN: (ENCOPT-3058):	Cell slow/ADDFX4 has already a dont_use attribute false.
+**WARN: (ENCOPT-3058):	Cell slow/ADDFXL has already a dont_use attribute false.
+**WARN: (ENCOPT-3058):	Cell slow/ADDHX2 has already a dont_use attribute false.
+**WARN: (ENCOPT-3058):	Cell slow/ADDHX4 has already a dont_use attribute false.
+**WARN: (ENCOPT-3058):	Cell slow/ADDHXL has already a dont_use attribute false.
+**WARN: (EMS-62):	Message <ENCOPT-3058> has exceeded the default message display limit of 20.
+To avoid this warning, increase the display limit per unique message
+by using the set_message_limit <number> command.
+The message limit can be removed by using the unset_message_limit command.
+Note that setting a very large number using the set_message_limit command
+or removing the message limit using the unset_message_limit command can
+significantly increase the log file size.
+To suppress a message, use suppress_message command.
+CHIP
+CHIP
+loading place ...
+**WARN: (ENCSP-606):	Inst InnerBPad31 (id 0) loc (3995170 -177600) is out of design Box, hence invalid
+**WARN: (ENCSP-606):	Inst InnerBPad30 (id 1) loc (3548520 -177600) is out of design Box, hence invalid
+**WARN: (ENCSP-606):	Inst InnerBPad29 (id 2) loc (3101870 -177600) is out of design Box, hence invalid
+**WARN: (ENCSP-606):	Inst InnerBPad28 (id 3) loc (2655230 -177600) is out of design Box, hence invalid
+**WARN: (ENCSP-606):	Inst InnerBPad27 (id 4) loc (2208590 -177600) is out of design Box, hence invalid
+**WARN: (ENCSP-606):	Inst InnerBPad26 (id 5) loc (1761950 -177600) is out of design Box, hence invalid
+**WARN: (ENCSP-606):	Inst InnerBPad25 (id 6) loc (1315300 -177600) is out of design Box, hence invalid
+**WARN: (ENCSP-606):	Inst InnerBPad24 (id 7) loc (868650 -177600) is out of design Box, hence invalid
+**WARN: (ENCSP-606):	Inst InnerBPad7 (id 24) loc (-177600 3983700) is out of design Box, hence invalid
+**WARN: (ENCSP-606):	Inst InnerBPad6 (id 25) loc (-177600 3538490) is out of design Box, hence invalid
+**WARN: (ENCSP-606):	Inst InnerBPad5 (id 26) loc (-177600 3093280) is out of design Box, hence invalid
+**WARN: (ENCSP-606):	Inst InnerBPad4 (id 27) loc (-177600 2648070) is out of design Box, hence invalid
+**WARN: (ENCSP-606):	Inst InnerBPad3 (id 28) loc (-177600 2202860) is out of design Box, hence invalid
+**WARN: (ENCSP-606):	Inst InnerBPad2 (id 29) loc (-177600 1312440) is out of design Box, hence invalid
+**WARN: (ENCSP-606):	Inst InnerBPad1 (id 30) loc (-177600 867220) is out of design Box, hence invalid
+loading route ...
+<CMD> summaryReport -noHtml -outfile summaryReport.rpt
+Creating directory summaryReport.
+Start to collect the design information.
+Build netlist information for Cell CHIP.
+Finished collecting the design information.
+Generating macro cells used in the design report.
+Generating standard cells used in the design report.
+Generating IO cells used in the design report.
+Analyze library ... 
+Analyze netlist ... 
+Generate no-driven nets information report.
+Analyze timing ... 
+Analyze floorplan/placement ... 
+Analysis Routing ...
+Report saved in file summaryReport.rpt.
+**ERROR: (ENCOGDS-1850):	Stream file name is missing.<CMD> streamOut CHIP.gds -mapFile streamOut.map -libName DesignLib -merge { tpz013g3_v1.1.gds tsmc13gfsg_fram.gds } -units 1000 -mode ALL
+Finding the highest version number among the merge files
+Merge file: tpz013g3_v1.1.gds has version number: 5
+Merge file: tsmc13gfsg_fram.gds has version number: 5
+
+Parse map file...
+Writing GDSII file ...
+	****** db unit per micron = 2000 ******
+	****** output gds2 file unit per micron = 1000 ******
+	****** unit scaling factor = 0.5 ******
+**WARN: (ENCOGDS-250):	specified units is smaller than the one in db - you may have rounding problems
+Output for instance
+Output for bump
+Output for physical terminals
+Output for logical terminals
+Output for regular nets
+Output for special nets and metal fills
+Output for via structure generation
+Statistics for GDS generated (version 5)
+----------------------------------------
+Stream Out Layer Mapping Information:
+GDS Layer Number          GDS Layer Name
+----------------------------------------
+    31                            METAL1
+    131                           METAL1
+    51                             VIA12
+    32                            METAL2
+    132                           METAL2
+    52                             VIA23
+    33                            METAL3
+    133                           METAL3
+    53                             VIA34
+    34                            METAL4
+    134                           METAL4
+    54                             VIA45
+    35                            METAL5
+    135                           METAL5
+    55                             VIA56
+    36                            METAL6
+    136                           METAL6
+    56                             VIA67
+    37                            METAL7
+    137                           METAL7
+    57                             VIA78
+    38                            METAL8
+    138                           METAL8
+    131                           METAL1
+    132                           METAL2
+    133                           METAL3
+    134                           METAL4
+    135                           METAL5
+    136                           METAL6
+    137                           METAL7
+    138                           METAL8
+
+
+Stream Out Information Processed for GDS version 5:
+Units: 1000 DBU
+
+Object                             Count
+----------------------------------------
+Instances                          32246
+
+Ports/Pins                             0
+
+Nets                                 475
+    metal layer METAL1                41
+    metal layer METAL2               232
+    metal layer METAL3               154
+    metal layer METAL4                47
+    metal layer METAL5                 1
+
+    Via Instances                    556
+
+Special Nets                        1787
+    metal layer METAL1              1473
+    metal layer METAL2                12
+    metal layer METAL3                12
+    metal layer METAL5                 2
+    metal layer METAL6               226
+    metal layer METAL7                62
+
+    Via Instances                 277180
+
+Metal Fills                       827354
+    metal layer METAL1            120100
+    metal layer METAL2            133059
+    metal layer METAL3            101831
+    metal layer METAL4            133236
+    metal layer METAL5            101930
+    metal layer METAL6             62678
+    metal layer METAL7             83687
+    metal layer METAL8             90833
+
+    Via Instances                      0
+
+Metal FillOPCs                         0
+
+    Via Instances                      0
+
+Text                                  26
+    metal layer METAL1                 2
+    metal layer METAL3                24
+
+
+Blockages                              0
+
+
+Custom Text                            2
+    metal layer METAL8                 2
+
+
+Custom Box                             0
+
+Merging with GDS libraries
+Scanning GDS file tpz013g3_v1.1.gds to register cell name ......
+Scanning GDS file tsmc13gfsg_fram.gds to register cell name ......
+Merging GDS file tpz013g3_v1.1.gds ......
+	****** Merge file: tpz013g3_v1.1.gds has version number: 5.
+	****** Merge file: tpz013g3_v1.1.gds has units: 1000 per micron.
+	****** unit scaling factor = 1 ******
+Merging GDS file tsmc13gfsg_fram.gds ......
+	****** Merge file: tsmc13gfsg_fram.gds has version number: 5.
+	****** Merge file: tsmc13gfsg_fram.gds has units: 1000 per micron.
+	****** unit scaling factor = 1 ******
+######Streamout is finished!
+<CMD> selectInst IOFILLER_N_77
+<CMD> setDrawView ameba
+<CMD> deselectAll
+<CMD> setDrawView place
+<CMD> setDrawView fplan
+<CMD> setDrawView place
+<CMD> setDrawView fplan
+<CMD> setDrawView place
+<CMD> summaryReport -outdir summaryReport
+Start to collect the design information.
+Build netlist information for Cell CHIP.
+Finished collecting the design information.
+Generating macro cells used in the design report.
+Generating standard cells used in the design report.
+Generating IO cells used in the design report.
+Analyze library ... 
+Analyze netlist ... 
+Generate no-driven nets information report.
+Analyze timing ... 
+Analyze floorplan/placement ... 
+Analysis Routing ...
+Report saved in file summaryReport/CHIP.main.htm.ascii.
+<CMD> saveNetlist CHIP.v
+Writing Netlist "CHIP.v" ...
+default_rc_corner RC_corner
+Performce RC Extraction ...
+<CMD> extractRC
+Extraction called for design 'CHIP' of instances=32246 and nets=22978 using extraction engine 'postRoute' at effort level 'low' .
+**WARN: (ENCEXT-3530):	Use of command 'setDesignMode -process <process_node>' prior to extraction is recommended for maximum accuracy and optimal automatic threshold setting.
+Detail RC Extraction called for design CHIP.
+RC Extraction called in multi-corner(1) mode.
+Process corner(s) are loaded.
+ Corner: RC_corner
+extractDetailRC Option : -outfile ./CHIP_LdsSIK_19328.rcdb.d  -extended
+RC Mode: Detail [Extended CapTable, RC Table Resistances]
+      RC Corner Indexes            0   
+Capacitance Scaling Factor   : 1.00000 
+Coupling Cap. Scaling Factor : 1.00000 
+Resistance Scaling Factor    : 1.00000 
+Clock Cap. Scaling Factor    : 1.00000 
+Clock Res. Scaling Factor    : 1.00000 
+Shrink Factor                : 1.00000
+Initializing multi-corner capacitance tables ... 
+Initializing multi-corner resistance tables ...
+Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 367.1M)
+Creating parasitic data file './CHIP_LdsSIK_19328.rcdb.d/header.da' in memory efficient access mode for storing RC.
+Extracted 10.3158% (CPU Time= 0:00:00.2  MEM= 401.5M)
+Extracted 20.4211% (CPU Time= 0:00:00.4  MEM= 402.4M)
+Extracted 30.3158% (CPU Time= 0:00:00.4  MEM= 402.4M)
+Extracted 40.4211% (CPU Time= 0:00:00.4  MEM= 402.4M)
+Extracted 50.3158% (CPU Time= 0:00:00.4  MEM= 402.4M)
+Extracted 60.4211% (CPU Time= 0:00:00.6  MEM= 402.4M)
+Extracted 70.3158% (CPU Time= 0:00:00.6  MEM= 402.4M)
+Extracted 80.4211% (CPU Time= 0:00:00.6  MEM= 402.4M)
+Extracted 90.3158% (CPU Time= 0:00:00.8  MEM= 402.4M)
+Extracted 100% (CPU Time= 0:00:05.6  MEM= 402.6M)
+Nr. Extracted Resistors     : 1096
+Nr. Extracted Ground Cap.   : 1159
+Nr. Extracted Coupling Cap. : 0
+Opening parasitic data file './CHIP_LdsSIK_19328.rcdb.d/header.da' for reading.
+Detail RC Extraction DONE (CPU Time: 0:00:07.6  Real Time: 0:00:07.0  MEM: 367.074M)
+<CMD> set_power_analysis_mode -reset
+<CMD> set_power_analysis_mode -method static -corner max -create_binary_db true -write_static_currents true -honor_negative_energy true -ignore_control_signals true
+**ERROR: (ENCSYT-30089):	Activity file () does not exist.
+<CMD> set_power_output_dir -reset
+<CMD> set_power_output_dir ./
+<CMD> set_default_switching_activity -reset
+<CMD> set_default_switching_activity -input_activity 0.2 -period 10.0
+'set_default_switching_activity' finished successfully.
+<CMD> read_activity_file -reset
+<CMD> set_power -reset
+<CMD> set_powerup_analysis -reset
+<CMD> set_powerup_analysis -mode accurate -ultrasim_simulation_mode ms
+<CMD> set_dynamic_power_simulation -reset
+<CMD> report_power -rail_analysis_format VS -outfile .//CHIP.rpt
+CPE found ground net: VSS
+CPE found power net: VDD  voltage: 1.08V
+Using new Cte TW Api base...#################################################################################
+# Design Stage: PostRoute
+# Design Mode: 90nm
+# Analysis Mode: MMMC non-OCV
+# Extraction Mode: detail/spef
+# Delay Calculation Options: engine=default signOff=true SIAware=false(opt)
+# Switching Delay Calculation Engine to feDC
+#################################################################################
+Calculate delays in Single mode...
+Topological Sorting (CPU = 0:00:00.0, MEM = 380.8M, InitMEM = 380.8M)
+Start delay calculation (mem=380.797M)...
+delayCal using detail RC...
+Opening parasitic data file './CHIP_LdsSIK_19328.rcdb.d/header.da' for reading.
+RC Database In Completed (CPU Time= 0:00:00.0  MEM= 385.8M)
+Initializing multi-corner capacitance tables ... 
+Initializing multi-corner resistance tables ...
+**WARN: (ENCTS-403):	Delay calculation was forced to extrapolate table data outside of the characterized range. In some cases, extrapolation can reduce the accuracy of the delay calculation.  You can enable more detailed reporting of these cases by enabling the command 'setDelayCalMode -reportOutBound'.
+Delay calculation completed. (cpu=0:00:00.7 real=0:00:01.0 mem=390.117M 0)
+Calculate delays in Single mode...
+Topological Sorting (CPU = 0:00:00.0, MEM = 390.1M, InitMEM = 390.1M)
+Start delay calculation (mem=390.117M)...
+delayCal using detail RC...
+Delay calculation completed. (cpu=0:00:00.0 real=0:00:00.0 mem=390.117M 0)
+*** CDM Built up (cpu=0:00:00.7  real=0:00:01.0  mem= 390.1M) ***
+CPE found ground net: VSS
+CPE found power net: VDD  voltage: 1.08V
+**WARN: (ENCCTE-291):	CORNER0 is a physical only instance and is ignored.
+**WARN: (ENCCTE-291):	ipad_CoreVDD1 is a physical only instance and is ignored.
+**WARN: (ENCCTE-291):	ipad_CoreVSS1 is a physical only instance and is ignored.
+**WARN: (ENCCTE-291):	CORNER1 is a physical only instance and is ignored.
+**WARN: (ENCCTE-291):	ipad_IOVDD1 is a physical only instance and is ignored.
+**WARN: (ENCCTE-291):	ipad_IOVSS1 is a physical only instance and is ignored.
+**WARN: (ENCCTE-291):	CORNER2 is a physical only instance and is ignored.
+**WARN: (ENCCTE-291):	ipad_CoreVDD2 is a physical only instance and is ignored.
+**WARN: (ENCCTE-291):	ipad_IOVDD2 is a physical only instance and is ignored.
+**WARN: (ENCCTE-291):	CORNER3 is a physical only instance and is ignored.
+**WARN: (ENCCTE-291):	ipad_IOVSS2 is a physical only instance and is ignored.
+**WARN: (ENCCTE-291):	ipad_CoreVSS2 is a physical only instance and is ignored.
+**WARN: (ENCCTE-291):	IOFILLER_N_167 is a physical only instance and is ignored.
+**WARN: (ENCCTE-291):	IOFILLER_N_166 is a physical only instance and is ignored.
+**WARN: (ENCCTE-291):	IOFILLER_N_165 is a physical only instance and is ignored.
+**WARN: (ENCCTE-291):	IOFILLER_N_164 is a physical only instance and is ignored.
+**WARN: (ENCCTE-291):	IOFILLER_N_163 is a physical only instance and is ignored.
+**WARN: (ENCCTE-291):	IOFILLER_N_162 is a physical only instance and is ignored.
+**WARN: (ENCCTE-291):	IOFILLER_N_161 is a physical only instance and is ignored.
+**WARN: (ENCCTE-291):	IOFILLER_N_160 is a physical only instance and is ignored.
+**WARN: (EMS-62):	Message <ENCCTE-291> has exceeded the default message display limit of 20.
+To avoid this warning, increase the display limit per unique message
+by using the set_message_limit <number> command.
+The message limit can be removed by using the unset_message_limit command.
+Note that setting a very large number using the set_message_limit command
+or removing the message limit using the unset_message_limit command can
+significantly increase the log file size.
+To suppress a message, use suppress_message command.
+INFO (POWER-1606): Found clock 'clk' with frequency 50MHz from SDC file.
+
+
+Propagating signal activity...
+
+
+Starting Levelizing
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT)
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 5%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 10%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 15%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 20%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 25%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 30%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 35%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 40%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 45%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 50%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 55%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 60%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 65%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 70%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 75%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 80%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 85%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 90%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 95%
+
+Finished Levelizing
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT)
+
+Starting Activity Propagation
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT)
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 5%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 10%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 15%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 20%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 25%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 30%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 35%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 40%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 45%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 50%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 55%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 60%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 65%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 70%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 75%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 80%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 85%
+
+Finished Activity Propagation
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT)
+WARNING (POWER-1501): 2 cell(s) in the design have timing library models but
+do not have leakage power data.  Leakage power will not be calculated for these cells:
+
+  PDO12CDG
+  PDIDGZ
+
+Starting Calculating power
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT)
+
+Calculating power dissipation...
+
+ ... Calculating switching power
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 5%
+  instance opad_done is not connected to any rail
+  instance opad_freq3 is not connected to any rail
+  instance opad_freq2 is not connected to any rail
+  instance opad_freq1 is not connected to any rail
+  instance opad_freq0 is not connected to any rail
+  only first five unconnected instances are listed...
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 10%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 15%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 20%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 25%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 30%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 35%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 40%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 45%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 50%
+ ... Calculating internal and leakage power
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 55%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 60%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 65%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 70%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 75%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 80%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 85%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 90%
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT): 95%
+
+Finished Calculating power
+2017-Jan-01 17:33:18 (2017-Jan-01 09:33:18 GMT)
+*
+
+  31 instances have no static power
+  See the logfile for the list of instances that have no power.
+  31 instances have no static power
+  The instances with no power are:
+     InnerBPad31 (PADIZ40)
+     InnerBPad30 (PADIZ40)
+     InnerBPad29 (PADIZ40)
+     InnerBPad28 (PADIZ40)
+     InnerBPad27 (PADIZ40)
+     InnerBPad26 (PADIZ40)
+     InnerBPad25 (PADIZ40)
+     InnerBPad24 (PADIZ40)
+     InnerBPad23 (PADIZ40)
+     InnerBPad22 (PADIZ40)
+     InnerBPad21 (PADIZ40)
+     InnerBPad20 (PADIZ40)
+     InnerBPad19 (PADIZ40)
+     InnerBPad18 (PADIZ40)
+     InnerBPad17 (PADIZ40)
+     InnerBPad16 (PADIZ40)
+     InnerBPad15 (PADIZ40)
+     InnerBPad14 (PADIZ40)
+     InnerBPad13 (PADIZ40)
+     InnerBPad12 (PADIZ40)
+     InnerBPad11 (PADIZ40)
+     InnerBPad10 (PADIZ40)
+     InnerBPad9 (PADIZ40)
+     InnerBPad8 (PADIZ40)
+     InnerBPad7 (PADIZ40)
+     InnerBPad6 (PADIZ40)
+     InnerBPad5 (PADIZ40)
+     InnerBPad4 (PADIZ40)
+     InnerBPad3 (PADIZ40)
+     InnerBPad2 (PADIZ40)
+     InnerBPad1 (PADIZ40)
+
+
+Total Power
+-----------------------------------------------------------------------------------------
+Total Internal Power:       9.213      99.09%
+Total Switching Power:     0.08359      0.899%
+Total Leakage Power:    0.001098     0.0118%
+Total Power:       9.298
+-----------------------------------------------------------------------------------------
+WARNING (POWER-2041): There are instances which are not connected to power or ground nets in this design. They are put into default power/ground rail uti files. The list of instance names can be obtained by using itaputil on the uti files.
+
+report_power consumed time (real time) 00:00:01 : peak memory (575M) 
+Output file is .//CHIP.rpt.
+<CMD> view_analysis_results
+<CMD> view_analysis_results -display clear
+<CMD> setDrawView place
+<CMD> auto_fetch_dc_sources VDD
+<CMD> setDrawView place
+<CMD> auto_fetch_dc_sources VSS
+**WARN: (ENCPARA-395):	DC sources that are already fetched and currently in memory is for VDD. They will be automatically saved to autoSaved_VDD.pp before fetching new dc sources for VSS.
+Saving pre-existing pad location in autoSaved_VDD.pp.
+<CMD> setDrawView place
+<CMD> clear_pad_loc_display -editForm
+<CMD> save_pad_location -file CHIP.pp
+**ERROR: (ENCPARA-124):	No net name specified, please use save_pad_location -net <netName> to specify one or auto_fetch_dc_sources <netName> before saving to specify one.
+**ERROR: **ERROR: (ENCPARA-2395):	Error in saving pad location..
+
+**ERROR: **ERROR: (ENCPARA-2451):	Must specify pad location file.
+
+<CMD> setDrawView place
+<CMD> analyze_early_rail -method static -type net_based -bias_voltage 1.080 -net_voltage 0.000 -volt_limit 0.108 -instance_current_file static_VSS.ptiavg -pad_location_file CHIP.pp -display_IR -net VSS
+Analysis view: 'av_func_mode_max' is currently used for extraction.
+**ERROR: **ERROR: (ENCPARA-2395):	Check error messages in log file.
+.
+
+<CMD> setDrawView fplan
+<CMD> selectInst opad_freq3
+<CMD> deselectAll
+<CMD> selectWire 1999.2000 1803.2100 2009.2000 1805.0500 1 _FILLS_RESERVED
+<CMD> deselectAll
+<CMD> selectWire 2000.8000 1801.2000 2002.8000 1806.6000 8 _FILLS_RESERVED
+<CMD> windowSelect 2672.491 1832.834 2683.103 1418.967
+<CMD> selectWire 332.7200 1967.4600 334.7200 1977.4600 8 _FILLS_RESERVED
+<CMD> uiSetTool move
+<CMD> deselectAll
+<CMD> selectInst IOFILLER_W_66
+<CMD> setObjFPlanBox Instance IOFILLER_W_66 640.433 957.7165 886.433 977.7165
+<CMD> deselectAll
+<CMD> selectWire 691.8400 955.8000 700.4000 957.8000 7 _FILLS_RESERVED
+<CMD> editMove 0.0 -4.51
+<CMD> deselectAll
+<CMD> selectWire 1149.2000 891.2000 1150.3200 900.8000 8 _FILLS_RESERVED
+<CMD> editMove -446.499 63.141
+<CMD> deselectAll
+<CMD> selectWire 670.0600 1269.0000 672.0600 1279.0000 8 _FILLS_RESERVED
+<CMD> undo
+<CMD> uiSetTool select
+<CMD> deselectAll
+<CMD> selectWire 1869.8000 1329.0400 1879.8000 1331.0400 7 _FILLS_RESERVED
+<CMD> setDrawView ameba
+<CMD> setDrawView place
+<CMD> setDrawView ameba
+<CMD> uiSetTool move
+<CMD> uiSetTool select
+<CMD> windowSelect 667.091 690.455 603.950 676.924
+<CMD> deselectAll
+**ERROR: (ENCSYT-6000):	No Object Selected.
+<CMD> redo
+<CMD> undo
+<CMD> encMessage warning 0
+Suppress "**WARN ..." messages.
+<CMD> encMessage debug 0
+<CMD> encMessage info 0
+Reset to color id 0 for fas (FAS) and all their descendants.
+Free PSO.
+Reading config file - finish.enc.dat/CHIP.conf
+**WARN: (ENCLF-119):	the layer 'METAL1' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'METAL2' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'METAL3' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'METAL4' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'METAL5' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'METAL6' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'METAL7' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'METAL8' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'VIA12' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'VIA23' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'VIA34' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'VIA45' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'VIA56' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'VIA67' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'VIA78' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-44):	Macro 'PDC0102CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PDC0204CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PDC0408CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PDC1216CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PDS0102CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PDS0204CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PDS0408CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PDS1216CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PRC0102CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PRC0204CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PRC0408CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PRC1216CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PRS0102CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PRS0204CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PRS0408CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PRS1216CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PVDD1CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PVSS1CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PVSS3CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PXOE1CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-200):	Pin 'AA[0]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'AA[1]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'AA[2]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'AA[3]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'AA[4]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'AA[5]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'AB[0]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'AB[1]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'AB[2]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'AB[3]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'AB[4]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'AB[5]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'CENA' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'CENB' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'CLKA' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'CLKB' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'DB[0]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'DB[10]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'DB[11]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'DB[12]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCPP-557):	a single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. You should remove this statement from your LEF file.
+	VIARULE TURNM1 GENERATE
+**WARN: (ENCPP-557):	a single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. You should remove this statement from your LEF file.
+	VIARULE TURNM2 GENERATE
+**WARN: (ENCPP-557):	a single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. You should remove this statement from your LEF file.
+	VIARULE TURNM3 GENERATE
+**WARN: (ENCPP-557):	a single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. You should remove this statement from your LEF file.
+	VIARULE TURNM4 GENERATE
+**WARN: (ENCPP-557):	a single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. You should remove this statement from your LEF file.
+	VIARULE TURNM5 GENERATE
+**WARN: (ENCPP-557):	a single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. You should remove this statement from your LEF file.
+	VIARULE TURNM6 GENERATE
+**WARN: (ENCPP-557):	a single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. You should remove this statement from your LEF file.
+	VIARULE TURNM7 GENERATE
+**WARN: (ENCPP-557):	a single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. You should remove this statement from your LEF file.
+	VIARULE TURNM8 GENERATE
+**WARN: (ENCSYC-2):	Timing is not defined for cell PADIZ40.
+*** End library_loading (cpu=0.02min, mem=-5.0M, fe_cpu=5.27min, fe_mem=357.2M) ***
+**WARN: (TCLCMD-1013):	The SDC set_operating_conditions assertion is not supported. Please use the Encounter setOpCond command to specify library and operating condition information. Use the setAnalysisMode command to control single vs. bestCase/worstCase vs. on-chip variation timing analysis. (File CHIP.sdc, Line 21).
+
+**WARN: (ENCFP-780):	IO instance 'ipad_dat00' isn't defined in IO file, io placement might be incorrect
+**WARN: (ENCFP-780):	IO instance 'ipad_dat01' isn't defined in IO file, io placement might be incorrect
+**WARN: (ENCFP-780):	IO instance 'ipad_dat02' isn't defined in IO file, io placement might be incorrect
+**WARN: (ENCFP-780):	IO instance 'ipad_dat03' isn't defined in IO file, io placement might be incorrect
+**WARN: (ENCFP-780):	IO instance 'ipad_dat04' isn't defined in IO file, io placement might be incorrect
+**WARN: (ENCFP-780):	IO instance 'ipad_dat05' isn't defined in IO file, io placement might be incorrect
+**WARN: (ENCFP-780):	IO instance 'ipad_dat06' isn't defined in IO file, io placement might be incorrect
+**WARN: (ENCFP-780):	IO instance 'ipad_dat07' isn't defined in IO file, io placement might be incorrect
+**WARN: (ENCFP-780):	IO instance 'ipad_dat08' isn't defined in IO file, io placement might be incorrect
+**WARN: (ENCFP-780):	IO instance 'ipad_dat09' isn't defined in IO file, io placement might be incorrect
+**WARN: (ENCFP-780):	IO instance 'ipad_dat10' isn't defined in IO file, io placement might be incorrect
+**WARN: (ENCFP-780):	IO instance 'ipad_dat11' isn't defined in IO file, io placement might be incorrect
+**WARN: (ENCFP-780):	IO instance 'ipad_dat12' isn't defined in IO file, io placement might be incorrect
+**WARN: (ENCFP-780):	IO instance 'ipad_dat13' isn't defined in IO file, io placement might be incorrect
+**WARN: (ENCFP-780):	IO instance 'ipad_dat14' isn't defined in IO file, io placement might be incorrect
+**WARN: (ENCFP-780):	IO instance 'ipad_dat15' isn't defined in IO file, io placement might be incorrect
+**WARN: (ENCSYT-709):	The next major release of EDI (11.1) will use the
+Multi-Mode/Multi-Corner (MMMC) architecture exclusively for configuration and
+control of some software features. The current configuration will continue to
+work in this release. But for compatibility with the future releases you
+should migrate your design to an MMMC style configuration. You can refer to
+the What's New document for this release for additional information on the
+11.1 migration to MMMC. In addition, you can run loadConfig with the
+-showEolWarnings option to identify specific command and configuration
+options that will no longer be supported.
+Loading preference file finish.enc.dat/enc.pref.tcl ...
+Loading mode file finish.enc.dat/CHIP.mode ...
+**WARN: (ENCOPT-3058):	Cell slow/ACCSHCINX2 has already a dont_use attribute false.
+**WARN: (ENCOPT-3058):	Cell slow/ACCSHCINX4 has already a dont_use attribute false.
+**WARN: (ENCOPT-3058):	Cell slow/ACCSHCONX2 has already a dont_use attribute false.
+**WARN: (ENCOPT-3058):	Cell slow/ACCSHCONX4 has already a dont_use attribute false.
+**WARN: (ENCOPT-3058):	Cell slow/ACCSIHCONX2 has already a dont_use attribute false.
+**WARN: (ENCOPT-3058):	Cell slow/ACCSIHCONX4 has already a dont_use attribute false.
+**WARN: (ENCOPT-3058):	Cell slow/ACHCINX2 has already a dont_use attribute false.
+**WARN: (ENCOPT-3058):	Cell slow/ACHCINX4 has already a dont_use attribute false.
+**WARN: (ENCOPT-3058):	Cell slow/ACHCONX2 has already a dont_use attribute false.
+**WARN: (ENCOPT-3058):	Cell slow/ACHCONX4 has already a dont_use attribute false.
+**WARN: (ENCOPT-3058):	Cell slow/ADDFHX1 has already a dont_use attribute false.
+**WARN: (ENCOPT-3058):	Cell slow/ADDFHX2 has already a dont_use attribute false.
+**WARN: (ENCOPT-3058):	Cell slow/ADDFHX4 has already a dont_use attribute false.
+**WARN: (ENCOPT-3058):	Cell slow/ADDFX1 has already a dont_use attribute false.
+**WARN: (ENCOPT-3058):	Cell slow/ADDFX2 has already a dont_use attribute false.
+**WARN: (ENCOPT-3058):	Cell slow/ADDFX4 has already a dont_use attribute false.
+**WARN: (ENCOPT-3058):	Cell slow/ADDFXL has already a dont_use attribute false.
+**WARN: (ENCOPT-3058):	Cell slow/ADDHX2 has already a dont_use attribute false.
+**WARN: (ENCOPT-3058):	Cell slow/ADDHX4 has already a dont_use attribute false.
+**WARN: (ENCOPT-3058):	Cell slow/ADDHXL has already a dont_use attribute false.
+CHIP
+CHIP
+loading place ...
+**WARN: (ENCSP-606):	Inst InnerBPad31 (id 0) loc (3995170 -177600) is out of design Box, hence invalid
+**WARN: (ENCSP-606):	Inst InnerBPad30 (id 1) loc (3548520 -177600) is out of design Box, hence invalid
+**WARN: (ENCSP-606):	Inst InnerBPad29 (id 2) loc (3101870 -177600) is out of design Box, hence invalid
+**WARN: (ENCSP-606):	Inst InnerBPad28 (id 3) loc (2655230 -177600) is out of design Box, hence invalid
+**WARN: (ENCSP-606):	Inst InnerBPad27 (id 4) loc (2208590 -177600) is out of design Box, hence invalid
+**WARN: (ENCSP-606):	Inst InnerBPad26 (id 5) loc (1761950 -177600) is out of design Box, hence invalid
+**WARN: (ENCSP-606):	Inst InnerBPad25 (id 6) loc (1315300 -177600) is out of design Box, hence invalid
+**WARN: (ENCSP-606):	Inst InnerBPad24 (id 7) loc (868650 -177600) is out of design Box, hence invalid
+**WARN: (ENCSP-606):	Inst InnerBPad7 (id 24) loc (-177600 3983700) is out of design Box, hence invalid
+**WARN: (ENCSP-606):	Inst InnerBPad6 (id 25) loc (-177600 3538490) is out of design Box, hence invalid
+**WARN: (ENCSP-606):	Inst InnerBPad5 (id 26) loc (-177600 3093280) is out of design Box, hence invalid
+**WARN: (ENCSP-606):	Inst InnerBPad4 (id 27) loc (-177600 2648070) is out of design Box, hence invalid
+**WARN: (ENCSP-606):	Inst InnerBPad3 (id 28) loc (-177600 2202860) is out of design Box, hence invalid
+**WARN: (ENCSP-606):	Inst InnerBPad2 (id 29) loc (-177600 1312440) is out of design Box, hence invalid
+**WARN: (ENCSP-606):	Inst InnerBPad1 (id 30) loc (-177600 867220) is out of design Box, hence invalid
+loading route ...
+
+*** Memory Usage v#1 (Current mem = 384.520M, initial mem = 46.102M) ***
+--- Ending "Encounter" (totcpu=0:05:26, real=0:33:18, mem=384.5M) ---

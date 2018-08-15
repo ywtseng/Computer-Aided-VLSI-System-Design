@@ -1,0 +1,276 @@
+se::start_metric timeDesign {-preCts}
+se::save_metric timing.setup.WNS.all {-2.683 ns }
+se::save_metric timing.setup.TNS.all {-563.912 ns }
+se::save_metric timing.setup.numPaths.all {3089}
+se::save_metric timing.setup.numViolatingPaths.all {427}
+se::save_metric timing.setup.WNS.in2out {N/A}
+se::save_metric timing.setup.TNS.in2out {N/A}
+se::save_metric timing.setup.numPaths.in2out {N/A}
+se::save_metric timing.setup.numViolatingPaths.in2out {N/A}
+se::save_metric timing.setup.WNS.in2reg {-2.683 ns }
+se::save_metric timing.setup.TNS.in2reg {-563.912 ns }
+se::save_metric timing.setup.numPaths.in2reg {2587}
+se::save_metric timing.setup.numViolatingPaths.in2reg {427}
+se::save_metric timing.setup.WNS.reg2out {16.905 ns }
+se::save_metric timing.setup.TNS.reg2out {0.000 ns }
+se::save_metric timing.setup.numPaths.reg2out {5}
+se::save_metric timing.setup.numViolatingPaths.reg2out {0}
+se::save_metric timing.setup.WNS.reg2reg {0.099 ns }
+se::save_metric timing.setup.TNS.reg2reg {0.000 ns }
+se::save_metric timing.setup.numPaths.reg2reg {1542}
+se::save_metric timing.setup.numViolatingPaths.reg2reg {0}
+se::save_metric timing.DRV.maxCap.real.nets {0}
+se::save_metric timing.DRV.maxCap.real.terms {0}
+se::save_metric timing.DRV.maxCap.real.Worst {0.000}
+se::save_metric timing.DRV.maxCap.total.nets {0}
+se::save_metric timing.DRV.maxCap.total.terms {0}
+se::save_metric timing.DRV.maxTran.real.nets {0}
+se::save_metric timing.DRV.maxTran.real.terms {0}
+se::save_metric timing.DRV.maxTran.real.Worst {0.000}
+se::save_metric timing.DRV.maxTran.total.nets {0}
+se::save_metric timing.DRV.maxTran.total.terms {0}
+se::save_metric timing.DRV.maxFanout.real.nets {0}
+se::save_metric timing.DRV.maxFanout.real.terms {0}
+se::save_metric timing.DRV.maxFanout.real.Worst {0.000}
+se::save_metric timing.DRV.maxFanout.total.nets {1}
+se::save_metric timing.DRV.maxFanout.total.terms {1}
+se::save_metric design.util {88.783 %}
+se::save_metric route.overconH {0.012 %}
+se::save_metric route.overconV {0.185 %}
+se::save_metric route.overcon.total {0.000 %}
+se::save_metric route.overcon.worst {0.000 %}
+se::save_metric route.overcon.max {0.000 }
+se::save_metric cputime {0:00:03.6 }
+se::save_metric realtime {0:00:03.0 }
+se::save_metric mem {340.082 M}
+se::end_metric timeDesign {-preCts}
+se::start_metric optDesign {-preCts}
+se::save_metric timing.setup.WNS.all {-2.081 ns }
+se::save_metric timing.setup.TNS.all {-329.865 ns }
+se::save_metric timing.setup.numPaths.all {3089}
+se::save_metric timing.setup.numViolatingPaths.all {335}
+se::save_metric timing.setup.WNS.in2out {N/A}
+se::save_metric timing.setup.TNS.in2out {N/A}
+se::save_metric timing.setup.numPaths.in2out {N/A}
+se::save_metric timing.setup.numViolatingPaths.in2out {N/A}
+se::save_metric timing.setup.WNS.in2reg {-2.081 ns }
+se::save_metric timing.setup.TNS.in2reg {-329.865 ns }
+se::save_metric timing.setup.numPaths.in2reg {2587}
+se::save_metric timing.setup.numViolatingPaths.in2reg {335}
+se::save_metric timing.setup.WNS.reg2out {16.905 ns }
+se::save_metric timing.setup.TNS.reg2out {0.000 ns }
+se::save_metric timing.setup.numPaths.reg2out {5}
+se::save_metric timing.setup.numViolatingPaths.reg2out {0}
+se::save_metric timing.setup.WNS.reg2reg {0.184 ns }
+se::save_metric timing.setup.TNS.reg2reg {0.000 ns }
+se::save_metric timing.setup.numPaths.reg2reg {1542}
+se::save_metric timing.setup.numViolatingPaths.reg2reg {0}
+se::save_metric timing.DRV.maxCap.real.nets {0}
+se::save_metric timing.DRV.maxCap.real.terms {0}
+se::save_metric timing.DRV.maxCap.real.Worst {0.000}
+se::save_metric timing.DRV.maxCap.total.nets {0}
+se::save_metric timing.DRV.maxCap.total.terms {0}
+se::save_metric timing.DRV.maxTran.real.nets {0}
+se::save_metric timing.DRV.maxTran.real.terms {0}
+se::save_metric timing.DRV.maxTran.real.Worst {0.000}
+se::save_metric timing.DRV.maxTran.total.nets {0}
+se::save_metric timing.DRV.maxTran.total.terms {0}
+se::save_metric timing.DRV.maxFanout.real.nets {0}
+se::save_metric timing.DRV.maxFanout.real.terms {0}
+se::save_metric timing.DRV.maxFanout.real.Worst {0.000}
+se::save_metric timing.DRV.maxFanout.total.nets {1}
+se::save_metric timing.DRV.maxFanout.total.terms {1}
+se::save_metric design.util {96.175 %}
+se::save_metric route.overconH {0.011 %}
+se::save_metric route.overconV {0.172 %}
+se::save_metric route.overcon.total {0.000 %}
+se::save_metric route.overcon.worst {0.000 %}
+se::save_metric route.overcon.max {0.000 }
+se::save_metric cputime {0:01:36 }
+se::save_metric realtime {0:01:59 }
+se::save_metric mem {362.125 M}
+se::end_metric optDesign {-preCts}
+se::start_metric timeDesign {-preCts}
+se::save_metric timing.setup.WNS.all {-2.085 ns }
+se::save_metric timing.setup.TNS.all {-330.272 ns }
+se::save_metric timing.setup.numPaths.all {3089}
+se::save_metric timing.setup.numViolatingPaths.all {336}
+se::save_metric timing.setup.WNS.in2out {N/A}
+se::save_metric timing.setup.TNS.in2out {N/A}
+se::save_metric timing.setup.numPaths.in2out {N/A}
+se::save_metric timing.setup.numViolatingPaths.in2out {N/A}
+se::save_metric timing.setup.WNS.in2reg {-2.085 ns }
+se::save_metric timing.setup.TNS.in2reg {-330.272 ns }
+se::save_metric timing.setup.numPaths.in2reg {2587}
+se::save_metric timing.setup.numViolatingPaths.in2reg {336}
+se::save_metric timing.setup.WNS.reg2out {16.905 ns }
+se::save_metric timing.setup.TNS.reg2out {0.000 ns }
+se::save_metric timing.setup.numPaths.reg2out {5}
+se::save_metric timing.setup.numViolatingPaths.reg2out {0}
+se::save_metric timing.setup.WNS.reg2reg {0.184 ns }
+se::save_metric timing.setup.TNS.reg2reg {0.000 ns }
+se::save_metric timing.setup.numPaths.reg2reg {1542}
+se::save_metric timing.setup.numViolatingPaths.reg2reg {0}
+se::save_metric timing.DRV.maxCap.real.nets {0}
+se::save_metric timing.DRV.maxCap.real.terms {0}
+se::save_metric timing.DRV.maxCap.real.Worst {0.000}
+se::save_metric timing.DRV.maxCap.total.nets {0}
+se::save_metric timing.DRV.maxCap.total.terms {0}
+se::save_metric timing.DRV.maxTran.real.nets {0}
+se::save_metric timing.DRV.maxTran.real.terms {0}
+se::save_metric timing.DRV.maxTran.real.Worst {0.000}
+se::save_metric timing.DRV.maxTran.total.nets {0}
+se::save_metric timing.DRV.maxTran.total.terms {0}
+se::save_metric timing.DRV.maxFanout.real.nets {0}
+se::save_metric timing.DRV.maxFanout.real.terms {0}
+se::save_metric timing.DRV.maxFanout.real.Worst {0.000}
+se::save_metric timing.DRV.maxFanout.total.nets {1}
+se::save_metric timing.DRV.maxFanout.total.terms {1}
+se::save_metric design.util {96.175 %}
+se::save_metric route.overconH {0.011 %}
+se::save_metric route.overconV {0.178 %}
+se::save_metric route.overcon.total {0.000 %}
+se::save_metric route.overcon.worst {0.000 %}
+se::save_metric route.overcon.max {0.000 }
+se::save_metric cputime {0:00:00.0 }
+se::save_metric realtime {0:00:04.0 }
+se::save_metric mem {356.043 M}
+se::end_metric timeDesign {-preCts}
+se::start_metric optDesign {-preCts}
+se::save_metric timing.setup.WNS.all {-2.080 ns }
+se::save_metric timing.setup.TNS.all {-329.365 ns }
+se::save_metric timing.setup.numPaths.all {3089}
+se::save_metric timing.setup.numViolatingPaths.all {333}
+se::save_metric timing.setup.WNS.in2out {N/A}
+se::save_metric timing.setup.TNS.in2out {N/A}
+se::save_metric timing.setup.numPaths.in2out {N/A}
+se::save_metric timing.setup.numViolatingPaths.in2out {N/A}
+se::save_metric timing.setup.WNS.in2reg {-2.080 ns }
+se::save_metric timing.setup.TNS.in2reg {-329.365 ns }
+se::save_metric timing.setup.numPaths.in2reg {2587}
+se::save_metric timing.setup.numViolatingPaths.in2reg {333}
+se::save_metric timing.setup.WNS.reg2out {16.904 ns }
+se::save_metric timing.setup.TNS.reg2out {0.000 ns }
+se::save_metric timing.setup.numPaths.reg2out {5}
+se::save_metric timing.setup.numViolatingPaths.reg2out {0}
+se::save_metric timing.setup.WNS.reg2reg {0.182 ns }
+se::save_metric timing.setup.TNS.reg2reg {0.000 ns }
+se::save_metric timing.setup.numPaths.reg2reg {1542}
+se::save_metric timing.setup.numViolatingPaths.reg2reg {0}
+se::save_metric timing.DRV.maxCap.real.nets {0}
+se::save_metric timing.DRV.maxCap.real.terms {0}
+se::save_metric timing.DRV.maxCap.real.Worst {0.000}
+se::save_metric timing.DRV.maxCap.total.nets {0}
+se::save_metric timing.DRV.maxCap.total.terms {0}
+se::save_metric timing.DRV.maxTran.real.nets {0}
+se::save_metric timing.DRV.maxTran.real.terms {0}
+se::save_metric timing.DRV.maxTran.real.Worst {0.000}
+se::save_metric timing.DRV.maxTran.total.nets {0}
+se::save_metric timing.DRV.maxTran.total.terms {0}
+se::save_metric timing.DRV.maxFanout.real.nets {0}
+se::save_metric timing.DRV.maxFanout.real.terms {0}
+se::save_metric timing.DRV.maxFanout.real.Worst {0.000}
+se::save_metric timing.DRV.maxFanout.total.nets {1}
+se::save_metric timing.DRV.maxFanout.total.terms {1}
+se::save_metric design.util {95.777 %}
+se::save_metric route.overconH {0.011 %}
+se::save_metric route.overconV {0.179 %}
+se::save_metric route.overcon.total {0.000 %}
+se::save_metric route.overcon.worst {0.000 %}
+se::save_metric route.overcon.max {0.000 }
+se::save_metric cputime {0:01:06 }
+se::save_metric realtime {0:01:31 }
+se::save_metric mem {379.816 M}
+se::end_metric optDesign {-preCts}
+se::start_metric optDesign {-preCts}
+se::save_metric timing.setup.WNS.all {-2.077 ns }
+se::save_metric timing.setup.TNS.all {-329.152 ns }
+se::save_metric timing.setup.numPaths.all {3089}
+se::save_metric timing.setup.numViolatingPaths.all {332}
+se::save_metric timing.setup.WNS.in2out {N/A}
+se::save_metric timing.setup.TNS.in2out {N/A}
+se::save_metric timing.setup.numPaths.in2out {N/A}
+se::save_metric timing.setup.numViolatingPaths.in2out {N/A}
+se::save_metric timing.setup.WNS.in2reg {-2.077 ns }
+se::save_metric timing.setup.TNS.in2reg {-329.152 ns }
+se::save_metric timing.setup.numPaths.in2reg {2587}
+se::save_metric timing.setup.numViolatingPaths.in2reg {332}
+se::save_metric timing.setup.WNS.reg2out {16.905 ns }
+se::save_metric timing.setup.TNS.reg2out {0.000 ns }
+se::save_metric timing.setup.numPaths.reg2out {5}
+se::save_metric timing.setup.numViolatingPaths.reg2out {0}
+se::save_metric timing.setup.WNS.reg2reg {0.173 ns }
+se::save_metric timing.setup.TNS.reg2reg {0.000 ns }
+se::save_metric timing.setup.numPaths.reg2reg {1542}
+se::save_metric timing.setup.numViolatingPaths.reg2reg {0}
+se::save_metric timing.DRV.maxCap.real.nets {0}
+se::save_metric timing.DRV.maxCap.real.terms {0}
+se::save_metric timing.DRV.maxCap.real.Worst {0.000}
+se::save_metric timing.DRV.maxCap.total.nets {0}
+se::save_metric timing.DRV.maxCap.total.terms {0}
+se::save_metric timing.DRV.maxTran.real.nets {0}
+se::save_metric timing.DRV.maxTran.real.terms {0}
+se::save_metric timing.DRV.maxTran.real.Worst {0.000}
+se::save_metric timing.DRV.maxTran.total.nets {0}
+se::save_metric timing.DRV.maxTran.total.terms {0}
+se::save_metric timing.DRV.maxFanout.real.nets {0}
+se::save_metric timing.DRV.maxFanout.real.terms {0}
+se::save_metric timing.DRV.maxFanout.real.Worst {0.000}
+se::save_metric timing.DRV.maxFanout.total.nets {1}
+se::save_metric timing.DRV.maxFanout.total.terms {1}
+se::save_metric design.util {95.750 %}
+se::save_metric route.overconH {0.011 %}
+se::save_metric route.overconV {0.179 %}
+se::save_metric route.overcon.total {0.000 %}
+se::save_metric route.overcon.worst {0.000 %}
+se::save_metric route.overcon.max {0.000 }
+se::save_metric cputime {0:01:06 }
+se::save_metric realtime {0:01:27 }
+se::save_metric mem {397.305 M}
+se::end_metric optDesign {-preCts}
+se::start_metric timeDesign {-preCts}
+se::save_metric timing.setup.WNS.all {-2.075 ns }
+se::save_metric timing.setup.TNS.all {-329.681 ns }
+se::save_metric timing.setup.numPaths.all {3089}
+se::save_metric timing.setup.numViolatingPaths.all {332}
+se::save_metric timing.setup.WNS.in2out {N/A}
+se::save_metric timing.setup.TNS.in2out {N/A}
+se::save_metric timing.setup.numPaths.in2out {N/A}
+se::save_metric timing.setup.numViolatingPaths.in2out {N/A}
+se::save_metric timing.setup.WNS.in2reg {-2.075 ns }
+se::save_metric timing.setup.TNS.in2reg {-329.681 ns }
+se::save_metric timing.setup.numPaths.in2reg {2587}
+se::save_metric timing.setup.numViolatingPaths.in2reg {332}
+se::save_metric timing.setup.WNS.reg2out {16.905 ns }
+se::save_metric timing.setup.TNS.reg2out {0.000 ns }
+se::save_metric timing.setup.numPaths.reg2out {5}
+se::save_metric timing.setup.numViolatingPaths.reg2out {0}
+se::save_metric timing.setup.WNS.reg2reg {0.182 ns }
+se::save_metric timing.setup.TNS.reg2reg {0.000 ns }
+se::save_metric timing.setup.numPaths.reg2reg {1542}
+se::save_metric timing.setup.numViolatingPaths.reg2reg {0}
+se::save_metric timing.DRV.maxCap.real.nets {0}
+se::save_metric timing.DRV.maxCap.real.terms {0}
+se::save_metric timing.DRV.maxCap.real.Worst {0.000}
+se::save_metric timing.DRV.maxCap.total.nets {0}
+se::save_metric timing.DRV.maxCap.total.terms {0}
+se::save_metric timing.DRV.maxTran.real.nets {0}
+se::save_metric timing.DRV.maxTran.real.terms {0}
+se::save_metric timing.DRV.maxTran.real.Worst {0.000}
+se::save_metric timing.DRV.maxTran.total.nets {0}
+se::save_metric timing.DRV.maxTran.total.terms {0}
+se::save_metric timing.DRV.maxFanout.real.nets {0}
+se::save_metric timing.DRV.maxFanout.real.terms {0}
+se::save_metric timing.DRV.maxFanout.real.Worst {0.000}
+se::save_metric timing.DRV.maxFanout.total.nets {1}
+se::save_metric timing.DRV.maxFanout.total.terms {1}
+se::save_metric design.util {95.750 %}
+se::save_metric route.overconH {0.011 %}
+se::save_metric route.overconV {0.179 %}
+se::save_metric route.overcon.total {0.000 %}
+se::save_metric route.overcon.worst {0.000 %}
+se::save_metric route.overcon.max {0.000 }
+se::save_metric cputime {0:00:03.3 }
+se::save_metric realtime {0:00:03.0 }
+se::save_metric mem {393.234 M}
+se::end_metric timeDesign {-preCts}

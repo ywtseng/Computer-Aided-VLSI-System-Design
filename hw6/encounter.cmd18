@@ -1,0 +1,235 @@
+#######################################################
+#                                                     #
+#  Encounter Command Logging File                     #
+#  Created on Sat Dec 31 14:24:17 2016                #
+#                                                     #
+#######################################################
+
+#@(#)CDS: Encounter v10.13-s272_1 (32bit) 04/18/2012 16:36 (Linux 2.6)
+#@(#)CDS: NanoRoute v10.13-s027 NR120403-1008/10_10_USR3-UB (database version 2.30, 132.4.1) {superthreading v1.16}
+#@(#)CDS: CeltIC v10.13-s063_1 (32bit) 02/29/2012 09:38:16 (Linux 2.6.9-89.0.19.ELsmp)
+#@(#)CDS: AAE 10.13-s008 (32bit) 04/18/2012 (Linux 2.6.9-89.0.19.ELsmp)
+#@(#)CDS: CTE 10.13-s018_1 (32bit) Feb 28 2012 22:08:25 (Linux 2.6.9-89.0.19.ELsmp)
+#@(#)CDS: CPE v10.13-s225
+
+win
+loadConfig CHIP.conf 0
+create_rc_corner -name RC_corner -cap_table {library/tsmc013.capTbl} -preRoute_res {1.5} -preRoute_cap {1.5} -preRoute_clkres {0.0} -preRoute_clkcap {0.0} -postRoute_res {1.5} -postRoute_cap {1.5} -postRoute_xcap {1.5} -postRoute_clkres {0.0} -postRoute_clkcap {0.0} -qx_tech_file {library/tsmc13_8lm.cl/icecaps_8lm.tch}
+create_library_set -name lib_max -timing {library/lib/slow.lib library/lib/RF2SH64x16_slow_syn.lib library/lib/tpz013g3wc.lib} -si {library/celtic/slow.cdB}
+create_library_set -name lib_min -timing {library/lib/fast.lib library/lib/RF2SH64x16_fast@0C_syn.lib library/lib/tpz013g3lt.lib} -si {library/celtic/fast.cdB}
+create_constraint_mode -name func_mode -sdc_files {CHIP.sdc}
+create_delay_corner -name Delay_Corner_max -library_set {lib_max} -rc_corner {RC_corner}
+create_delay_corner -name Delay_Corner_min -library_set {lib_min} -rc_corner {RC_corner}
+create_analysis_view -name av_func_mode_max -constraint_mode {func_mode} -delay_corner {Delay_Corner_max}
+create_analysis_view -name av_func_mode_min -constraint_mode {func_mode} -delay_corner {Delay_Corner_min}
+commitConfig
+fit
+setDrawView fplan
+setDrawView ameba
+selectInst ipad_data01
+setDrawView fplan
+setDrawView ameba
+deselectAll
+selectInst ipad_data01
+setDrawView fplan
+deselectAll
+selectInst ipad_data02
+deselectAll
+selectInst ipad_data00
+deselectAll
+selectInst ipad_CoreVSS1
+deselectAll
+selectInst ipad_CoreVDD1
+deselectAll
+selectInst ipad_val
+deselectAll
+selectInst ipad_rst
+deselectAll
+selectInst ipad_clk
+setDrawView ameba
+deselectAll
+selectInst ipad_data15
+deselectAll
+selectInst opad_done
+deselectAll
+selectInst opad_freq0
+deselectAll
+selectInst opad_freq1
+deselectAll
+selectInst opad_freq2
+deselectAll
+selectInst opad_freq3
+clearGlobalNets
+clearGlobalNets
+globalNetConnect VDD -type pgpin -pin VDD -inst *
+globalNetConnect VSS -type pgpin -pin VSS -inst *
+globalNetConnect VDD -type tiehi -pin VSS -inst *
+globalNetConnect VSS -type tielo -pin VSS -inst *
+deselectAll
+selectInst opad_freq3
+deselectAll
+selectInst opad_freq3
+deselectAll
+selectInst opad_freq2
+deselectAll
+specifyScanChain scan1 -start ipad_SCAN_IN/C -stop opad_SCAN_OUT/I
+scanTrace
+getIoFlowFlag
+setIoFlowFlag 0
+floorPlan -site TSM13SITE -r 1 0.8 80 80 80 80
+uiSetTool select
+getIoFlowFlag
+fit
+setDrawView fplan
+setDrawView ameba
+setPlaceMode -fp true
+placeDesign -noPrePlaceOpt
+setDrawView fplan
+selectObject Module FAS
+windowSelect 1367.833 238.737 1425.932 240.552
+selectObject Module FAS
+deselectAll
+selectInst CORNER2
+deselectAll
+selectObject Module FAS
+deselectAll
+selectObject Module FAS
+flipOrRotateObject -rotate R90
+deselectAll
+selectObject Module FAS
+deselectAll
+selectInst CORNER1
+deselectAll
+selectInst CORNER1
+windowSelect 952.066 796.119 926.648 785.225
+selectObject Module FAS
+deselectAll
+selectInst CORNER2
+deselectAll
+selectInst ipad_data09
+deselectAll
+setDrawView place
+selectInst FAS/mult_48/U20
+deselectAll
+selectInst FAS/mult_45/U16
+deselectAll
+selectInst FAS/add_77/U1_1
+deselectAll
+selectInst FAS/mult_44/U76
+setDrawView ameba
+setDrawView fplan
+setDrawView ameba
+setDrawView place
+deselectAll
+selectInst CORNER1
+setDrawView ameba
+setDrawView place
+deselectAll
+selectInst FAS/d30_reg_11_
+deselectAll
+selectInst CORNER0
+deselectAll
+selectInst FAS/BF2I_a05_r_reg_15_
+deselectAll
+setDrawView ameba
+selectObject Module FAS
+flipOrRotateObject -rotate R90
+windowSelect 449.212 696.795 421.435 796.325
+selectObject Module FAS
+windowSelect 416.806 750.032 379.772 840.303
+windowSelect 361.255 835.674 368.199 817.157
+selectObject Module FAS
+windowSelect 530.224 574.119 488.560 590.322
+selectObject Module FAS
+deselectAll
+selectInst opad_freq3
+deselectAll
+selectObject Module FAS
+deselectAll
+selectObject Module FAS
+deselectAll
+selectObject Module FAS
+setDrawView place
+deselectAll
+windowSelect 648.271 590.322 708.452 641.244
+deselectAll
+selectInst FAS/BF2II_a00_i_reg_12_
+windowSelect 634.383 550.972 405.233 500.050
+deselectAll
+selectInst FAS/mult_44/U19
+uiSetTool move
+deselectAll
+selectInst FAS/d15_reg_11_
+setObjFPlanBox Instance FAS/d15_reg_11_ 525.2175 601.399 533.9575 605.089
+deselectAll
+selectInst FAS/d01_reg_4_
+setObjFPlanBox Instance FAS/d01_reg_4_ 542.0265 525.3515 550.7665 529.0415
+setObjFPlanBox Instance FAS/d01_reg_4_ 365.9665 775.602 374.7065 779.292
+setDrawView fplan
+deselectAll
+selectObject Module FAS
+setObjFPlanBox Module FAS -530.7625 -6.944 -16.2025 506.673
+setObjFPlanBox Module FAS -530.7625 2.3145 -16.2025 515.9315
+setObjFPlanBox Module FAS -533.0775 -4.6295 -18.5175 508.9875
+setObjFPlanBox Module FAS 1212.1655 643.4715 1726.7255 1157.0885
+setObjFPlanBox Module FAS 1193.6485 717.54 1708.2085 1231.157
+setObjFPlanBox Module FAS 1158.929 699.023 1673.489 1212.64
+deselectAll
+selectInst opad_freq3
+setObjFPlanBox Instance opad_freq3 919.095 826.682 1165.095 861.682
+setDrawView ameba
+setDrawView place
+setDrawView ameba
+setDrawView fplan
+deselectAll
+selectObject Module FAS
+setObjFPlanBox Module FAS 1187.423 695.0585 1701.703 1207.9685
+setObjFPlanBox Module FAS 1198.9965 648.7655 1713.2765 1161.6755
+setDrawView ameba
+setObjFPlanBox Module FAS 1365.651 614.046 1879.931 1126.956
+setDrawView place
+setDrawView fplan
+setObjFPlanBox Module FAS 1344.819 604.787 1859.099 1117.697
+setObjFPlanBox Module FAS 1284.638 558.4945 1798.918 1071.4045
+undo
+undo
+undo
+undo
+undo
+deselectAll
+selectInst CORNER1
+setObjFPlanBox Instance CORNER1 882.061 912.326 1128.061 1158.326
+setObjFPlanBox Instance CORNER1 930.669 914.6405 1176.669 1160.6405
+deselectAll
+selectObject Module FAS
+setObjFPlanBox Module FAS 1282.324 623.304 1796.604 1136.214
+setObjFPlanBox Module FAS 1208.255 644.136 1722.535 1157.046
+setObjFPlanBox Module FAS 1150.389 563.123 1664.669 1076.033
+deselectAll
+selectInst CORNER1
+setObjFPlanBox Instance CORNER1 923.7245 912.3265 1169.7245 1158.3265
+deselectAll
+selectObject Module FAS
+setObjFPlanBox Module FAS 1176.31 641.218 1690.13 1154.128
+setObjFPlanBox Module FAS 1282.7835 638.9035 1796.6035 1151.8135
+setObjFPlanBox Module FAS 1303.6155 636.589 1817.4355 1149.499
+setObjFPlanBox Module FAS 1278.154 636.589 1791.974 1149.499
+setObjFPlanBox Module FAS 1282.7835 629.645 1796.6035 1142.555
+uiSetTool select
+deselectAll
+selectObject Module FAS
+deselectAll
+selectObject Module FAS
+uiSetTool move
+setObjFPlanBox Module FAS 1278.1545 638.9035 1791.9745 1151.8135
+setObjFPlanBox Module FAS 1259.6375 627.3305 1773.4575 1140.2405
+setObjFPlanBox Module FAS 1261.952 620.3865 1775.772 1133.2965
+setObjFPlanBox Module FAS 1241.12 604.184 1754.94 1117.094
+setObjFPlanBox Module FAS 1231.8615 638.9035 1745.6815 1151.8135
+uiSetTool select
+deselectAll
+selectObject Module FAS
+deselectAll
+selectInst CORNER1
+deselectAll
+selectObject Module FAS

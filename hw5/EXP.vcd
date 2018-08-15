@@ -1,0 +1,33 @@
+$date
+    Dec 12, 2016  17:01:31
+$end
+$version
+    TOOL:	ncsim	10.20-s114
+$end
+$timescale
+    10 ps
+$end
+
+$scope module test_conv $end
+$var parameter 32 !    N_DATAOUT  $end
+$var parameter 32 "    N_DATAIN  $end
+
+$scope module EXP $end
+$var parameter  2 #    IDLE  $end
+$var parameter  2 $    CAL  $end
+$var parameter  2 %    OUT  $end
+$var parameter  2 &    DONE  $end
+$upscope $end
+
+$upscope $end
+
+$enddefinitions $end
+$dumpvars
+b11 &
+b10 %
+b1 $
+b0 #
+b1010000 "
+b101000 !
+$end
+#90200

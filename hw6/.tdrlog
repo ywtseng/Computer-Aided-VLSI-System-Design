@@ -1,0 +1,48 @@
+
+
+Setting Timing Driven Routing Constraints ...  Sun Jan  1 16:53:29 2017
+================================================================================
+
+DESIGN BOUNDARY (0.00 0.00)(2466.91 2460.46)
+CONGESTION RATIO 0.09
+NET BBOX CONGESTED RATIO 0.14 (12/84)
+NET BBOX ON BLOCK RATIO  0.00 (0/84)
+
+slack(+2.360, +12.753, +18.902) std_dev(6.481,9.621) base(2.360) 1.5*sigma(3.031,-1.679)
++2.410 (5), +2.460 (0), +2.510 (1), +2.560 (0), +2.610 (0)
++2.660 (0), +2.760 (0), +2.860 (2), +2.960 (0), +3.160 (0)
++3.360 (0), +3.860 (18), +4.360 (0), +5.360 (0), +5.360^(58)
+
+[1] ...
+total_net(22977) set(10) bad(0) tieup(0) special(0)
+dont_route(22893) hi_fanout(0) already_constr(0) short_net(2) pos_slack(57)
+no driver(0) no_receiver(0) io_net(0)
+no expansion(15)
+1.2(6) 1.5(1) 2.0(1) 2.5(0)
+3.0(0) 3.5(1) 4.0(0) 4.5(1)
+5.0(0) 5.5(0) 6.0(0) 6.5(0)
+7.0(0) 7.5(0) 8.0(0) 9.0(0)
+10(0)  11(0)  12(0)  13(0)
+14(0)  15(0)  16(0)  17(0)
+18(0)  19(0)  20(0)  max(4.50)
+
+[2] ...
+select (+2.360 : +2.360)
+total_net(22977) select(0) bad(0) tieup(0) special(0) dont_route(22889)
+hi_fanout(0) already_constr(4) short_net(14) no_timing(0) pos_slack(70)
+
+
+[3] ...
+M1 res 0.087000 ohm, cap 0.207654 ff, delay 0.112912 ns
+M2 res 0.057000 ohm, cap 0.237381 ff, delay 0.067654 ns
+M3 res 0.057000 ohm, cap 0.275469 ff, delay 0.078509 ns
+M4 res 0.057000 ohm, cap 0.238450 ff, delay 0.067958 ns
+M5 res 0.057000 ohm, cap 0.275198 ff, delay 0.078431 ns
+M6 res 0.057000 ohm, cap 0.240810 ff, delay 0.068631 ns
+M7 res 0.020000 ohm, cap 0.329264 ff, delay 0.032926 ns
+M8 res 0.020000 ohm, cap 0.244745 ff, delay 0.011125 ns
+prefer (2 - 8)
+select (+2.360 : +0.000)
+total_net(22977) select(0) bad(0) tieup(0) special(0) dont_route(22893)
+hi_fanout(0) already_constr(0) short_net(74) pos_slack(10)
+

@@ -1,0 +1,87 @@
+ncsim 10.20-s114
+Linux 3.12.21-gentoo-r1 #1 SMP Wed Jul 30 16:01:50 CST 2014 x86_64
+CPU cores: 16
+Limit information:
+======================================
+cputime			unlimited
+filesize		unlimited
+datasize		unlimited
+stacksize		8192 kbytes
+coredumpsize	0 kbytes
+memoryuse		unlimited
+vmemoryuse		unlimited
+descriptors		1024
+memorylocked	64 kbytes
+maxproc			386050
+======================================
+Runtime environment variables:
+MANPATH=/etc/java-config-2/current-system-vm/man:/usr/local/share/man:/usr/share/man:/usr/share/gcc-data/x86_64-pc-linux-gnu/4.8.3/man:/usr/share/binutils-data/x86_64-pc-linux-gnu/2.24/man:/etc/java-config-2/current-system-vm/man/:/usr/cad/synopsys/synthesis/cur/doc/syn/man
+TERM=xterm
+SHELL=/bin/bash
+SSH_CLIENT=140.112.48.61 13134 22
+SSH_TTY=/dev/pts/0
+USER=ywtseng
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=01;05;37;41:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.pdf=00;32:*.ps=00;32:*.txt=00;32:*.patch=00;32:*.diff=00;32:*.log=00;32:*.tex=00;32:*.doc=00;32:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:
+MULTIOSDIRS=../lib64:../lib32
+PAGER=/usr/bin/less
+CONFIG_PROTECT_MASK=/etc/gentoo-release /etc/sandbox.d /etc/fonts/fonts.conf /etc/terminfo /etc/ca-certificates.conf /etc/revdep-rebuild
+MAIL=/var/mail/ywtseng
+PATH=/usr/cad/synopsys/tmax/cur/bin:/usr/cad/spring_soft/verdi/cur/bin:/usr/cad/spring_soft/verdi/cur/nLint/bin:/usr/cad/cadence/EDI/cur/tools/celtic/bin:/usr/cad/cadence/EDI/cur/tools/plato/bin:/usr/cad/cadence/EDI/cur/tools/dfII/bin:/usr/cad/cadence/EDI/cur/tools/fe/bin:/usr/cad/cadence/EDI/cur/tools/cdsdoc/bin:/usr/cad/cadence/EDI/cur/tools/bin:/usr/cad/cadence/EDI/cur//tools/tlfUtil/bin:/usr/cad/cadence/INCISIV/cur/tools/bin:/usr/cad/cadence/INCISIV/cur/tools/vtools/vfault/bin:/usr/cad/cadence/INCISIV/cur/tools/dfII/bin:/usr/bin/X11:/usr/cad/synopsys/synthesis/cur/amd64/syn/bin:/usr/local/bin:/usr/bin:/bin:/opt/bin:/usr/x86_64-pc-linux-gnu/gcc-bin/4.8.3
+HG=/usr/bin/hg
+PWD=/home/ywtseng/cvsd/hw5
+JAVA_HOME=/etc/java-config-2/current-system-vm
+JAVAC=/etc/java-config-2/current-system-vm/bin/javac
+EDITOR=/usr/bin/vi
+QT_GRAPHICSSYSTEM=native
+JDK_HOME=/etc/java-config-2/current-system-vm
+SHLVL=2
+HOME=/home/ywtseng
+LESS=-R -M --shift 5
+LOGNAME=ywtseng
+GCC_SPECS=
+CVS_RSH=ssh
+SSH_CONNECTION=140.112.48.61 13134 192.168.20.25 22
+LESSOPEN=|lesspipe %s
+ES_BASHCOMP_DIRS=/usr/share/bash-completion/completions
+INFOPATH=/usr/share/info:/usr/share/gcc-data/x86_64-pc-linux-gnu/4.8.3/info:/usr/share/binutils-data/x86_64-pc-linux-gnu/2.24/info:/usr/share/info/emacs-24
+DISPLAY=localhost:10.0
+RUBYOPT=-rauto_gem
+OPENGL_PROFILE=xorg-x11
+CONFIG_PROTECT=/usr/share/gnupg/qualified.txt
+_=/bin/tcsh
+HOSTTYPE=x86_64-linux
+VENDOR=unknown
+OSTYPE=linux
+MACHTYPE=x86_64
+GROUP=stu105
+HOST=eda25
+REMOTEHOST=eda.ee.ntu.edu.tw
+LM_LICENSE_FILE=26585@lsntu:5219@lsntu:5280@lsntu:5280@lsnctu:5280@lsncu
+SYNTHESIS=/usr/cad/synopsys/synthesis/cur
+SYNOPSYS=/usr/cad/synopsys/synthesis/cur
+SYN_MAN_DIR=/usr/cad/synopsys/synthesis/cur/doc/syn/man
+LD_LIBRARY_PATH=/usr/cad/spring_soft/verdi/cur/share/PLI/IUS/LINUX/::/usr/cad/cadence/EDI/cur//tools/tlfUtil/lib:/usr/cad/cadence/INCISIV/cur/tools/lib:/usr/cad/cadence/INCISIV/cur/tools/vtools/vfault/lib:/usr/openwin/lib:/usr/dt/lib:/usr/lib:/usr/local/lib
+ENCOUNTER=/usr/cad/cadence/EDI/cur/tools/fe
+OAHOME=/usr/cad/cadence/EDI/cur/oa_v22.41.013
+OA_HOME=/usr/cad/cadence/EDI/cur/oa_v22.41.013
+SHLIB_PATH=/usr/cad/spring_soft/verdi/cur/share/PLI/IUS/LINUX
+USE_PIPE=1
+SYNOPSYS_TMAX=/usr/cad/synopsys/tmax/cur
+/net/home/ywtseng/cvsd/hw5/INCA_libs/irun.lnx86.10.20.nc/svpp.ts
+CDS_ARCH=lnx86
+NCRUNMODE=ncverilog:./INCA_libs/irun.lnx86.10.20.nc
+IRUNBATCH=FALSE
+TCL_LIBRARY=/usr/cad/cadence/INCISIV/cur/tools/inca/files/tcl/library
+Runtime command line arguments:
+argv[0]=ncverilog
+argv[1]=EXP_tb.v
+argv[2]=EXP.v
+79 profile - 100
+          CPU/Mem usage: 0.030 sys,  0.040 user,  41.41M sys,  0.00M vm
+80 VC callback profile - scalar:0 vector:0
+81 Mon Dec 12 17:01:31 2016
+82 pliAppInit
+83 pliAppMiscSet: New Sim Round
+84 LIBSSCORE=found /usr/cad/spring_soft/verdi/cur/share/PLI/IUS/LINUX/libsscore_ius102.so through $LD_LIBRARY_PATH setting.
+85 Catch signal 11. Stack trace follows:
+stack trace not available86 Sim process exit

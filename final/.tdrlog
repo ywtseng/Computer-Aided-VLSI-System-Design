@@ -1,0 +1,52 @@
+
+
+Setting Timing Driven Routing Constraints ...  Fri Jan  6 19:33:25 2017
+================================================================================
+
+DESIGN BOUNDARY (0.00 0.00)(1327.89 1327.63)
+CONGESTION RATIO 0.32
+NET BBOX CONGESTED RATIO 0.35 (11381/32562)
+NET BBOX ON BLOCK RATIO  0.00 (0/32562)
+
+slack(-0.029, +1.390, +9.161) std_dev(1.665,0.823) base(0.155) 1.5*sigma(-1.108,0.155)
++0.021 (260), +0.071 (367), +0.121 (544), +0.171 (725), +0.221 (739)
++0.271 (707), +0.371 (1721), +0.471 (2121), +0.571 (2986), +0.771 (4551)
++0.971 (3045), +1.471 (5006), +1.971 (3797), +2.971 (3507), +2.971^(2486)
+
+[1] ...
+total_net(32822) set(23623) bad(0) tieup(0) special(0)
+dont_route(120) hi_fanout(13) already_constr(0) short_net(3146) pos_slack(140)
+no driver(0) no_receiver(0) io_net(0)
+no expansion(5780)
+1.2(2734) 1.5(1379) 2.0(1219) 2.5(1153)
+3.0(1215) 3.5(1270) 4.0(1207) 4.5(1160)
+5.0(1034) 5.5(976) 6.0(839) 6.5(827)
+7.0(727) 7.5(705) 8.0(1281) 9.0(1068)
+10(966)  11(790)  12(723)  13(642)
+14(528)  15(436)  16(382)  17(362)
+18(0)  19(0)  20(0)  max(17.00)
+
+[2] ...
+select (-0.029 : +0.971)
+total_net(32822) select(11985) bad(0) tieup(0) special(0) dont_route(63)
+hi_fanout(41) already_constr(57) short_net(11683) no_timing(0) pos_slack(8993)
+net lengths min(10.00) med(80.93) max(1372.65)
+short threshold(161.87) long threshold(726.79)
+(1000)
+(200)
+
+[3] ...
+M1 res 0.087000 ohm, cap 0.207654 ff, delay 0.112912 ns
+M2 res 0.057000 ohm, cap 0.237381 ff, delay 0.067654 ns
+M3 res 0.057000 ohm, cap 0.275469 ff, delay 0.078509 ns
+M4 res 0.057000 ohm, cap 0.238450 ff, delay 0.067958 ns
+M5 res 0.057000 ohm, cap 0.275198 ff, delay 0.078431 ns
+M6 res 0.057000 ohm, cap 0.240810 ff, delay 0.068631 ns
+M7 res 0.020000 ohm, cap 0.329264 ff, delay 0.032926 ns
+M8 res 0.020000 ohm, cap 0.244745 ff, delay 0.011125 ns
+prefer (2 - 8)
+select (-0.029 : +0.000)
+total_net(32822) select(32) bad(0) tieup(0) special(0) dont_route(120)
+hi_fanout(13) already_constr(0) short_net(29542) pos_slack(3115)
+(1)
+

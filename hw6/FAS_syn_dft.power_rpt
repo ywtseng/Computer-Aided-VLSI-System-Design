@@ -1,0 +1,40 @@
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: There is no defined clock in the design. (PWR-80)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : FAS
+Version: D-2010.03-SP5
+Date   : Thu Dec  1 23:59:42 2016
+****************************************
+
+
+Library(s) Used:
+
+    typical (File: /net/home/ywtseng/cvsd/hw3/typical.db)
+
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 1.2  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+  Cell Internal Power  =  24.6213 mW   (87%)
+  Net Switching Power  =   3.7231 mW   (13%)
+                         ---------
+Total Dynamic Power    =  28.3443 mW  (100%)
+
+Cell Leakage Power     =  82.4252 uW
+
+1

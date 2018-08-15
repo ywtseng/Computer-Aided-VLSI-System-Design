@@ -1,0 +1,9 @@
+setAnalysisMode -analysisType single -checkType setup -clkSrcPath false -clockPropagation forcedIdeal -virtualIPO false
+setTrialRouteMode -fixAirConnect true -handlePreroute true -keepMarkedOptRoutes true
+setOptMode -considerViaResInStnLayerAssignment true -drcMargin 0.2 -effort high -expNetBasedRCScalesMode 7 -fixCap true -fixDrc true -fixFanoutLoad false -fixTran true -maxLocalDensity 3 -placeDesignInPlaceOptPerformed true -route noPreserve -rPlace false -setupTargetSlack 0.1
+setExtractRCMode  -engine preRoute
+setDelayCalMode -engine default
+setCTSMode -moveGateLimit 25
+setPlaceMode -fp false -ignoreScan true -relaxSoftBlockageMode 2 -timingDriven true
+setIlmMode -highFanoutPort true -loopBack false 
+setImportMode -config true -keepEmptyModule true -treatUndefinedCellAsBbox false

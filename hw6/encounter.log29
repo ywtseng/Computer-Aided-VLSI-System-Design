@@ -1,0 +1,687 @@
+Checking out Encounter license ...
+Encounter_Digital_Impl_Sys_XL 10.1 license checkout succeeded.
+You can run 2 CPU jobs with the base license that is currently checked out.
+If required, use the setMultiCpuUsage command to enable multi-CPU processing.
+This Encounter release has been compiled with OA version 22.04-p013.
+
+*******************************************************************
+*   Copyright (c)  Cadence Design Systems, Inc.  1996 - 2011.     *
+*                     All rights reserved.                        *
+*                                                                 *
+*                                                                 *
+*                                                                 *
+* This program contains confidential and trade secret information *
+* of Cadence Design Systems, Inc. and is protected by copyright   *
+* law and international treaties.  Any reproduction, use,         *
+* distribution or disclosure of this program or any portion of it,*
+* or any attempt to obtain a human-readable version of this       *
+* program, without the express, prior written consent of          *
+* Cadence Design Systems, Inc., is strictly prohibited.           *
+*                                                                 *
+*                 Cadence Design Systems, Inc.                    *
+*                    2655 Seely Avenue                            *
+*                   San Jose, CA 95134,  USA                      *
+*                                                                 *
+*                                                                 *
+*******************************************************************
+
+@(#)CDS: Encounter v10.13-s272_1 (32bit) 04/18/2012 16:36 (Linux 2.6)
+@(#)CDS: NanoRoute v10.13-s027 NR120403-1008/10_10_USR3-UB (database version 2.30, 132.4.1) {superthreading v1.16}
+@(#)CDS: CeltIC v10.13-s063_1 (32bit) 02/29/2012 09:38:16 (Linux 2.6.9-89.0.19.ELsmp)
+@(#)CDS: AAE 10.13-s008 (32bit) 04/18/2012 (Linux 2.6.9-89.0.19.ELsmp)
+@(#)CDS: CTE 10.13-s018_1 (32bit) Feb 28 2012 22:08:25 (Linux 2.6.9-89.0.19.ELsmp)
+@(#)CDS: CPE v10.13-s225
+--- Starting "Encounter v10.13-s272_1" on Sat Dec 31 17:17:12 2016 (mem=46.1M) ---
+--- Running on eda25 (x86_64 w/Linux 3.12.21-gentoo-r1) ---
+This version was compiled on Wed Apr 18 16:36:14 PDT 2012.
+Set DBUPerIGU to 1000.
+Set net toggle Scale Factor to 1.00
+Set Shrink Factor to 1.00000
+<CMD> win
+*** Memory pool thread-safe mode activated.
+<CMD> loadConfig CHIP.conf 0
+Reading config file - CHIP.conf
+**WARN: (ENCSYT-709):	The next major release of EDI (11.1) will use the
+Multi-Mode/Multi-Corner (MMMC) architecture exclusively for configuration and
+control of some software features. The current configuration will continue to
+work in this release. But for compatibility with the future releases you
+should migrate your design to an MMMC style configuration. You can refer to
+the What's New document for this release for additional information on the
+11.1 migration to MMMC. In addition, you can run loadConfig with the
+-showEolWarnings option to identify specific command and configuration
+options that will no longer be supported.
+<CMD> create_rc_corner -name RC_corner -cap_table {library/tsmc013.capTbl} -preRoute_res {1.0} -preRoute_cap {1.0} -preRoute_clkres {0.0} -preRoute_clkcap {0.0} -postRoute_res {1.0} -postRoute_cap {1.0} -postRoute_xcap {1.0} -postRoute_clkres {0.0} -postRoute_clkcap {0.0} -qx_tech_file {library/tsmc13_8lm.cl/icecaps_8lm.tch}
+<CMD> create_library_set -name lib_max -timing {library/lib/slow.lib library/lib/RF2SH64x16_slow_syn.lib library/lib/tpz013g3wc.lib} -si {library/celtic/slow.cdB}
+<CMD> create_library_set -name lib_min -timing {library/lib/fast.lib library/lib/RF2SH64x16_fast@0C_syn.lib library/lib/tpz013g3lt.lib} -si {library/celtic/fast.cdB}
+<CMD> create_constraint_mode -name func_mode -sdc_files {CHIP.sdc}
+<CMD> create_delay_corner -name Delay_Corner_max -library_set {lib_max} -rc_corner {RC_corner}
+<CMD> create_delay_corner -name Delay_Corner_min -library_set {lib_min} -rc_corner {RC_corner}
+<CMD> create_analysis_view -name av_func_mode_max -constraint_mode {func_mode} -delay_corner {Delay_Corner_max}
+<CMD> commitConfig
+
+Loading Lef file library/lef/tsmc13fsg_8lm_cic.lef...
+Set DBUPerIGU to M2 pitch 920.
+
+Loading Lef file library/lef/tpz013g3_8lm_cic.lef...
+
+Loading Lef file library/lef/RF2SH64x16.vclef...
+WARNING (LEFPARS-2007): NAMESCASESENSITIVE statement is obsolete in version 5.6 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file library/lef/RF2SH64x16.vclef at line 12.
+
+Loading Lef file library/lef/antenna_8.lef...
+**WARN: (ENCLF-119):	the layer 'METAL1' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'METAL2' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'METAL3' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'METAL4' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'METAL5' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'METAL6' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'METAL7' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'METAL8' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'VIA12' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'VIA23' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'VIA34' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'VIA45' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'VIA56' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'VIA67' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'VIA78' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-44):	Macro 'PDC0102CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PDC0204CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PDC0408CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PDC1216CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PDS0102CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PDS0204CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PDS0408CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PDS1216CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PRC0102CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PRC0204CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PRC0408CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PRC1216CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PRS0102CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PRS0204CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PRS0408CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PRS1216CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PVDD1CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PVSS1CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PVSS3CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PXOE1CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (EMS-62):	Message <ENCLF-44> has exceeded the default message display limit of 20.
+To avoid this warning, increase the display limit per unique message
+by using the set_message_limit <number> command.
+The message limit can be removed by using the unset_message_limit command.
+Note that setting a very large number using the set_message_limit command
+or removing the message limit using the unset_message_limit command can
+significantly increase the log file size.
+To suppress a message, use suppress_message command.
+**WARN: (ENCLF-200):	Pin 'AA[0]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'AA[1]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'AA[2]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'AA[3]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'AA[4]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'AA[5]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'AB[0]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'AB[1]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'AB[2]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'AB[3]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'AB[4]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'AB[5]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'CENA' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'CENB' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'CLKA' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'CLKB' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'DB[0]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'DB[10]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'DB[11]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'DB[12]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (EMS-62):	Message <ENCLF-200> has exceeded the default message display limit of 20.
+To avoid this warning, increase the display limit per unique message
+by using the set_message_limit <number> command.
+The message limit can be removed by using the unset_message_limit command.
+Note that setting a very large number using the set_message_limit command
+or removing the message limit using the unset_message_limit command can
+significantly increase the log file size.
+To suppress a message, use suppress_message command.
+
+Power Planner/ViaGen version 8.1.46 promoted on 02/17/2009.
+viaInitial starts at Sat Dec 31 17:17:33 2016
+**WARN: (ENCPP-557):	a single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. You should remove this statement from your LEF file.
+	VIARULE TURNM1 GENERATE
+**WARN: (ENCPP-557):	a single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. You should remove this statement from your LEF file.
+	VIARULE TURNM2 GENERATE
+**WARN: (ENCPP-557):	a single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. You should remove this statement from your LEF file.
+	VIARULE TURNM3 GENERATE
+**WARN: (ENCPP-557):	a single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. You should remove this statement from your LEF file.
+	VIARULE TURNM4 GENERATE
+**WARN: (ENCPP-557):	a single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. You should remove this statement from your LEF file.
+	VIARULE TURNM5 GENERATE
+**WARN: (ENCPP-557):	a single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. You should remove this statement from your LEF file.
+	VIARULE TURNM6 GENERATE
+**WARN: (ENCPP-557):	a single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. You should remove this statement from your LEF file.
+	VIARULE TURNM7 GENERATE
+**WARN: (ENCPP-557):	a single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. You should remove this statement from your LEF file.
+	VIARULE TURNM8 GENERATE
+viaInitial ends at Sat Dec 31 17:17:33 2016
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist 'FAS_syn.v'
+
+*** Memory Usage v#1 (Current mem = 230.004M, initial mem = 46.102M) ***
+*** End netlist parsing (cpu=0:00:00.1, real=0:00:00.0, mem=230.0M) ***
+Set top cell to CHIP.
+Reading common timing library 'library/lib/slow.lib' ...
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO0' of cell 'ACCSHCINX2' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO1' of cell 'ACCSHCINX2' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO0' of cell 'ACCSHCINX4' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO1' of cell 'ACCSHCINX4' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO0N' of cell 'ACCSHCONX2' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO1N' of cell 'ACCSHCONX2' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO0N' of cell 'ACCSHCONX4' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO1N' of cell 'ACCSHCONX4' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO0N' of cell 'ACCSIHCONX2' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO1N' of cell 'ACCSIHCONX2' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO0N' of cell 'ACCSIHCONX4' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO1N' of cell 'ACCSIHCONX4' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ACHCINX2' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ACHCINX4' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CON' of cell 'ACHCONX2' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CON' of cell 'ACHCONX4' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFHX1' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFHX1' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFHX2' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFHX2' is not defined in the library.
+Message <TECHLIB-436> has exceeded the message display limit of '20'. setMessageLimit/set_message_limit sets the limit. unsetMessageLimit/unset_message_limit can be used to reset this.
+No function defined for cell 'HOLDX1'. The cell will only be used for analysis.
+ read 527 cells in library 'slow' 
+Reading common timing library 'library/lib/RF2SH64x16_slow_syn.lib' ...
+ read 1 cells in library 'USERLIB' 
+Reading common timing library 'library/lib/tpz013g3wc.lib' ...
+No function defined for cell 'PVSS3DGZ'. The cell will only be used for analysis.
+No function defined for cell 'PVSS2DGZ'. The cell will only be used for analysis.
+No function defined for cell 'PVSS1DGZ'. The cell will only be used for analysis.
+No function defined for cell 'PVDD2POC'. The cell will only be used for analysis.
+No function defined for cell 'PVDD2DGZ'. The cell will only be used for analysis.
+No function defined for cell 'PVDD1DGZ'. The cell will only be used for analysis.
+ read 124 cells in library 'tpz013g3wc' 
+*** End library_loading (cpu=0.02min, mem=10.0M, fe_cpu=0.12min, fe_mem=240.0M) ***
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell CHIP ...
+*** Netlist is unique.
+** info: there are 753 modules.
+** info: there are 10035 stdCell insts.
+** info: there are 24 Pad insts.
+
+*** Memory Usage v#1 (Current mem = 248.637M, initial mem = 46.102M) ***
+CTE reading timing constraint file 'CHIP.sdc' ...
+**WARN: (TCLCMD-1013):	The SDC set_operating_conditions assertion is not supported. Please use the Encounter setOpCond command to specify library and operating condition information. Use the setAnalysisMode command to control single vs. bestCase/worstCase vs. on-chip variation timing analysis. (File CHIP.sdc, Line 10).
+
+**WARN: (TCLCMD-513):	No matching object found for 'data_valid' (File CHIP.sdc, Line 17).
+
+**ERROR: (TCLCMD-917):	Cannot find 'ports' that match 'data_valid' (File CHIP.sdc, Line 17).
+
+**ERROR: (TCLCMD-917):	Cannot find 'ports, pins, designs or library cell pins' that match '' (File CHIP.sdc, Line 17).
+
+**WARN: (TCLCMD-513):	No matching object found for 'data_valid' (File CHIP.sdc, Line 40).
+
+**ERROR: (TCLCMD-917):	Cannot find 'ports' that match 'data_valid' (File CHIP.sdc, Line 40).
+
+**WARN: (TCLCMD-513):	No matching object found for '' (File CHIP.sdc, Line 40).
+
+**ERROR: (TCLNL-312):	set_input_delay: Invalid list of pins: '' (File CHIP.sdc, Line 40).
+
+**WARN: (TCLCMD-513):	No matching object found for 'data_valid' (File CHIP.sdc, Line 63).
+
+**ERROR: (TCLCMD-917):	Cannot find 'ports' that match 'data_valid' (File CHIP.sdc, Line 63).
+
+**WARN: (TCLCMD-513):	No matching object found for '' (File CHIP.sdc, Line 63).
+
+**ERROR: (TCLNL-312):	set_drive: Invalid list of pins: '' (File CHIP.sdc, Line 63).
+
+INFO (CTE): read_dc_script finished with  6 WARNING and 6 ERROR
+WARNING (CTE-25): Line: 8 of File CHIP.sdc : Skipped unsupported command: set_units
+
+
+*** Read timing constraints (cpu=0:00:00.0 mem=253.9M) ***
+Total number of combinational cells: 362
+Total number of sequential cells: 154
+Total number of tristate cells: 10
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers: BUFX2 BUFX12 BUFX16 BUFX20 BUFX3 CLKBUFX2 BUFX4 BUFX6 BUFX8 CLKBUFX12 CLKBUFX16 CLKBUFX20 CLKBUFX3 CLKBUFX4 CLKBUFX6 CLKBUFX8
+Total number of usable buffers: 16
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: CLKINVX1 CLKINVX2 CLKINVX12 CLKINVX16 CLKINVX20 CLKINVX3 CLKINVX4 CLKINVX6 CLKINVX8 INVX1 INVX2 INVX12 INVX16 INVX20 INVXL INVX3 INVX4 INVX6 INVX8
+Total number of usable inverters: 19
+List of unusable inverters: RFRDX2 RFRDX1 RFRDX4
+Total number of unusable inverters: 3
+List of identified usable delay cells: DLY1X1 DLY1X4 DLY2X1 DLY2X4 DLY3X1 DLY3X4 DLY4X1 DLY4X4
+Total number of identified usable delay cells: 8
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+*info: set bottom ioPad orient R0
+Reading IO assignment file "FAS.ioc" ...
+Adjusting Core to Left to: 0.1000.
+Set Using Default Delay Limit as 1000.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Input Pin Transition Delay as 0.1 ps.
+PreRoute Cap Scale Factor :        1.00
+PreRoute Res Scale Factor :        1.00
+PostRoute Cap Scale Factor :       1.00
+PostRoute Res Scale Factor :       1.00
+PostRoute XCap Scale Factor :      1.00
+
+PreRoute Clock Cap Scale Factor :  1.00	[Derived from postRoute_cap (effortLevel low)]
+PreRoute Clock Res Scale Factor :  1.00	[Derived from postRoute_res (effortLevel low)]
+PostRoute Clock Cap Scale Factor : 1.00	[Derived from postRoute_cap (effortLevel low)]
+PostRoute Clock Res Scale Factor : 1.00	[Derived from postRoute_res (effortLevel low)]
+Reading Capacitance Table File library/tsmc013.capTbl ...
+Cap Table was created using Encounter 04.20-s274_1.
+Process name: t013s8ml_fsg.
+<CMD> fit
+<CMD> setDrawView fplan
+<CMD> getIoFlowFlag
+<CMD> getIoFlowFlag
+<CMD> clearGlobalNets
+<CMD> globalNetConnect VDD -type pgpin -pin VDD -inst *
+<CMD> globalNetConnect VSS -type pgpin -pin VSS -inst *
+<CMD> globalNetConnect VDD -type tiehi -inst *
+<CMD> globalNetConnect VSS -type tielo -inst *
+<CMD> getIoFlowFlag
+<CMD> setIoFlowFlag 0
+<CMD> floorPlan -site TSM13SITE -r 1 0.8 80 80 80 80
+Adjusting Core to Left to: 80.1400. Core to Bottom to: 80.3600.
+**WARN: (ENCFP-325):	After proportional resize, all pre-routed wires will be removed.
+<CMD> uiSetTool select
+<CMD> getIoFlowFlag
+<CMD> fit
+<CMD> setPlaceMode -fp false
+<CMD> placeDesign -noPrePlaceOpt
+*** Starting placeDesign default flow ***
+Extracting standard cell pins and blockage ...... 
+Pin and blockage extraction finished
+Extracting macro/IO cell pins and blockage ...... 
+Pin and blockage extraction finished
+*** Starting "NanoPlace(TM) placement v#1 (mem=257.2M)" ...
+**WARN: (ENCTS-403):	Delay calculation was forced to extrapolate table data outside of the characterized range. In some cases, extrapolation can reduce the accuracy of the delay calculation.  You can enable more detailed reporting of these cases by enabling the command 'setDelayCalMode -reportOutBound'.
+*** Build Buffered Sizing Timing Model
+(cpu=0:00:03.3 mem=265.0M) ***
+*** Build Virtual Sizing Timing Model
+(cpu=0:00:03.7 mem=272.6M) ***
+Options: timingDriven clkGateAware ignoreScan ignoreSpare pinGuide gpeffort=medium 
+**WARN: (ENCSP-9042):	Scan chains were not defined, -ignoreScan option will be ignored. 
+Please first define the scan chains before using this option.
+#std cell=10035 #block=0 (0 floating + 0 preplaced) #ioInst=36 #net=14347 #term=43149 #term/net=3.01, #fixedIo=36, #floatIo=0, #fixedPin=24, #floatPin=0
+stdCell: 10035 single + 0 double + 0 multi
+Total standard cell length = 57.2976 (mm), area = 0.2114 (mm^2)
+Average module density = 0.800.
+Density for the design = 0.800.
+       = stdcell_area 124560 (211428 um^2) / alloc_area 155680 (264251 um^2).
+Pin Density = 0.346.
+            = total # of pins 43149 / total Instance area 124560.
+**WARN: Skipped set_input_transition constraints on port "clk" due to set_drive specified on same
+Checking spec file integrity...
+Clock gating cells determined by native netlist tracing.
+Iteration  1: Total net bbox = 2.525e+04 (1.24e+04 1.28e+04)
+              Est.  stn bbox = 2.525e+04 (1.24e+04 1.28e+04)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 299.7M
+Iteration  2: Total net bbox = 2.525e+04 (1.24e+04 1.28e+04)
+              Est.  stn bbox = 2.525e+04 (1.24e+04 1.28e+04)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 299.7M
+Iteration  3: Total net bbox = 2.425e+04 (1.22e+04 1.20e+04)
+              Est.  stn bbox = 2.425e+04 (1.22e+04 1.20e+04)
+              cpu = 0:00:00.6 real = 0:00:01.0 mem = 299.7M
+Iteration  4: Total net bbox = 2.492e+05 (9.00e+04 1.59e+05)
+              Est.  stn bbox = 2.492e+05 (9.00e+04 1.59e+05)
+              cpu = 0:00:03.0 real = 0:00:03.0 mem = 299.7M
+Iteration  5: Total net bbox = 3.213e+05 (1.33e+05 1.89e+05)
+              Est.  stn bbox = 3.213e+05 (1.33e+05 1.89e+05)
+              cpu = 0:00:02.7 real = 0:00:02.0 mem = 299.7M
+Iteration  6: Total net bbox = 3.446e+05 (1.48e+05 1.96e+05)
+              Est.  stn bbox = 3.446e+05 (1.48e+05 1.96e+05)
+              cpu = 0:00:01.1 real = 0:00:02.0 mem = 300.0M
+Iteration  7: Total net bbox = 3.554e+05 (1.59e+05 1.96e+05)
+              Est.  stn bbox = 4.387e+05 (1.96e+05 2.43e+05)
+              cpu = 0:00:00.9 real = 0:00:00.0 mem = 297.4M
+**WARN: Skipped set_input_transition constraints on port "clk" due to set_drive specified on same
+**WARN: Skipped set_input_transition constraints on port "clk" due to set_drive specified on same
+Iteration  8: Total net bbox = 3.751e+05 (1.75e+05 2.00e+05)
+              Est.  stn bbox = 4.585e+05 (2.12e+05 2.47e+05)
+              cpu = 0:00:03.3 real = 0:00:03.0 mem = 295.7M
+Iteration  9: Total net bbox = 3.642e+05 (1.64e+05 2.01e+05)
+              Est.  stn bbox = 4.503e+05 (2.02e+05 2.49e+05)
+              cpu = 0:00:01.2 real = 0:00:02.0 mem = 295.8M
+**WARN: Skipped set_input_transition constraints on port "clk" due to set_drive specified on same
+**WARN: Skipped set_input_transition constraints on port "clk" due to set_drive specified on same
+Iteration 10: Total net bbox = 3.866e+05 (1.80e+05 2.06e+05)
+              Est.  stn bbox = 4.728e+05 (2.19e+05 2.54e+05)
+              cpu = 0:00:03.0 real = 0:00:03.0 mem = 296.1M
+Iteration 11: Total net bbox = 3.770e+05 (1.71e+05 2.06e+05)
+              Est.  stn bbox = 4.615e+05 (2.08e+05 2.53e+05)
+              cpu = 0:00:04.3 real = 0:00:05.0 mem = 296.3M
+Iteration 12: Total net bbox = 3.770e+05 (1.71e+05 2.06e+05)
+              Est.  stn bbox = 4.615e+05 (2.08e+05 2.53e+05)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 296.6M
+Iteration 13: Total net bbox = 4.147e+05 (2.07e+05 2.08e+05)
+              Est.  stn bbox = 5.004e+05 (2.45e+05 2.55e+05)
+              cpu = 0:00:01.2 real = 0:00:00.0 mem = 296.6M
+*** cost = 4.147e+05 (2.07e+05 2.08e+05) (cpu for global=0:00:21.3) real=0:00:21.0***
+Info: 1 clock gating cells identified, 0 (on average) moved
+Core Placement runtime cpu: 0:00:12.9 real: 0:00:13.0
+Starting refinePlace ...
+move report: placeLevelShifters moves 0 insts, mean move: 0.00 um, max move: 0.00 um
+  Spread Effort: high, pre-route mode.
+Finished Phase I. CPU Time = 0:00:02.0, Real Time = 0:00:02.0
+move report: preRPlace moves 6795 insts, mean move: 1.80 um, max move: 15.18 um
+	max move on inst (FAS/mult_50/U41): (373.98, 632.63) --> (358.80, 632.63)
+Placement tweakage begins.
+wire length = 4.165e+05 = 2.073e+05 H + 2.092e+05 V
+wire length = 3.711e+05 = 1.635e+05 H + 2.077e+05 V
+Placement tweakage ends.
+move report: tweak moves 4723 insts, mean move: 7.55 um, max move: 55.20 um
+	max move on inst (FAS/mult_55/U123): (470.12, 470.27) --> (525.32, 470.27)
+move report: rPlace moves 0 insts, mean move: 0.00 um, max move: 0.00 um
+move report: overall moves 8161 insts, mean move: 5.17 um, max move: 52.90 um
+	max move on inst (FAS/mult_55/U123): (472.42, 470.27) --> (525.32, 470.27)
+Statistics of distance of Instance movement in detailed placement:
+  maximum (X+Y) =        52.90 um
+  inst (FAS/mult_55/U123) with max move: (472.42, 470.27) -> (525.32, 470.27)
+  mean    (X+Y) =         5.17 um
+Total instances flipped for WireLenOpt: 152
+Total instances flipped, including legalization: 1335
+Total instances moved : 8161
+*** cpu=0:00:02.0   mem=302.7M  mem(used)=6.4M***
+Total net length = 3.708e+05 (1.635e+05 2.074e+05) (ext = 0.000e+00)
+*** End of Placement (cpu=0:00:28.4, real=0:00:28.0, mem=302.7M) ***
+default core: bins with density >  0.75 =   74 % ( 145 / 196 )
+*** Free Virtual Timing Model ...(mem=294.4M)
+Starting IO pin assignment...
+**WARN: (ENCSP-9025):	No scan chain specified/traced.
+Starting congestion repair ...
+*** Starting trialRoute (mem=294.4M) ***
+
+There are 0 pin guide points passed to trialRoute.
+**WARN: (ENCTR-2325):	there are 24 nets connecting a pad term to a fterm without geometry and these nets will not be routed.  Type 'set trPrintIgnoredPadNets <limit>'  to see these nets.
+Options:  -noPinGuide
+
+Nr of prerouted/Fixed nets = 24
+routingBox: (460 410) (2334500 2330030)
+coreBox:    (652280 652720) (1682820 1678540)
+Number of multi-gpin terms=3164, multi-gpins=8165, moved blk term=12/12
+
+Phase 1a route (0:00:00.0 294.4M):
+Est net length = 4.294e+05um = 1.935e+05H + 2.359e+05V
+Usage: (4.6%H 5.6%V) = (2.317e+05um 3.749e+05um) = (100542 101648)
+Obstruct: 85076 = 42538 (32.4%H) + 42538 (32.4%V)
+Overflow: 0 = 0 (0.00% H) + 0 (0.00% V)
+
+Phase 1b route (0:00:00.0 294.4M):
+Usage: (4.6%H 5.6%V) = (2.313e+05um 3.749e+05um) = (100354 101648)
+Overflow: 0 = 0 (0.00% H) + 0 (0.00% V)
+
+Phase 1c route (0:00:00.0 294.4M):
+Usage: (4.5%H 5.6%V) = (2.307e+05um 3.745e+05um) = (100117 101544)
+Overflow: 0 = 0 (0.00% H) + 0 (0.00% V)
+
+Phase 1d route (0:00:00.0 294.4M):
+Usage: (4.5%H 5.6%V) = (2.307e+05um 3.745e+05um) = (100118 101544)
+Overflow: 0 = 0 (0.00% H) + 0 (0.00% V)
+
+Phase 1e route (0:00:00.0 294.4M):
+Usage: (4.5%H 5.6%V) = (2.307e+05um 3.745e+05um) = (100118 101544)
+Overflow: 0 = 0 (0.00% H) + 0 (0.00% V)
+
+Usage: (4.5%H 5.6%V) = (2.307e+05um 3.745e+05um) = (100118 101544)
+Overflow: 0 = 0 (0.00% H) + 0 (0.00% V)
+
+Congestion distribution:
+
+Remain	cntH		cntV
+--------------------------------------
+--------------------------------------
+  2:	0	 0.00%	15	 0.02%
+  3:	234	 0.26%	384	 0.43%
+  4:	0	 0.00%	8	 0.01%
+  5:	0	 0.00%	22	 0.02%
+  6:	470	 0.53%	520	 0.59%
+  7:	0	 0.00%	605	 0.68%
+  8:	1	 0.00%	290	 0.33%
+  9:	471	 0.53%	791	 0.89%
+ 10:	0	 0.00%	1394	 1.57%
+ 11:	0	 0.00%	2270	 2.56%
+ 12:	236	 0.27%	3556	 4.02%
+ 13:	2	 0.00%	5395	 6.09%
+ 14:	4	 0.00%	5544	 6.26%
+ 15:	138	 0.16%	5556	 6.27%
+ 16:	63	 0.07%	4752	 5.37%
+ 17:	125	 0.14%	33338	37.64%
+ 18:	534	 0.60%	0	 0.00%
+ 19:	600	 0.68%	0	 0.00%
+ 20:	85684	96.75%	24122	27.24%
+
+Global route (cpu=0.0s real=0.0s 294.4M)
+Phase 1l route (0:00:01.2 294.4M):
+
+
+*** After '-updateRemainTrks' operation: 
+
+Usage: (4.7%H 5.7%V) = (2.378e+05um 3.855e+05um) = (103182 104508)
+Overflow: 0 = 0 (0.00% H) + 0 (0.00% V)
+
+Congestion distribution:
+
+Remain	cntH		cntV
+--------------------------------------
+--------------------------------------
+  1:	0	 0.00%	1	 0.00%
+  2:	6	 0.01%	19	 0.02%
+  3:	228	 0.26%	385	 0.43%
+  4:	0	 0.00%	18	 0.02%
+  5:	0	 0.00%	44	 0.05%
+  6:	470	 0.53%	563	 0.64%
+  7:	0	 0.00%	693	 0.78%
+  8:	1	 0.00%	379	 0.43%
+  9:	471	 0.53%	898	 1.01%
+ 10:	0	 0.00%	1497	 1.69%
+ 11:	0	 0.00%	2352	 2.66%
+ 12:	236	 0.27%	3514	 3.97%
+ 13:	2	 0.00%	5168	 5.84%
+ 14:	10	 0.01%	5408	 6.11%
+ 15:	148	 0.17%	5471	 6.18%
+ 16:	65	 0.07%	4697	 5.30%
+ 17:	157	 0.18%	33333	37.64%
+ 18:	570	 0.64%	0	 0.00%
+ 19:	669	 0.76%	0	 0.00%
+ 20:	85529	96.58%	24122	27.24%
+
+
+
+*** Completed Phase 1 route (0:00:01.2 294.4M) ***
+
+
+Total length: 4.412e+05um, number of vias: 88706
+M1(H) length: 3.901e+01um, number of vias: 43077
+M2(V) length: 1.465e+05um, number of vias: 38337
+M3(H) length: 1.774e+05um, number of vias: 6344
+M4(V) length: 9.152e+04um, number of vias: 635
+M5(H) length: 1.328e+04um, number of vias: 265
+M6(V) length: 1.171e+04um, number of vias: 24
+M7(H) length: 7.220e+02um, number of vias: 24
+M8(V) length: 2.612e+01um
+*** Completed Phase 2 route (0:00:00.0 294.4M) ***
+
+*** Finished all Phases (cpu=0:00:01.2 mem=294.4M) ***
+Peak Memory Usage was 294.4M 
+*** Finished trialRoute (cpu=0:00:01.2 mem=294.4M) ***
+
+CongRepair Bin Grid Size (width, height) = ( default_value , default_value )
+Trial Route Overflow 0.000000(H) 0.000000(V).
+Skipped repairing congestion.
+*** Finishing placeDesign default flow ***
+**placeDesign ... cpu = 0: 0:30, real = 0: 0:30, mem = 294.4M **
+<CMD_INTERNAL> redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+<CMD> clearClockDomains
+<CMD> setClockDomains -all
+setClockDomains -all 
+**WARN: (ENCSYC-1873):	The setClockDomains -all option is unsupported in CTE mode 
+<CMD> timeDesign -prePlace -idealClock -pathReports -drvReports -slackReports -numPaths 50 -prefix CHIP_prePlace -outDir timingReports
+Set Using Default Delay Limit as 101.
+**WARN: (ENCDC-1629):	The variable rdaUseDefaultDelayLimit was set to 101. This is less than the default 1000 and may result in inaccurate results for high fanout nets. To change the variable, run command setUseDefaultDelayLimit.
+Setting High Fanout Nets ( > 100 ) as ideal temporarily for -prePlace option
+Set Default Net Delay as 0 ps.
+Set Default Net Load as 0 pF. 
+**WARN: (ENCEXT-3530):	Use of command 'setDesignMode -process <process_node>' prior to extraction is recommended for maximum accuracy and optimal automatic threshold setting.
+**WARN: Skipped set_input_transition constraints on port "clk" due to set_drive specified on same
+
+------------------------------------------------------------
+          timeDesign Summary                             
+------------------------------------------------------------
+
++--------------------+---------+---------+---------+---------+---------+---------+
+|     Setup mode     |   all   | reg2reg | in2reg  | reg2out | in2out  | clkgate |
++--------------------+---------+---------+---------+---------+---------+---------+
+|           WNS (ns):| -8.217  | -2.042  | -8.217  | 17.095  |   N/A   |   N/A   |
+|           TNS (ns):| -3406.1 | -29.008 | -3377.0 |  0.000  |   N/A   |   N/A   |
+|    Violating Paths:|   812   |   30    |   782   |    0    |   N/A   |   N/A   |
+|          All Paths:|  3333   |  1664   |  2831   |    5    |   N/A   |   N/A   |
++--------------------+---------+---------+---------+---------+---------+---------+
+
+Density: 80.010%
+------------------------------------------------------------
+Set Using Default Delay Limit as 1000.
+Resetting back High Fanout Nets as non-ideal
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Reported timing to dir timingReports
+Total CPU time: 2.47 sec
+Total Real time: 3.0 sec
+Total Memory Usage: 295.9375 Mbytes
+
+*** Memory Usage v#1 (Current mem = 295.938M, initial mem = 46.102M) ***
+--- Ending "Encounter" (totcpu=0:01:05, real=0:04:25, mem=295.9M) ---

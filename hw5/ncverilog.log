@@ -1,0 +1,103 @@
+ncverilog: 10.20-s114: (c) Copyright 1995-2012 Cadence Design Systems, Inc.
+TOOL:	ncverilog	10.20-s114: Started on Dec 12, 2016 at 17:01:26 CST
+ncverilog
+	EXP_tb.v
+	EXP.v
+file: EXP_tb.v
+	module worklib.test_conv:v
+		errors: 0, warnings: 0
+file: EXP.v
+	module worklib.EXP:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.EXP:v <0x76e42152>
+			streams:   8, words:  4042
+		worklib.test_conv:v <0x0cf7bb3f>
+			streams:   9, words:  9777
+	Loading native compiled code:     .................... Done
+	Building instance specific data structures.
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                  2       2
+		Registers:               30      30
+		Scalar wires:             5       -
+		Vectored wires:           2       -
+		Always blocks:            8       8
+		Initial blocks:           6       6
+		Pseudo assignments:       1       1
+		Simulation timescale:  10ps
+	Writing initial simulation snapshot: worklib.test_conv:v
+Loading snapshot worklib.test_conv:v .................... Done
+*Novas* Loading libsscore_ius102.so
+ncsim> source /usr/cad/cadence/INCISIV/cur/tools/inca/files/ncsimrc
+ncsim> run
+ncsim: *W,DVEXACC: some objects excluded from $dumpvars due to access restrictions, use +access+r on command line for access to all objects.
+            File: ./EXP_tb.v, line = 53, pos = 8
+           Scope: test_conv
+            Time: 0 FS + 0
+
+---------------------------------------------------------
+                          x=   0
+---------------------------------------------------------
+Pass ! k=  0; Dataout= 0000100000  ; Ans= 0000100000 
+Pass ! k=  1; Dataout= 0000100000  ; Ans= 0000100000 
+Pass ! k=  2; Dataout= 0000100000  ; Ans= 0000100000 
+Pass ! k=  3; Dataout= 0000100000  ; Ans= 0000100000 
+Pass ! k=  4; Dataout= 0000100000  ; Ans= 0000100000 
+Pass ! k=  5; Dataout= 0000100000  ; Ans= 0000100000 
+Pass ! k=  6; Dataout= 0000100000  ; Ans= 0000100000 
+Pass ! k=  7; Dataout= 0000100000  ; Ans= 0000100000 
+Pass ! k=  8; Dataout= 0000100000  ; Ans= 0000100000 
+Pass ! k=  9; Dataout= 0000100000  ; Ans= 0000100000 
+---------------------------------------------------------
+                          x=   1
+---------------------------------------------------------
+Pass ! k=  0; Dataout= 0000100000  ; Ans= 0000100000 
+Pass ! k=  1; Dataout= 0001000000  ; Ans= 0001000000 
+Pass ! k=  2; Dataout= 0001010000  ; Ans= 0001010000 
+Pass ! k=  3; Dataout= 0001010101  ; Ans= 0001010101 
+Pass ! k=  4; Dataout= 0001010110  ; Ans= 0001010110 
+Pass ! k=  5; Dataout= 0001010110  ; Ans= 0001010110 
+Pass ! k=  6; Dataout= 0001010110  ; Ans= 0001010110 
+Pass ! k=  7; Dataout= 0001010110  ; Ans= 0001010110 
+Pass ! k=  8; Dataout= 0001010110  ; Ans= 0001010110 
+Pass ! k=  9; Dataout= 0001010110  ; Ans= 0001010110 
+---------------------------------------------------------
+                          x=   2
+---------------------------------------------------------
+Pass ! k=  0; Dataout= 0000100000  ; Ans= 0000100000 
+Pass ! k=  1; Dataout= 0001100000  ; Ans= 0001100000 
+Pass ! k=  2; Dataout= 0010100000  ; Ans= 0010100000 
+Pass ! k=  3; Dataout= 0011001010  ; Ans= 0011001010 
+Pass ! k=  4; Dataout= 0011011111  ; Ans= 0011011111 
+Pass ! k=  5; Dataout= 0011100111  ; Ans= 0011100111 
+Pass ! k=  6; Dataout= 0011101001  ; Ans= 0011101001 
+Pass ! k=  7; Dataout= 0011101001  ; Ans= 0011101001 
+Pass ! k=  8; Dataout= 0011101001  ; Ans= 0011101001 
+Pass ! k=  9; Dataout= 0011101001  ; Ans= 0011101001 
+---------------------------------------------------------
+                          x=   3
+---------------------------------------------------------
+Pass ! k=  0; Dataout= 0000100000  ; Ans= 0000100000 
+Pass ! k=  1; Dataout= 0010000000  ; Ans= 0010000000 
+Pass ! k=  2; Dataout= 0100010000  ; Ans= 0100010000 
+Pass ! k=  3; Dataout= 0110100000  ; Ans= 0110100000 
+Pass ! k=  4; Dataout= 1000001100  ; Ans= 1000001100 
+Pass ! k=  5; Dataout= 1001001100  ; Ans= 1001001100 
+Pass ! k=  6; Dataout= 1001101100  ; Ans= 1001101100 
+Pass ! k=  7; Dataout= 1001111001  ; Ans= 1001111001 
+Pass ! k=  8; Dataout= 1001111110  ; Ans= 1001111110 
+Pass ! k=  9; Dataout= 1001111111  ; Ans= 1001111111 
+------------------------------------------------------------
+
+Congratulations! All data have been generated successfully!
+
+-------------------------PASS-------------------------------
+
+Simulation complete via $finish(1) at time 902 NS + 0
+./EXP_tb.v:134       #(`CYCLE/2); $finish;
+ncsim> exit
+TOOL:	ncverilog	10.20-s114: Exiting on Dec 12, 2016 at 17:01:31 CST  (total: 00:00:05)

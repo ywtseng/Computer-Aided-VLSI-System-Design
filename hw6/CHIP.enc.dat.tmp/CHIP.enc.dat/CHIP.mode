@@ -1,0 +1,8 @@
+setAnalysisMode -analysisType single -checkType setup -clkSrcPath false -clockPropagation forcedIdeal -virtualIPO false
+setTrialRouteMode -fixAirConnect true
+setExtractRCMode  -engine preRoute
+setDelayCalMode -engine default
+setCTSMode -moveGateLimit 25
+setPlaceMode -fp true -ignoreScan true -relaxSoftBlockageMode 2 -timingDriven false
+setIlmMode -highFanoutPort true -loopBack false 
+setImportMode -config true -keepEmptyModule true -treatUndefinedCellAsBbox false

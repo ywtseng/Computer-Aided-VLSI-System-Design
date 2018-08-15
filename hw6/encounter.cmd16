@@ -1,0 +1,64 @@
+#######################################################
+#                                                     #
+#  Encounter Command Logging File                     #
+#  Created on Sat Dec 31 14:15:35 2016                #
+#                                                     #
+#######################################################
+
+#@(#)CDS: Encounter v10.13-s272_1 (32bit) 04/18/2012 16:36 (Linux 2.6)
+#@(#)CDS: NanoRoute v10.13-s027 NR120403-1008/10_10_USR3-UB (database version 2.30, 132.4.1) {superthreading v1.16}
+#@(#)CDS: CeltIC v10.13-s063_1 (32bit) 02/29/2012 09:38:16 (Linux 2.6.9-89.0.19.ELsmp)
+#@(#)CDS: AAE 10.13-s008 (32bit) 04/18/2012 (Linux 2.6.9-89.0.19.ELsmp)
+#@(#)CDS: CTE 10.13-s018_1 (32bit) Feb 28 2012 22:08:25 (Linux 2.6.9-89.0.19.ELsmp)
+#@(#)CDS: CPE v10.13-s225
+
+win
+loadConfig CHIP.conf 0
+create_rc_corner -name RC_corner -cap_table {library/tsmc013.capTbl} -preRoute_res {0.8} -preRoute_cap {0.8} -preRoute_clkres {0.0} -preRoute_clkcap {0.0} -postRoute_res {0.8} -postRoute_cap {0.8} -postRoute_xcap {0.8} -postRoute_clkres {0.0} -postRoute_clkcap {0.0} -qx_tech_file {library/tsmc13_8lm.cl/icecaps_8lm.tch}
+create_library_set -name lib_max -timing {library/lib/slow.lib library/lib/RF2SH64x16_slow_syn.lib library/lib/tpz013g3wc.lib} -si {library/celtic/slow.cdB}
+create_library_set -name lib_min -timing {library/lib/fast.lib library/lib/RF2SH64x16_fast@0C_syn.lib library/lib/tpz013g3lt.lib} -si {library/celtic/fast.cdB}
+create_constraint_mode -name func_mode -sdc_files {CHIP.sdc}
+create_delay_corner -name Delay_Corner_max -library_set {lib_max} -rc_corner {RC_corner}
+create_delay_corner -name Delay_Corner_min -library_set {lib_min} -rc_corner {RC_corner}
+create_analysis_view -name av_func_mode_max -constraint_mode {func_mode} -delay_corner {Delay_Corner_max}
+create_analysis_view -name av_func_mode_min -constraint_mode {func_mode} -delay_corner {Delay_Corner_min}
+commitConfig
+fit
+setDrawView fplan
+setDrawView place
+setDrawView ameba
+setDrawView fplan
+setDrawView ameba
+setDrawView place
+setDrawView ameba
+selectInst opad_freq3
+deselectAll
+selectInst opad_freq3
+deselectAll
+selectInst opad_freq3
+deselectAll
+selectInst ipad_data02
+windowSelect 595.659 679.821 550.191 567.775
+windowSelect 248.154 790.243 800.264 247.876
+windowSelect 696.337 496.326 641.126 424.877
+selectInst opad_freq3
+deselectAll
+selectInst ipad_data02
+deselectAll
+selectInst ipad_data11
+setDrawView fplan
+setDrawView ameba
+setDrawView fplan
+setDrawView ameba
+setDrawView fplan
+deselectAll
+selectInst ipad_IOVSS1
+deselectAll
+selectInst ipad_CoreVDD2
+deselectAll
+selectInst ipad_IOVSS1
+deselectAll
+selectInst ipad_IOVDD1
+deselectAll
+selectInst ipad_data15
+setDrawView ameba

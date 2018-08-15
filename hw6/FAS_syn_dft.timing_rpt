@@ -1,0 +1,50 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : FAS
+Version: D-2010.03-SP5
+Date   : Thu Dec  1 23:59:25 2016
+****************************************
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: top
+
+  Startpoint: d32_reg_16_
+              (rising edge-triggered flip-flop)
+  Endpoint: fir_d[15] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  d32_reg_16_/CK (SDFFRXL)                 0.00       0.00 r
+  d32_reg_16_/Q (SDFFRXL)                  0.39       0.39 r
+  add_100_S2/A[0] (FAS_DW01_inc_2)         0.00       0.39 r
+  add_100_S2/U1_1_1/CO (ADDHXL)            0.12       0.52 r
+  add_100_S2/U1_1_2/CO (ADDHXL)            0.11       0.62 r
+  add_100_S2/U1_1_3/CO (ADDHXL)            0.11       0.73 r
+  add_100_S2/U1_1_4/CO (ADDHXL)            0.11       0.84 r
+  add_100_S2/U1_1_5/CO (ADDHXL)            0.11       0.95 r
+  add_100_S2/U1_1_6/CO (ADDHXL)            0.11       1.06 r
+  add_100_S2/U1_1_7/CO (ADDHXL)            0.11       1.16 r
+  add_100_S2/U1_1_8/CO (ADDHXL)            0.11       1.27 r
+  add_100_S2/U1_1_9/CO (ADDHXL)            0.11       1.38 r
+  add_100_S2/U1_1_10/CO (ADDHXL)           0.11       1.49 r
+  add_100_S2/U1_1_11/CO (ADDHXL)           0.11       1.60 r
+  add_100_S2/U1_1_12/CO (ADDHXL)           0.11       1.70 r
+  add_100_S2/U1_1_13/CO (ADDHXL)           0.11       1.81 r
+  add_100_S2/U1_1_14/CO (ADDHXL)           0.10       1.91 r
+  add_100_S2/U1/Y (XOR2X1)                 0.10       2.01 f
+  add_100_S2/SUM[15] (FAS_DW01_inc_2)      0.00       2.01 f
+  U7748/Y (NAND2X1)                        0.09       2.10 r
+  U7047/Y (CLKINVX1)                       0.05       2.15 f
+  fir_d[15] (out)                          0.00       2.15 f
+  data arrival time                                   2.15
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

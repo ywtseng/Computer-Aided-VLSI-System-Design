@@ -1,0 +1,155 @@
+#######################################################
+#                                                     #
+#  Encounter Command Logging File                     #
+#  Created on Fri Jan  6 19:30:29 2017                #
+#                                                     #
+#######################################################
+
+#@(#)CDS: Encounter v10.13-s272_1 (32bit) 04/18/2012 16:36 (Linux 2.6)
+#@(#)CDS: NanoRoute v10.13-s027 NR120403-1008/10_10_USR3-UB (database version 2.30, 132.4.1) {superthreading v1.16}
+#@(#)CDS: CeltIC v10.13-s063_1 (32bit) 02/29/2012 09:38:16 (Linux 2.6.9-89.0.19.ELsmp)
+#@(#)CDS: AAE 10.13-s008 (32bit) 04/18/2012 (Linux 2.6.9-89.0.19.ELsmp)
+#@(#)CDS: CTE 10.13-s018_1 (32bit) Feb 28 2012 22:08:25 (Linux 2.6.9-89.0.19.ELsmp)
+#@(#)CDS: CPE v10.13-s225
+
+win
+encMessage warning 0
+encMessage debug 0
+encMessage info 0
+restoreDesign powerroute.enc.dat CHIP
+setDrawView fplan
+encMessage warning 1
+encMessage debug 0
+encMessage info 1
+setNanoRouteMode -quiet -routeInsertAntennaDiode 1
+setNanoRouteMode -quiet -routeAntennaCellName ANTENNA
+setNanoRouteMode -quiet -routeWithTimingDriven 1
+setNanoRouteMode -quiet -routeWithSiDriven 1
+setNanoRouteMode -quiet -routeTopRoutingLayer default
+setNanoRouteMode -quiet -routeBottomRoutingLayer default
+setNanoRouteMode -quiet -drouteEndIteration default
+setNanoRouteMode -quiet -routeWithTimingDriven true
+setNanoRouteMode -quiet -routeWithSiDriven true
+routeDesign -globalDetail
+setDrawView ameba
+setDrawView place
+setDrawView ameba
+setDrawView fplan
+setDrawView ameba
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+clearClockDomains
+setClockDomains -all
+timeDesign -postRoute -pathReports -drvReports -slackReports -numPaths 50 -prefix CHIP_postRoute -outDir timingReports
+setOptMode -fixCap true -fixTran true -fixFanoutLoad true
+optDesign -postRoute
+setOptMode -fixCap true -fixTran true -fixFanoutLoad true
+optDesign -postRoute
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+clearClockDomains
+setClockDomains -all
+timeDesign -postRoute -hold -pathReports -slackReports -numPaths 50 -prefix CHIP_postRoute -outDir timingReports
+saveDesign routed.enc
+getFillerMode -quiet
+addFiller -cell FILL1 FILL2 FILL4 FILL8 FILL16 FILL32 FILL64 -prefix FILLER
+setVerifyGeometryMode -area { 0 0 0 0 } -minWidth true -minSpacing true -minArea true -sameNet true -short true -overlap true -offRGrid false -offMGrid true -minHole true -implantCheck true -minimumCut true -minStep true -viaEnclosure true -antenna false -insuffMetalOverlap true -pinInBlkg false -diffCellViol true -sameCellViol false -padFillerCellsOverlap true -routingBlkgPinOverlap true -routingCellBlkgOverlap true -regRoutingOnly false -stackedViasOnRegNet false -wireExt true -viaOverlap false -useNonDefaultSpacing false -maxWidth true -maxNonPrefLength -1 -error 1000 -warning 50
+verifyGeometry
+verifyProcessAntenna -reportfile CHIP.antenna.rpt -error 1000
+verifyConnectivity -type all -error 1000 -warning 50
+saveDesign corefiller.enc
+setDrawView place
+setDrawView fplan
+setDrawView ameba
+setDrawView place
+setDrawView ameba
+windowSelect 947.339 545.908 996.984 696.912
+saveNetlist CHIP.v
+write_sdf -ideal_clock_network CHIP.sdf
+global dbgLefDefOutVersion
+set dbgLefDefOutVersion 5.7
+defOut -floorplan -netlist -scanChain -routing CHIP.def
+set dbgLefDefOutVersion NULL
+addMetalFill -layer { METAL1 METAL2 METAL3 METAL4 METAL5 METAL6 METAL7 METAL8 }
+selectObject Module LZSS
+setDrawView place
+setDrawView fplan
+setDrawView place
+loadECO bondPads.eco
+placeInstance boundPadW1 -88.8 256.825 R270
+placeInstance boundPadW2 -203.8 302.65 R270
+placeInstance boundPadW3 -88.8 348.475 R270
+placeInstance boundPadW4 -203.8 394.3 R270
+placeInstance boundPadW5 -88.8 440.125 R270
+placeInstance boundPadW6 -203.8 531.765 R270
+placeInstance boundPadW7 -88.8 577.585 R270
+placeInstance boundPadW8 -203.8 623.405 R270
+placeInstance boundPadW9 -88.8 669.225 R270
+placeInstance boundPadW10 -203.8 715.045 R270
+placeInstance boundPadW11 -88.8 760.865 R270
+placeInstance boundPadW12 -203.8 806.685 R270
+placeInstance boundPadW13 -88.8 852.505 R270
+placeInstance boundPadW14 -203.8 898.33 R270
+placeInstance boundPadW15 -88.8 944.155 R270
+placeInstance boundPadW16 -203.8 989.98 R270
+placeInstance boundPadW17 -88.8 1035.805 R270
+placeInstance boundPadE1 1327.895 259.37 R90
+placeInstance boundPadE2 1327.895 307.74 R90
+placeInstance boundPadE3 1327.895 356.11 R90
+placeInstance boundPadE4 1327.895 404.48 R90
+placeInstance boundPadE5 1327.895 452.85 R90
+placeInstance boundPadE6 1327.895 501.22 R90
+placeInstance boundPadE7 1327.895 549.585 R90
+placeInstance boundPadE8 1327.895 597.95 R90
+placeInstance boundPadE9 1327.895 646.315 R90
+placeInstance boundPadE10 1327.895 694.68 R90
+placeInstance boundPadE11 1327.895 743.045 R90
+placeInstance boundPadE12 1327.895 791.41 R90
+placeInstance boundPadE13 1327.895 839.78 R90
+placeInstance boundPadE14 1327.895 888.15 R90
+placeInstance boundPadE15 1327.895 936.52 R90
+placeInstance boundPadE16 1327.895 984.89 R90
+placeInstance boundPadE17 1327.895 1033.26 R90
+placeInstance boundPadN1 256.84 1327.63 R180
+placeInstance boundPadN2 302.68 1327.63 R180
+placeInstance boundPadN3 348.52 1327.63 R180
+placeInstance boundPadN4 394.355 1327.63 R180
+placeInstance boundPadN5 440.19 1327.63 R180
+placeInstance boundPadN6 486.025 1327.63 R180
+placeInstance boundPadN7 531.86 1327.63 R180
+placeInstance boundPadN8 577.695 1327.63 R180
+placeInstance boundPadN9 623.53 1327.63 R180
+placeInstance boundPadN10 669.365 1327.63 R180
+placeInstance boundPadN11 715.2 1327.63 R180
+placeInstance boundPadN12 761.035 1327.63 R180
+placeInstance boundPadN13 806.87 1327.63 R180
+placeInstance boundPadN14 852.705 1327.63 R180
+placeInstance boundPadN15 898.54 1327.63 R180
+placeInstance boundPadN16 944.375 1327.63 R180
+placeInstance boundPadN17 990.215 1327.63 R180
+placeInstance boundPadN18 1036.055 1327.63 R180
+placeInstance boundPadS1 259.385 -88.8 R0
+placeInstance boundPadS2 307.77 -203.8 R0
+placeInstance boundPadS3 356.155 -88.8 R0
+placeInstance boundPadS4 404.54 -203.8 R0
+placeInstance boundPadS5 452.925 -88.8 R0
+placeInstance boundPadS6 501.31 -203.8 R0
+placeInstance boundPadS7 549.69 -88.8 R0
+placeInstance boundPadS8 598.07 -203.8 R0
+placeInstance boundPadS9 646.45 -88.8 R0
+placeInstance boundPadS10 694.83 -203.8 R0
+placeInstance boundPadS11 743.21 -88.8 R0
+placeInstance boundPadS12 791.59 -203.8 R0
+placeInstance boundPadS13 839.97 -88.8 R0
+placeInstance boundPadS14 888.355 -203.8 R0
+placeInstance boundPadS15 936.74 -88.8 R0
+placeInstance boundPadS16 985.125 -203.8 R0
+placeInstance boundPadS17 1033.51 -88.8 R0
+saveDesign finish.enc
+setNanoRouteMode -quiet -routeAntennaCellName {}
+setStreamOutMode -specifyViaName default -SEvianames false -virtualConnection false -uniquifyCellNamesPrefix false -snapToMGrid false -textSize 1 -version 3
+setTieHiLoMode -reset
+setTieHiLoMode -cell {TIEHI TIELO} -maxDistance 100 -maxFanOut 10 -honorDontTouch false -createHierPort false
+streamOut CHIP.gds -mapFile streamOut.map -libName DesignLib -merge { library/gds/tpz013g3_v1.1.gds  library/gds/tsmc13gfsg_fram.gds } -outputMacros -units 1000 -mode ALL
+setDrawView ameba
+setDrawView fplan
+setDrawView place
+zoomOut

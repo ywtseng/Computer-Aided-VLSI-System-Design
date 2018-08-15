@@ -1,0 +1,24 @@
+ 
+****************************************
+Report : area
+Design : FAS
+Version: D-2010.03-SP5
+Date   : Sun Jan  1 14:54:47 2017
+****************************************
+
+Library(s) Used:
+
+    typical (File: /net/home/ywtseng/cvsd/hw6/typical.db)
+
+Number of ports:               24
+Number of nets:              8085
+Number of cells:             4481
+Number of references:         153
+
+Combinational area:       157055.332183
+Noncombinational area:    54372.812546
+Net Interconnect area:    1342980.161133
+
+Total cell area:          211428.144729
+Total area:               1554408.305862
+1

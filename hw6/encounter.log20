@@ -1,0 +1,2023 @@
+Checking out Encounter license ...
+Encounter_Digital_Impl_Sys_XL 10.1 license checkout succeeded.
+You can run 2 CPU jobs with the base license that is currently checked out.
+If required, use the setMultiCpuUsage command to enable multi-CPU processing.
+This Encounter release has been compiled with OA version 22.04-p013.
+
+*******************************************************************
+*   Copyright (c)  Cadence Design Systems, Inc.  1996 - 2011.     *
+*                     All rights reserved.                        *
+*                                                                 *
+*                                                                 *
+*                                                                 *
+* This program contains confidential and trade secret information *
+* of Cadence Design Systems, Inc. and is protected by copyright   *
+* law and international treaties.  Any reproduction, use,         *
+* distribution or disclosure of this program or any portion of it,*
+* or any attempt to obtain a human-readable version of this       *
+* program, without the express, prior written consent of          *
+* Cadence Design Systems, Inc., is strictly prohibited.           *
+*                                                                 *
+*                 Cadence Design Systems, Inc.                    *
+*                    2655 Seely Avenue                            *
+*                   San Jose, CA 95134,  USA                      *
+*                                                                 *
+*                                                                 *
+*******************************************************************
+
+@(#)CDS: Encounter v10.13-s272_1 (32bit) 04/18/2012 16:36 (Linux 2.6)
+@(#)CDS: NanoRoute v10.13-s027 NR120403-1008/10_10_USR3-UB (database version 2.30, 132.4.1) {superthreading v1.16}
+@(#)CDS: CeltIC v10.13-s063_1 (32bit) 02/29/2012 09:38:16 (Linux 2.6.9-89.0.19.ELsmp)
+@(#)CDS: AAE 10.13-s008 (32bit) 04/18/2012 (Linux 2.6.9-89.0.19.ELsmp)
+@(#)CDS: CTE 10.13-s018_1 (32bit) Feb 28 2012 22:08:25 (Linux 2.6.9-89.0.19.ELsmp)
+@(#)CDS: CPE v10.13-s225
+--- Starting "Encounter v10.13-s272_1" on Sat Dec 31 15:14:41 2016 (mem=46.1M) ---
+--- Running on eda25 (x86_64 w/Linux 3.12.21-gentoo-r1) ---
+This version was compiled on Wed Apr 18 16:36:14 PDT 2012.
+Set DBUPerIGU to 1000.
+Set net toggle Scale Factor to 1.00
+Set Shrink Factor to 1.00000
+<CMD> win
+*** Memory pool thread-safe mode activated.
+<CMD> loadConfig CHIP.conf 0
+Reading config file - CHIP.conf
+**WARN: (ENCSYT-709):	The next major release of EDI (11.1) will use the
+Multi-Mode/Multi-Corner (MMMC) architecture exclusively for configuration and
+control of some software features. The current configuration will continue to
+work in this release. But for compatibility with the future releases you
+should migrate your design to an MMMC style configuration. You can refer to
+the What's New document for this release for additional information on the
+11.1 migration to MMMC. In addition, you can run loadConfig with the
+-showEolWarnings option to identify specific command and configuration
+options that will no longer be supported.
+<CMD> create_rc_corner -name RC_corner -cap_table {library/tsmc013.capTbl} -preRoute_res {1.5} -preRoute_cap {1.5} -preRoute_clkres {0.0} -preRoute_clkcap {0.0} -postRoute_res {1.5} -postRoute_cap {1.5} -postRoute_xcap {1.5} -postRoute_clkres {0.0} -postRoute_clkcap {0.0} -qx_tech_file {library/tsmc13_8lm.cl/icecaps_8lm.tch}
+<CMD> create_library_set -name lib_max -timing {library/lib/slow.lib library/lib/RF2SH64x16_slow_syn.lib library/lib/tpz013g3wc.lib} -si {library/celtic/slow.cdB}
+<CMD> create_library_set -name lib_min -timing {library/lib/fast.lib library/lib/RF2SH64x16_fast@0C_syn.lib library/lib/tpz013g3lt.lib} -si {library/celtic/fast.cdB}
+<CMD> create_constraint_mode -name func_mode -sdc_files {CHIP.sdc}
+<CMD> create_delay_corner -name Delay_Corner_max -library_set {lib_max} -rc_corner {RC_corner}
+<CMD> create_delay_corner -name Delay_Corner_min -library_set {lib_min} -rc_corner {RC_corner}
+<CMD> create_analysis_view -name av_func_mode_max -constraint_mode {func_mode} -delay_corner {Delay_Corner_max}
+<CMD> create_analysis_view -name av_func_mode_min -constraint_mode {func_mode} -delay_corner {Delay_Corner_min}
+<CMD> commitConfig
+
+Loading Lef file library/lef/tsmc13fsg_8lm_cic.lef...
+Set DBUPerIGU to M2 pitch 920.
+
+Loading Lef file library/lef/tpz013g3_8lm_cic.lef...
+
+Loading Lef file library/lef/RF2SH64x16.vclef...
+WARNING (LEFPARS-2007): NAMESCASESENSITIVE statement is obsolete in version 5.6 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file library/lef/RF2SH64x16.vclef at line 12.
+
+Loading Lef file library/lef/antenna_8.lef...
+**WARN: (ENCLF-119):	the layer 'METAL1' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'METAL2' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'METAL3' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'METAL4' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'METAL5' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'METAL6' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'METAL7' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'METAL8' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'VIA12' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'VIA23' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'VIA34' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'VIA45' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'VIA56' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'VIA67' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-119):	the layer 'VIA78' has been defined, the content other than the antenna data will be ignored.
+**WARN: (ENCLF-44):	Macro 'PDC0102CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PDC0204CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PDC0408CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PDC1216CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PDS0102CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PDS0204CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PDS0408CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PDS1216CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PRC0102CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PRC0204CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PRC0408CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PRC1216CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PRS0102CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PRS0204CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PRS0408CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PRS1216CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PVDD1CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PVSS1CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PVSS3CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (ENCLF-44):	Macro 'PXOE1CDG' has no SIZE statement or a zero SIZE
+statement and it is a class CORE macro so it needs a correct SIZE. There
+is no SITE statement, so a useful SIZE cannot be computed, so this macro
+is not loaded in the Encounter database and cannot be used in the
+netlist.
+**WARN: (EMS-62):	Message <ENCLF-44> has exceeded the default message display limit of 20.
+To avoid this warning, increase the display limit per unique message
+by using the set_message_limit <number> command.
+The message limit can be removed by using the unset_message_limit command.
+Note that setting a very large number using the set_message_limit command
+or removing the message limit using the unset_message_limit command can
+significantly increase the log file size.
+To suppress a message, use suppress_message command.
+**WARN: (ENCLF-200):	Pin 'AA[0]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'AA[1]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'AA[2]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'AA[3]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'AA[4]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'AA[5]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'AB[0]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'AB[1]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'AB[2]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'AB[3]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'AB[4]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'AB[5]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'CENA' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'CENB' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'CLKA' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'CLKB' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'DB[0]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'DB[10]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'DB[11]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (ENCLF-200):	Pin 'DB[12]' in macro 'RF2SH64x16' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (EMS-62):	Message <ENCLF-200> has exceeded the default message display limit of 20.
+To avoid this warning, increase the display limit per unique message
+by using the set_message_limit <number> command.
+The message limit can be removed by using the unset_message_limit command.
+Note that setting a very large number using the set_message_limit command
+or removing the message limit using the unset_message_limit command can
+significantly increase the log file size.
+To suppress a message, use suppress_message command.
+
+Power Planner/ViaGen version 8.1.46 promoted on 02/17/2009.
+viaInitial starts at Sat Dec 31 15:15:07 2016
+**WARN: (ENCPP-557):	a single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. You should remove this statement from your LEF file.
+	VIARULE TURNM1 GENERATE
+**WARN: (ENCPP-557):	a single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. You should remove this statement from your LEF file.
+	VIARULE TURNM2 GENERATE
+**WARN: (ENCPP-557):	a single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. You should remove this statement from your LEF file.
+	VIARULE TURNM3 GENERATE
+**WARN: (ENCPP-557):	a single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. You should remove this statement from your LEF file.
+	VIARULE TURNM4 GENERATE
+**WARN: (ENCPP-557):	a single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. You should remove this statement from your LEF file.
+	VIARULE TURNM5 GENERATE
+**WARN: (ENCPP-557):	a single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. You should remove this statement from your LEF file.
+	VIARULE TURNM6 GENERATE
+**WARN: (ENCPP-557):	a single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. You should remove this statement from your LEF file.
+	VIARULE TURNM7 GENERATE
+**WARN: (ENCPP-557):	a single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. You should remove this statement from your LEF file.
+	VIARULE TURNM8 GENERATE
+viaInitial ends at Sat Dec 31 15:15:07 2016
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist 'FAS_syn.v'
+
+*** Memory Usage v#1 (Current mem = 229.887M, initial mem = 46.102M) ***
+*** End netlist parsing (cpu=0:00:00.1, real=0:00:00.0, mem=229.9M) ***
+Set top cell to CHIP.
+Reading common timing library 'library/lib/slow.lib' ...
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO0' of cell 'ACCSHCINX2' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO1' of cell 'ACCSHCINX2' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO0' of cell 'ACCSHCINX4' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO1' of cell 'ACCSHCINX4' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO0N' of cell 'ACCSHCONX2' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO1N' of cell 'ACCSHCONX2' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO0N' of cell 'ACCSHCONX4' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO1N' of cell 'ACCSHCONX4' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO0N' of cell 'ACCSIHCONX2' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO1N' of cell 'ACCSIHCONX2' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO0N' of cell 'ACCSIHCONX4' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO1N' of cell 'ACCSIHCONX4' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ACHCINX2' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ACHCINX4' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CON' of cell 'ACHCONX2' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CON' of cell 'ACHCONX4' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFHX1' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFHX1' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFHX2' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFHX2' is not defined in the library.
+Message <TECHLIB-436> has exceeded the message display limit of '20'. setMessageLimit/set_message_limit sets the limit. unsetMessageLimit/unset_message_limit can be used to reset this.
+No function defined for cell 'HOLDX1'. The cell will only be used for analysis.
+ read 527 cells in library 'slow' 
+Reading common timing library 'library/lib/RF2SH64x16_slow_syn.lib' ...
+ read 1 cells in library 'USERLIB' 
+Reading common timing library 'library/lib/tpz013g3wc.lib' ...
+No function defined for cell 'PVSS3DGZ'. The cell will only be used for analysis.
+No function defined for cell 'PVSS2DGZ'. The cell will only be used for analysis.
+No function defined for cell 'PVSS1DGZ'. The cell will only be used for analysis.
+No function defined for cell 'PVDD2POC'. The cell will only be used for analysis.
+No function defined for cell 'PVDD2DGZ'. The cell will only be used for analysis.
+No function defined for cell 'PVDD1DGZ'. The cell will only be used for analysis.
+ read 124 cells in library 'tpz013g3wc' 
+*** End library_loading (cpu=0.02min, mem=10.0M, fe_cpu=0.13min, fe_mem=239.9M) ***
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell CHIP ...
+*** Netlist is unique.
+** info: there are 753 modules.
+** info: there are 10035 stdCell insts.
+** info: there are 24 Pad insts.
+
+*** Memory Usage v#1 (Current mem = 248.723M, initial mem = 46.102M) ***
+CTE reading timing constraint file 'CHIP.sdc' ...
+**WARN: (TCLCMD-1013):	The SDC set_operating_conditions assertion is not supported. Please use the Encounter setOpCond command to specify library and operating condition information. Use the setAnalysisMode command to control single vs. bestCase/worstCase vs. on-chip variation timing analysis. (File CHIP.sdc, Line 10).
+
+**WARN: (TCLCMD-513):	No matching object found for 'data_valid' (File CHIP.sdc, Line 17).
+
+**ERROR: (TCLCMD-917):	Cannot find 'ports' that match 'data_valid' (File CHIP.sdc, Line 17).
+
+**ERROR: (TCLCMD-917):	Cannot find 'ports, pins, designs or library cell pins' that match '' (File CHIP.sdc, Line 17).
+
+**WARN: (TCLCMD-513):	No matching object found for 'data_valid' (File CHIP.sdc, Line 40).
+
+**ERROR: (TCLCMD-917):	Cannot find 'ports' that match 'data_valid' (File CHIP.sdc, Line 40).
+
+**WARN: (TCLCMD-513):	No matching object found for '' (File CHIP.sdc, Line 40).
+
+**ERROR: (TCLNL-312):	set_input_delay: Invalid list of pins: '' (File CHIP.sdc, Line 40).
+
+**WARN: (TCLCMD-513):	No matching object found for 'data_valid' (File CHIP.sdc, Line 63).
+
+**ERROR: (TCLCMD-917):	Cannot find 'ports' that match 'data_valid' (File CHIP.sdc, Line 63).
+
+**WARN: (TCLCMD-513):	No matching object found for '' (File CHIP.sdc, Line 63).
+
+**ERROR: (TCLNL-312):	set_drive: Invalid list of pins: '' (File CHIP.sdc, Line 63).
+
+INFO (CTE): read_dc_script finished with  6 WARNING and 6 ERROR
+WARNING (CTE-25): Line: 8 of File CHIP.sdc : Skipped unsupported command: set_units
+
+
+*** Read timing constraints (cpu=0:00:00.0 mem=253.9M) ***
+Total number of combinational cells: 362
+Total number of sequential cells: 154
+Total number of tristate cells: 10
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers: BUFX2 BUFX12 BUFX16 BUFX20 BUFX3 CLKBUFX2 BUFX4 BUFX6 BUFX8 CLKBUFX12 CLKBUFX16 CLKBUFX20 CLKBUFX3 CLKBUFX4 CLKBUFX6 CLKBUFX8
+Total number of usable buffers: 16
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: CLKINVX1 CLKINVX2 CLKINVX12 CLKINVX16 CLKINVX20 CLKINVX3 CLKINVX4 CLKINVX6 CLKINVX8 INVX1 INVX2 INVX12 INVX16 INVX20 INVXL INVX3 INVX4 INVX6 INVX8
+Total number of usable inverters: 19
+List of unusable inverters: RFRDX2 RFRDX1 RFRDX4
+Total number of unusable inverters: 3
+List of identified usable delay cells: DLY1X1 DLY1X4 DLY2X1 DLY2X4 DLY3X1 DLY3X4 DLY4X1 DLY4X4
+Total number of identified usable delay cells: 8
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+*info: set bottom ioPad orient R0
+Reading IO assignment file "FAS.ioc" ...
+Adjusting Core to Left to: 0.1000.
+Set Using Default Delay Limit as 1000.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Input Pin Transition Delay as 0.1 ps.
+PreRoute Cap Scale Factor :        1.50
+PreRoute Res Scale Factor :        1.50
+PostRoute Cap Scale Factor :       1.50
+PostRoute Res Scale Factor :       1.50
+PostRoute XCap Scale Factor :      1.50
+
+PreRoute Clock Cap Scale Factor :  1.50	[Derived from postRoute_cap (effortLevel low)]
+PreRoute Clock Res Scale Factor :  1.50	[Derived from postRoute_res (effortLevel low)]
+PostRoute Clock Cap Scale Factor : 1.50	[Derived from postRoute_cap (effortLevel low)]
+PostRoute Clock Res Scale Factor : 1.50	[Derived from postRoute_res (effortLevel low)]
+Reading Capacitance Table File library/tsmc013.capTbl ...
+Cap Table was created using Encounter 04.20-s274_1.
+Process name: t013s8ml_fsg.
+<CMD> fit
+<CMD> setDrawView fplan
+<CMD> clearGlobalNets
+<CMD> globalNetConnect VDD -type pgpin -pin VDD -inst *
+<CMD> globalNetConnect VSS -type pgpin -pin VSS -inst *
+<CMD> globalNetConnect VDD -type tiehi -inst *
+<CMD> globalNetConnect VSS -type tielo -inst *
+<CMD> getIoFlowFlag
+<CMD> setIoFlowFlag 0
+<CMD> floorPlan -site TSM13SITE -r 1 0.8 80 80 80 80
+Adjusting Core to Left to: 80.1400. Core to Bottom to: 80.3600.
+**WARN: (ENCFP-325):	After proportional resize, all pre-routed wires will be removed.
+<CMD> uiSetTool select
+<CMD> getIoFlowFlag
+<CMD> fit
+<CMD> setPlaceMode -fp true
+**WARN: (ENCSP-509):	Option -timingDriven is set to false when -fp is true 
+<CMD> placeDesign -noPrePlaceOpt
+*** Starting placeDesign default flow ***
+Extracting standard cell pins and blockage ...... 
+Pin and blockage extraction finished
+Extracting macro/IO cell pins and blockage ...... 
+Pin and blockage extraction finished
+*** Starting "NanoPlace(TM) placement v#1 (mem=257.0M)" ...
+Options: clkGateAware ignoreScan ignoreSpare pinGuide gpeffort=fp 
+**WARN: (ENCSP-9042):	Scan chains were not defined, -ignoreScan option will be ignored. 
+Please first define the scan chains before using this option.
+#std cell=10035 #block=0 (0 floating + 0 preplaced) #ioInst=36 #net=14347 #term=43095 #term/net=3.00, #fixedIo=36, #floatIo=0, #fixedPin=24, #floatPin=0
+stdCell: 10035 single + 0 double + 0 multi
+Total standard cell length = 57.2976 (mm), area = 0.2114 (mm^2)
+Average module density = 0.800.
+Density for the design = 0.800.
+       = stdcell_area 124560 (211428 um^2) / alloc_area 155680 (264251 um^2).
+Pin Density = 0.346.
+            = total # of pins 43095 / total Instance area 124560.
+Checking spec file integrity...
+Clock gating cells determined by native netlist tracing.
+Iteration  1: Total net bbox = 2.525e+04 (1.24e+04 1.28e+04)
+              Est.  stn bbox = 2.525e+04 (1.24e+04 1.28e+04)
+              cpu = 0:00:00.1 real = 0:00:00.0 mem = 264.2M
+Iteration  2: Total net bbox = 2.525e+04 (1.24e+04 1.28e+04)
+              Est.  stn bbox = 2.525e+04 (1.24e+04 1.28e+04)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 264.2M
+Iteration  3: Total net bbox = 2.438e+04 (1.23e+04 1.21e+04)
+              Est.  stn bbox = 2.438e+04 (1.23e+04 1.21e+04)
+              cpu = 0:00:00.3 real = 0:00:00.0 mem = 264.2M
+Iteration  4: Total net bbox = 2.410e+05 (7.91e+04 1.62e+05)
+              Est.  stn bbox = 2.410e+05 (7.91e+04 1.62e+05)
+              cpu = 0:00:02.0 real = 0:00:02.0 mem = 264.2M
+Iteration  5: Total net bbox = 3.129e+05 (1.28e+05 1.85e+05)
+              Est.  stn bbox = 3.129e+05 (1.28e+05 1.85e+05)
+              cpu = 0:00:01.7 real = 0:00:01.0 mem = 264.2M
+Iteration  6: Total net bbox = 3.398e+05 (1.46e+05 1.94e+05)
+              Est.  stn bbox = 3.398e+05 (1.46e+05 1.94e+05)
+              cpu = 0:00:00.9 real = 0:00:02.0 mem = 264.5M
+Iteration  7: Total net bbox = 3.679e+05 (1.72e+05 1.96e+05)
+              Est.  stn bbox = 4.509e+05 (2.09e+05 2.42e+05)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 262.7M
+Iteration  8: Total net bbox = 3.679e+05 (1.72e+05 1.96e+05)
+              Est.  stn bbox = 4.509e+05 (2.09e+05 2.42e+05)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 262.7M
+Iteration  9: Total net bbox = 3.745e+05 (1.76e+05 1.98e+05)
+              Est.  stn bbox = 4.608e+05 (2.14e+05 2.46e+05)
+              cpu = 0:00:01.1 real = 0:00:01.0 mem = 262.8M
+Iteration 10: Total net bbox = 3.745e+05 (1.76e+05 1.98e+05)
+              Est.  stn bbox = 4.608e+05 (2.14e+05 2.46e+05)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 262.8M
+Iteration 11: Total net bbox = 3.793e+05 (1.79e+05 2.00e+05)
+              Est.  stn bbox = 4.660e+05 (2.17e+05 2.49e+05)
+              cpu = 0:00:00.9 real = 0:00:00.0 mem = 263.3M
+Iteration 12: Total net bbox = 4.428e+05 (2.40e+05 2.03e+05)
+              Est.  stn bbox = 5.320e+05 (2.80e+05 2.52e+05)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 263.3M
+*** cost = 4.428e+05 (2.40e+05 2.03e+05) (cpu for global=0:00:06.9) real=0:00:06.0***
+Info: 0 clock gating cells identified, 0 (on average) moved
+Core Placement runtime cpu: 0:00:06.9 real: 0:00:06.0
+Total net length = 4.428e+05 (2.396e+05 2.032e+05) (ext = 0.000e+00)
+*** End of Placement (cpu=0:00:07.1, real=0:00:06.0, mem=263.3M) ***
+default core: bins with density >  0.75 = 66.3 % ( 130 / 196 )
+Starting IO pin assignment...
+**WARN: (ENCSP-9025):	No scan chain specified/traced.
+*** Finishing placeDesign default flow ***
+**placeDesign ... cpu = 0: 0: 7, real = 0: 0: 6, mem = 262.9M **
+<CMD> selectObject Module FAS
+<CMD> windowSelect -286.864 321.192 -455.713 181.393
+<CMD> uiSetTool move
+<CMD> selectObject Module FAS
+<CMD> setObjFPlanBox Module FAS 1193.8975 644.5295 1708.4575 1158.1465
+<CMD> uiSetTool select
+<CMD> deselectAll
+<CMD> selectObject Module FAS
+**WARN: (ENCSYT-3137):	Please select at least 1 Macro
+
+<CMD> deselectAll
+<CMD> selectObject Module FAS
+<CMD> deselectAll
+<CMD> selectObject Module FAS
+<CMD> deselectAll
+<CMD> selectObject Module FAS
+<CMD> deselectAll
+<CMD> selectObject Module FAS
+<CMD> deselectAll
+<CMD> selectObject Module FAS
+<CMD> deselectAll
+<CMD> selectObject Module FAS
+<CMD> deselectAll
+<CMD> selectObject Module FAS
+**WARN: (ENCSYT-3137):	Please select at least 1 Macro
+
+<CMD> deselectAll
+<CMD> selectObject Module FAS
+<CMD> deselectAll
+**ERROR: (ENCSYT-6000):	No Object Selected.
+<CMD> setDrawView ameba
+<CMD> selectObject Module FAS
+**WARN: (ENCSYT-3137):	Please select at least 1 Macro
+
+<CMD> uiSetTool move
+<CMD> setObjFPlanBox Module FAS 1722.23 697.181 2236.79 1210.798
+<CMD> setObjFPlanBox Module FAS 1248.365 657.2385 1762.925 1170.8555
+**WARN: (ENCSYT-3137):	Please select at least 1 Macro
+
+<CMD> uiSetTool select
+<CMD> deselectAll
+<CMD> selectObject Module FAS
+<CMD> deselectAll
+<CMD> selectObject Module FAS
+<CMD> setDrawView place
+<CMD> deselectAll
+**WARN: (ENCSYT-3137):	Please select at least 1 Macro
+
+<CMD> selectInst FAS/mult_53/U25
+<CMD> deselectAll
+<CMD> selectInst FAS/mult_53/U25
+<CMD> deselectAll
+<CMD> selectInst CORNER1
+<CMD> deselectAll
+**ERROR: (ENCSYT-6000):	No Object Selected.
+<CMD> selectInst CORNER1
+<CMD> deselectAll
+<CMD> selectInst CORNER1
+<CMD> setDrawView ameba
+<CMD> deselectAll
+<CMD> selectObject Module FAS
+<CMD> deselectAll
+<CMD> selectInst ipad_data02
+<CMD> deselectAll
+<CMD> selectInst ipad_data02
+<CMD> addHaloToBlock 30 30 30 30 ipad_data02
+Adding Block Halo to Macro ipad_data02 (PDIDGZ): (left: 30, bottom: 30, right: 30, top: 30)
+<CMD> deselectAll
+<CMD> selectInst ipad_data01
+<CMD> deselectAll
+<CMD> selectInst ipad_data02
+<CMD> undo
+<CMD> undo
+<CMD> undo
+<CMD> deselectAll
+**ERROR: (ENCSYT-6000):	No Object Selected.
+<CMD> selectInst ipad_val
+<CMD> deselectAll
+<CMD> selectInst ipad_rst
+<CMD> deselectAll
+<CMD> selectInst ipad_clk
+<CMD> deselectAll
+**WARN: (ENCSYT-3137):	Please select at least 1 Macro
+
+<CMD> selectObject Module FAS
+<CMD> setDrawView fplan
+<CMD> deselectAll
+<CMD> selectInst ipad_data02
+<CMD> deselectAll
+**WARN: (ENCSYT-3137):	Please select at least 1 Macro
+
+<CMD> selectInst ipad_data02
+<CMD> deselectAll
+<CMD> selectInst ipad_data02
+<CMD> deselectAll
+<CMD> selectInst ipad_data02
+<CMD> deselectAll
+<CMD> selectInst ipad_data02
+<CMD> deleteHaloFromBlock ipad_data02
+Remove Block Halo from Macro ipad_data02 (PDIDGZ)
+<CMD> deselectAll
+<CMD> selectInst ipad_data01
+<CMD> deselectAll
+<CMD> selectInst CORNER1
+<CMD> deselectAll
+<CMD> selectInst CORNER0
+<CMD> deselectAll
+<CMD> selectInst CORNER3
+<CMD> deselectAll
+<CMD> selectInst ipad_data02
+<CMD> deselectAll
+<CMD> selectInst CORNER3
+<CMD> deselectAll
+<CMD> selectInst CORNER0
+<CMD> deselectAll
+**ERROR: (ENCSYT-6000):	No Object Selected.
+<CMD> selectInst CORNER0
+<CMD> deselectAll
+<CMD> selectInst CORNER0
+<CMD> addHaloToBlock 30 30 30 30 CORNER0
+Adding Block Halo to Macro CORNER0 (PCORNERDGZ): (left: 30, bottom: 30, right: 30, top: 30)
+<CMD_INTERNAL> redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+<CMD> clearClockDomains
+<CMD> setClockDomains -all
+setClockDomains -all 
+**WARN: (ENCSYC-1873):	The setClockDomains -all option is unsupported in CTE mode 
+<CMD> timeDesign -prePlace -idealClock -pathReports -drvReports -slackReports -numPaths 50 -prefix CHIP_prePlace -outDir timingReports
+Set Using Default Delay Limit as 101.
+**WARN: (ENCDC-1629):	The variable rdaUseDefaultDelayLimit was set to 101. This is less than the default 1000 and may result in inaccurate results for high fanout nets. To change the variable, run command setUseDefaultDelayLimit.
+Setting High Fanout Nets ( > 100 ) as ideal temporarily for -prePlace option
+Set Default Net Delay as 0 ps.
+Set Default Net Load as 0 pF. 
+**WARN: Skipped set_input_transition constraints on port "clk" due to set_drive specified on same
+**WARN: (ENCTS-403):	Delay calculation was forced to extrapolate table data outside of the characterized range. In some cases, extrapolation can reduce the accuracy of the delay calculation.  You can enable more detailed reporting of these cases by enabling the command 'setDelayCalMode -reportOutBound'.
+
+------------------------------------------------------------
+          timeDesign Summary                             
+------------------------------------------------------------
+
++--------------------+---------+---------+---------+---------+---------+---------+
+|     Setup mode     |   all   | reg2reg | in2reg  | reg2out | in2out  | clkgate |
++--------------------+---------+---------+---------+---------+---------+---------+
+|           WNS (ns):| -7.114  |  0.910  | -7.114  | 17.196  |   N/A   |   N/A   |
+|           TNS (ns):| -2714.5 |  0.000  | -2714.5 |  0.000  |   N/A   |   N/A   |
+|    Violating Paths:|   735   |    0    |   735   |    0    |   N/A   |   N/A   |
+|          All Paths:|  3333   |  1664   |  2831   |    5    |   N/A   |   N/A   |
++--------------------+---------+---------+---------+---------+---------+---------+
+
+Density: 80.010%
+------------------------------------------------------------
+Set Using Default Delay Limit as 1000.
+Resetting back High Fanout Nets as non-ideal
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Reported timing to dir timingReports
+Total CPU time: 1.94 sec
+Total Real time: 2.0 sec
+Total Memory Usage: 273.851562 Mbytes
+<CMD> setPlaceMode -fp false
+<CMD> placeDesign -noPrePlaceOpt
+*** Starting placeDesign default flow ***
+*** Starting "NanoPlace(TM) placement v#1 (mem=274.4M)" ...
+*** Build Buffered Sizing Timing Model
+(cpu=0:00:03.3 mem=282.0M) ***
+*** Build Virtual Sizing Timing Model
+(cpu=0:00:03.3 mem=289.6M) ***
+Options: timingDriven clkGateAware ignoreScan ignoreSpare pinGuide gpeffort=medium 
+**WARN: (ENCSP-9042):	Scan chains were not defined, -ignoreScan option will be ignored. 
+Please first define the scan chains before using this option.
+#std cell=10035 #block=0 (0 floating + 0 preplaced) #ioInst=36 #net=14347 #term=43149 #term/net=3.01, #fixedIo=36, #floatIo=0, #fixedPin=24, #floatPin=0
+stdCell: 10035 single + 0 double + 0 multi
+Total standard cell length = 57.2976 (mm), area = 0.2114 (mm^2)
+Average module density = 0.800.
+Density for the design = 0.800.
+       = stdcell_area 124560 (211428 um^2) / alloc_area 155680 (264251 um^2).
+Pin Density = 0.346.
+            = total # of pins 43149 / total Instance area 124560.
+
+**WARN: Skipped set_input_transition constraints on port "clk" due to set_drive specified on same
+Checking spec file integrity...
+Clock gating cells determined by native netlist tracing.
+Iteration  1: Total net bbox = 2.525e+04 (1.24e+04 1.28e+04)
+              Est.  stn bbox = 2.525e+04 (1.24e+04 1.28e+04)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 306.8M
+Iteration  2: Total net bbox = 2.525e+04 (1.24e+04 1.28e+04)
+              Est.  stn bbox = 2.525e+04 (1.24e+04 1.28e+04)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 306.8M
+Iteration  3: Total net bbox = 2.525e+04 (1.24e+04 1.28e+04)
+              Est.  stn bbox = 2.525e+04 (1.24e+04 1.28e+04)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 306.8M
+Iteration  4: Total net bbox = 2.791e+05 (8.29e+04 1.96e+05)
+              Est.  stn bbox = 2.791e+05 (8.29e+04 1.96e+05)
+              cpu = 0:00:04.0 real = 0:00:04.0 mem = 306.8M
+Iteration  5: Total net bbox = 3.335e+05 (1.46e+05 1.88e+05)
+              Est.  stn bbox = 3.335e+05 (1.46e+05 1.88e+05)
+              cpu = 0:00:02.3 real = 0:00:03.0 mem = 306.8M
+Iteration  6: Total net bbox = 3.605e+05 (1.59e+05 2.01e+05)
+              Est.  stn bbox = 3.605e+05 (1.59e+05 2.01e+05)
+              cpu = 0:00:02.4 real = 0:00:02.0 mem = 306.8M
+Iteration  7: Total net bbox = 3.644e+05 (1.63e+05 2.01e+05)
+              Est.  stn bbox = 4.458e+05 (2.00e+05 2.46e+05)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 302.9M
+**WARN: Skipped set_input_transition constraints on port "clk" due to set_drive specified on same
+**WARN: Skipped set_input_transition constraints on port "clk" due to set_drive specified on same
+Iteration  8: Total net bbox = 3.884e+05 (1.83e+05 2.05e+05)
+              Est.  stn bbox = 4.698e+05 (2.20e+05 2.50e+05)
+              cpu = 0:00:04.8 real = 0:00:03.0 mem = 302.9M
+Iteration  9: Total net bbox = 3.736e+05 (1.72e+05 2.01e+05)
+              Est.  stn bbox = 4.572e+05 (2.10e+05 2.47e+05)
+              cpu = 0:00:00.0 real = 0:00:02.0 mem = 302.9M
+**WARN: Skipped set_input_transition constraints on port "clk" due to set_drive specified on same
+**WARN: Skipped set_input_transition constraints on port "clk" due to set_drive specified on same
+Iteration 10: Total net bbox = 3.926e+05 (1.87e+05 2.06e+05)
+              Est.  stn bbox = 4.762e+05 (2.25e+05 2.51e+05)
+              cpu = 0:00:05.6 real = 0:00:03.0 mem = 302.9M
+Iteration 11: Total net bbox = 3.803e+05 (1.75e+05 2.06e+05)
+              Est.  stn bbox = 4.633e+05 (2.13e+05 2.51e+05)
+              cpu = 0:00:03.1 real = 0:00:05.0 mem = 303.1M
+Iteration 12: Total net bbox = 3.803e+05 (1.75e+05 2.06e+05)
+              Est.  stn bbox = 4.633e+05 (2.13e+05 2.51e+05)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 303.3M
+Iteration 13: Total net bbox = 4.164e+05 (2.09e+05 2.07e+05)
+              Est.  stn bbox = 5.008e+05 (2.48e+05 2.52e+05)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 303.3M
+*** cost = 4.164e+05 (2.09e+05 2.07e+05) (cpu for global=0:00:22.1) real=0:00:22.0***
+Info: 1 clock gating cells identified, 0 (on average) moved
+Core Placement runtime cpu: 0:00:11.7 real: 0:00:16.0
+Starting refinePlace ...
+move report: placeLevelShifters moves 0 insts, mean move: 0.00 um, max move: 0.00 um
+  Spread Effort: high, pre-route mode.
+Finished Phase I. CPU Time = 0:00:05.6, Real Time = 0:00:03.0
+move report: preRPlace moves 7236 insts, mean move: 1.64 um, max move: 12.89 um
+	max move on inst (FAS/add_77/U1_20): (359.72, 695.36) --> (368.92, 699.05)
+Placement tweakage begins.
+wire length = 4.179e+05 = 2.092e+05 H + 2.087e+05 V
+wire length = 3.745e+05 = 1.677e+05 H + 2.068e+05 V
+Placement tweakage ends.
+move report: tweak moves 4731 insts, mean move: 7.32 um, max move: 55.24 um
+	max move on inst (FAS/U2597): (394.68, 529.31) --> (435.16, 544.07)
+move report: rPlace moves 0 insts, mean move: 0.00 um, max move: 0.00 um
+move report: overall moves 8443 insts, mean move: 4.83 um, max move: 54.32 um
+	max move on inst (FAS/U2597): (395.60, 529.31) --> (435.16, 544.07)
+Statistics of distance of Instance movement in detailed placement:
+  maximum (X+Y) =        54.32 um
+  inst (FAS/U2597) with max move: (395.6, 529.31) -> (435.16, 544.07)
+  mean    (X+Y) =         4.83 um
+Total instances flipped for WireLenOpt: 117
+Total instances flipped, including legalization: 1128
+Total instances moved : 8443
+*** cpu=0:00:05.6   mem=309.4M  mem(used)=6.3M***
+Total net length = 3.745e+05 (1.677e+05 2.068e+05) (ext = 0.000e+00)
+*** End of Placement (cpu=0:00:32.9, real=0:00:30.0, mem=309.4M) ***
+default core: bins with density >  0.75 = 80.6 % ( 158 / 196 )
+*** Free Virtual Timing Model ...(mem=299.1M)
+Starting IO pin assignment...
+**WARN: (ENCSP-9025):	No scan chain specified/traced.
+Starting congestion repair ...
+*** Starting trialRoute (mem=299.1M) ***
+
+There are 0 pin guide points passed to trialRoute.
+**WARN: (ENCTR-2325):	there are 24 nets connecting a pad term to a fterm without geometry and these nets will not be routed.  Type 'set trPrintIgnoredPadNets <limit>'  to see these nets.
+Options:  -noPinGuide
+
+Nr of prerouted/Fixed nets = 24
+routingBox: (460 410) (2334500 2330030)
+coreBox:    (652280 652720) (1682820 1678540)
+Number of multi-gpin terms=3164, multi-gpins=8178, moved blk term=12/12
+
+Phase 1a route (0:00:00.0 299.1M):
+Est net length = 4.328e+05um = 1.997e+05H + 2.331e+05V
+Usage: (4.7%H 5.5%V) = (2.378e+05um 3.725e+05um) = (103173 100985)
+Obstruct: 85076 = 42538 (32.4%H) + 42538 (32.4%V)
+Overflow: 0 = 0 (0.00% H) + 0 (0.00% V)
+
+Phase 1b route (0:00:00.0 299.1M):
+Usage: (4.7%H 5.5%V) = (2.373e+05um 3.725e+05um) = (102973 100983)
+Overflow: 0 = 0 (0.00% H) + 0 (0.00% V)
+
+Phase 1c route (0:00:00.0 299.1M):
+Usage: (4.7%H 5.5%V) = (2.368e+05um 3.721e+05um) = (102736 100887)
+Overflow: 0 = 0 (0.00% H) + 0 (0.00% V)
+
+Phase 1d route (0:00:00.0 299.1M):
+Usage: (4.7%H 5.5%V) = (2.368e+05um 3.721e+05um) = (102736 100887)
+Overflow: 0 = 0 (0.00% H) + 0 (0.00% V)
+
+Phase 1e route (0:00:00.0 299.1M):
+Usage: (4.7%H 5.5%V) = (2.368e+05um 3.721e+05um) = (102736 100887)
+Overflow: 0 = 0 (0.00% H) + 0 (0.00% V)
+
+Usage: (4.7%H 5.5%V) = (2.368e+05um 3.721e+05um) = (102736 100887)
+Overflow: 0 = 0 (0.00% H) + 0 (0.00% V)
+
+Congestion distribution:
+
+Remain	cntH		cntV
+--------------------------------------
+--------------------------------------
+  2:	0	 0.00%	22	 0.02%
+  3:	234	 0.26%	376	 0.42%
+  4:	0	 0.00%	7	 0.01%
+  5:	0	 0.00%	15	 0.02%
+  6:	470	 0.53%	512	 0.58%
+  7:	0	 0.00%	583	 0.66%
+  8:	1	 0.00%	317	 0.36%
+  9:	471	 0.53%	830	 0.94%
+ 10:	0	 0.00%	1495	 1.69%
+ 11:	0	 0.00%	2231	 2.52%
+ 12:	236	 0.27%	3448	 3.89%
+ 13:	6	 0.01%	5406	 6.10%
+ 14:	7	 0.01%	5459	 6.16%
+ 15:	152	 0.17%	5310	 6.00%
+ 16:	94	 0.11%	4730	 5.34%
+ 17:	176	 0.20%	33699	38.05%
+ 18:	571	 0.64%	0	 0.00%
+ 19:	707	 0.80%	0	 0.00%
+ 20:	85437	96.47%	24122	27.24%
+
+Global route (cpu=0.0s real=1.0s 299.1M)
+Phase 1l route (0:00:00.0 299.1M):
+
+
+*** After '-updateRemainTrks' operation: 
+
+Usage: (4.8%H 5.7%V) = (2.447e+05um 3.845e+05um) = (106192 104235)
+Overflow: 0 = 0 (0.00% H) + 0 (0.00% V)
+
+Congestion distribution:
+
+Remain	cntH		cntV
+--------------------------------------
+--------------------------------------
+  2:	6	 0.01%	29	 0.03%
+  3:	228	 0.26%	374	 0.42%
+  4:	0	 0.00%	17	 0.02%
+  5:	0	 0.00%	40	 0.05%
+  6:	470	 0.53%	547	 0.62%
+  7:	0	 0.00%	680	 0.77%
+  8:	1	 0.00%	429	 0.48%
+  9:	471	 0.53%	982	 1.11%
+ 10:	0	 0.00%	1612	 1.82%
+ 11:	0	 0.00%	2277	 2.57%
+ 12:	237	 0.27%	3383	 3.82%
+ 13:	7	 0.01%	5213	 5.89%
+ 14:	16	 0.02%	5315	 6.00%
+ 15:	168	 0.19%	5190	 5.86%
+ 16:	115	 0.13%	4659	 5.26%
+ 17:	189	 0.21%	33693	38.04%
+ 18:	632	 0.71%	0	 0.00%
+ 19:	822	 0.93%	0	 0.00%
+ 20:	85200	96.20%	24122	27.24%
+
+
+
+*** Completed Phase 1 route (0:00:00.0 299.1M) ***
+
+
+Total length: 4.446e+05um, number of vias: 89501
+M1(H) length: 4.078e+01um, number of vias: 43077
+M2(V) length: 1.440e+05um, number of vias: 38327
+M3(H) length: 1.798e+05um, number of vias: 6958
+M4(V) length: 9.007e+04um, number of vias: 797
+M5(H) length: 1.726e+04um, number of vias: 294
+M6(V) length: 1.280e+04um, number of vias: 24
+M7(H) length: 6.028e+02um, number of vias: 24
+M8(V) length: 2.912e+01um
+*** Completed Phase 2 route (0:00:00.0 299.1M) ***
+
+*** Finished all Phases (cpu=0:00:00.0 mem=299.1M) ***
+Peak Memory Usage was 303.1M 
+*** Finished trialRoute (cpu=0:00:00.0 mem=299.1M) ***
+
+CongRepair Bin Grid Size (width, height) = ( default_value , default_value )
+Trial Route Overflow 0.000000(H) 0.000000(V).
+Skipped repairing congestion.
+*** Finishing placeDesign default flow ***
+**placeDesign ... cpu = 0: 0:33, real = 0: 0:32, mem = 299.1M **
+<CMD> refinePlace -checkRoute 0 -honorSoftBlockage 0 -preserveRouting 0 -rmAffectedRouting 0 -swapEEQ 0 -checkPinLayerForAccess 1
+Starting refinePlace ...
+  Spread Effort: high, standalone mode.
+Finished Phase I. CPU Time = 0:00:00.0, Real Time = 0:00:01.0
+move report: preRPlace moves 0 insts, mean move: 0.00 um, max move: 0.00 um
+move report: rPlace moves 0 insts, mean move: 0.00 um, max move: 0.00 um
+move report: overall moves 0 insts, mean move: 0.00 um, max move: 0.00 um
+Statistics of distance of Instance movement in detailed placement:
+  maximum (X+Y) =         0.00 um
+  mean    (X+Y) =         0.00 um
+Total instances moved : 0
+*** cpu=0:00:00.0   mem=299.1M  mem(used)=0.0M***
+Total net length = 3.745e+05 (1.677e+05 2.068e+05) (ext = 0.000e+00)
+default core: bins with density >  0.75 = 80.6 % ( 158 / 196 )
+<CMD_INTERNAL> redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+<CMD> clearClockDomains
+<CMD> setClockDomains -all
+setClockDomains -all 
+**WARN: (ENCSYC-1873):	The setClockDomains -all option is unsupported in CTE mode 
+<CMD> timeDesign -preCTS -idealClock -pathReports -drvReports -slackReports -numPaths 50 -prefix CHIP_preCTS -outDir timingReports
+*** Starting trialRoute (mem=299.1M) ***
+
+There are 0 pin guide points passed to trialRoute.
+Options:  -noPinGuide
+
+Nr of prerouted/Fixed nets = 24
+routingBox: (460 410) (2334500 2330030)
+coreBox:    (652280 652720) (1682820 1678540)
+Number of multi-gpin terms=3164, multi-gpins=8178, moved blk term=12/12
+
+Phase 1a route (0:00:00.0 302.6M):
+Est net length = 4.328e+05um = 1.997e+05H + 2.331e+05V
+Usage: (4.7%H 5.5%V) = (2.378e+05um 3.725e+05um) = (103173 100985)
+Obstruct: 85076 = 42538 (32.4%H) + 42538 (32.4%V)
+Overflow: 0 = 0 (0.00% H) + 0 (0.00% V)
+
+Phase 1b route (0:00:00.0 302.6M):
+Usage: (4.7%H 5.5%V) = (2.373e+05um 3.725e+05um) = (102973 100983)
+Overflow: 0 = 0 (0.00% H) + 0 (0.00% V)
+
+Phase 1c route (0:00:00.0 302.6M):
+Usage: (4.7%H 5.5%V) = (2.368e+05um 3.721e+05um) = (102736 100887)
+Overflow: 0 = 0 (0.00% H) + 0 (0.00% V)
+
+Phase 1d route (0:00:00.0 302.6M):
+Usage: (4.7%H 5.5%V) = (2.368e+05um 3.721e+05um) = (102736 100887)
+Overflow: 0 = 0 (0.00% H) + 0 (0.00% V)
+
+Phase 1e route (0:00:00.0 302.6M):
+Usage: (4.7%H 5.5%V) = (2.368e+05um 3.721e+05um) = (102736 100887)
+Overflow: 0 = 0 (0.00% H) + 0 (0.00% V)
+
+Usage: (4.7%H 5.5%V) = (2.368e+05um 3.721e+05um) = (102736 100887)
+Overflow: 0 = 0 (0.00% H) + 0 (0.00% V)
+
+Congestion distribution:
+
+Remain	cntH		cntV
+--------------------------------------
+--------------------------------------
+  2:	0	 0.00%	22	 0.02%
+  3:	234	 0.26%	376	 0.42%
+  4:	0	 0.00%	7	 0.01%
+  5:	0	 0.00%	15	 0.02%
+  6:	470	 0.53%	512	 0.58%
+  7:	0	 0.00%	583	 0.66%
+  8:	1	 0.00%	317	 0.36%
+  9:	471	 0.53%	830	 0.94%
+ 10:	0	 0.00%	1495	 1.69%
+ 11:	0	 0.00%	2231	 2.52%
+ 12:	236	 0.27%	3448	 3.89%
+ 13:	6	 0.01%	5406	 6.10%
+ 14:	7	 0.01%	5459	 6.16%
+ 15:	152	 0.17%	5310	 6.00%
+ 16:	94	 0.11%	4730	 5.34%
+ 17:	176	 0.20%	33699	38.05%
+ 18:	571	 0.64%	0	 0.00%
+ 19:	707	 0.80%	0	 0.00%
+ 20:	85437	96.47%	24122	27.24%
+
+Global route (cpu=0.0s real=1.0s 302.6M)
+Phase 1l route (0:00:00.0 299.1M):
+
+
+*** After '-updateRemainTrks' operation: 
+
+Usage: (4.8%H 5.7%V) = (2.447e+05um 3.845e+05um) = (106192 104235)
+Overflow: 0 = 0 (0.00% H) + 0 (0.00% V)
+
+Congestion distribution:
+
+Remain	cntH		cntV
+--------------------------------------
+--------------------------------------
+  2:	6	 0.01%	29	 0.03%
+  3:	228	 0.26%	374	 0.42%
+  4:	0	 0.00%	17	 0.02%
+  5:	0	 0.00%	40	 0.05%
+  6:	470	 0.53%	547	 0.62%
+  7:	0	 0.00%	680	 0.77%
+  8:	1	 0.00%	429	 0.48%
+  9:	471	 0.53%	982	 1.11%
+ 10:	0	 0.00%	1612	 1.82%
+ 11:	0	 0.00%	2277	 2.57%
+ 12:	237	 0.27%	3383	 3.82%
+ 13:	7	 0.01%	5213	 5.89%
+ 14:	16	 0.02%	5315	 6.00%
+ 15:	168	 0.19%	5190	 5.86%
+ 16:	115	 0.13%	4659	 5.26%
+ 17:	189	 0.21%	33693	38.04%
+ 18:	632	 0.71%	0	 0.00%
+ 19:	822	 0.93%	0	 0.00%
+ 20:	85200	96.20%	24122	27.24%
+
+
+
+*** Completed Phase 1 route (0:00:00.0 299.1M) ***
+
+
+Total length: 4.446e+05um, number of vias: 89501
+M1(H) length: 4.078e+01um, number of vias: 43077
+M2(V) length: 1.440e+05um, number of vias: 38327
+M3(H) length: 1.798e+05um, number of vias: 6958
+M4(V) length: 9.007e+04um, number of vias: 797
+M5(H) length: 1.726e+04um, number of vias: 294
+M6(V) length: 1.280e+04um, number of vias: 24
+M7(H) length: 6.028e+02um, number of vias: 24
+M8(V) length: 2.912e+01um
+*** Completed Phase 2 route (0:00:01.2 299.1M) ***
+
+*** Finished all Phases (cpu=0:00:01.2 mem=299.1M) ***
+Peak Memory Usage was 306.6M 
+*** Finished trialRoute (cpu=0:00:01.2 mem=299.1M) ***
+
+Extraction called for design 'CHIP' of instances=10071 and nets=14357 using extraction engine 'preRoute' .
+**WARN: (ENCEXT-3530):	Use of command 'setDesignMode -process <process_node>' prior to extraction is recommended for maximum accuracy and optimal automatic threshold setting.
+Default RC Extraction called for design CHIP.
+RCMode: Default
+Capacitance Scaling Factor   : 1.50000
+Resistance Scaling Factor    : 1.50000
+Clock Cap. Scaling Factor    : 1.50000
+Clock Res Scaling Factor     : 1.50000
+Shrink Factor                : 1.00000
+Default RC extraction is honoring NDR/Shielding/ExtraSpace for clock nets.
+Default RC Extraction DONE (CPU Time: 0:00:00.0  Real Time: 0:00:00.0  MEM: 299.051M)
+**WARN: Skipped set_input_transition constraints on port "clk" due to set_drive specified on same
+
+------------------------------------------------------------
+          timeDesign Summary                             
+------------------------------------------------------------
+
++--------------------+---------+---------+---------+---------+---------+---------+
+|     Setup mode     |   all   | reg2reg | in2reg  | reg2out | in2out  | clkgate |
++--------------------+---------+---------+---------+---------+---------+---------+
+|           WNS (ns):| -9.569  | -3.694  | -9.569  | 17.028  |   N/A   |   N/A   |
+|           TNS (ns):| -3815.3 | -92.982 | -3722.3 |  0.000  |   N/A   |   N/A   |
+|    Violating Paths:|   860   |   51    |   809   |    0    |   N/A   |   N/A   |
+|          All Paths:|  3333   |  1664   |  2831   |    5    |   N/A   |   N/A   |
++--------------------+---------+---------+---------+---------+---------+---------+
+
++----------------+-------------------------------+------------------+
+|                |              Real             |       Total      |
+|    DRVs        +------------------+------------+------------------|
+|                |  Nr nets(terms)  | Worst Vio  |  Nr nets(terms)  |
++----------------+------------------+------------+------------------+
+|   max_cap      |     63 (63)      |   -0.065   |     63 (63)      |
+|   max_tran     |     21 (82)      |   -0.547   |     21 (82)      |
+|   max_fanout   |      0 (0)       |     0      |      1 (1)       |
++----------------+------------------+------------+------------------+
+
+Density: 80.010%
+Routing Overflow: 0.00% H and 0.00% V
+------------------------------------------------------------
+Reported timing to dir timingReports
+Total CPU time: 3.57 sec
+Total Real time: 4.0 sec
+Total Memory Usage: 307.253906 Mbytes
+<CMD> setOptMode -fixCap true -fixTran true -fixFanoutLoad false
+<CMD> optDesign -preCTS
+Connected to eda25 55354 0
+*** Finished dispatch of slaves (cpu=0:00:00.6) (real=0:00:04.0) ***
+**optDesign ... cpu = 0:00:00, real = 0:00:00, mem = 315.3M **
+setTrialRouteMode -fixAirConnect true
+Added -handlePreroute to trialRouteMode
+*** optDesign -preCTS ***
+DRC Margin: user margin 0.0; extra margin 0.2
+Setup Target Slack: user slack 0.0; extra slack 0.1
+Hold Target Slack: user slack 0.0
+*info: Setting setup target slack to 0.100
+*info: Hold target slack is 0.000
+**INFO : Adding temp dont-use cells (LVT only flow version : 2)
+Creating information for LVT Only Flow
+Include MVT Delays for Hold Opt
+Num of Buffers    : 43
+Num of Inverters  : 19
+Num of VTs        : 2
+Multi-VT timing optimization disabled based on library information.
+Deleting the dont_use list
+*** Starting trialRoute (mem=316.6M) ***
+
+There are 0 pin guide points passed to trialRoute.
+Start to check current routing status for nets...
+All nets are already routed correctly.
+*** Finishing trialRoute (mem=316.6M) ***
+
+
+------------------------------------------------------------
+             Initial Summary                             
+------------------------------------------------------------
+
++--------------------+---------+
+|     Setup mode     |   all   |
++--------------------+---------+
+|           WNS (ns):| -9.569  |
+|           TNS (ns):| -3815.3 |
+|    Violating Paths:|   860   |
+|          All Paths:|  3333   |
++--------------------+---------+
+
++----------------+-------------------------------+------------------+
+|                |              Real             |       Total      |
+|    DRVs        +------------------+------------+------------------|
+|                |  Nr nets(terms)  | Worst Vio  |  Nr nets(terms)  |
++----------------+------------------+------------+------------------+
+|   max_cap      |     63 (63)      |   -0.065   |     63 (63)      |
+|   max_tran     |     21 (82)      |   -0.547   |     21 (82)      |
+|   max_fanout   |      0 (0)       |     0      |      1 (1)       |
++----------------+------------------+------------+------------------+
+
+Density: 80.010%
+------------------------------------------------------------
+**optDesign ... cpu = 0:00:01, real = 0:00:01, mem = 317.7M **
+*** Starting optimizing excluded clock nets MEM= 317.7M) ***
+*info: No excluded clock nets to be optimized.
+*** Completed optimizing excluded clock nets (CPU Time= 0:00:00.0  MEM= 317.7M) ***
+Info: 24 io nets excluded
+Info: 2 clock nets excluded from IPO operation.
+
+Netlist preparation processing... 
+Removed 418 instances
+*info: Marking 0 isolation instances dont touch
+*info: Marking 0 level shifter instances dont touch
+
+------------------------------------------------------------
+     Summary (cpu=0.01min real=0.02min mem=319.9M)                             
+------------------------------------------------------------
+
++--------------------+---------+
+|     Setup mode     |   all   |
++--------------------+---------+
+|           WNS (ns):| -8.610  |
+|           TNS (ns):| -2871.2 |
+|    Violating Paths:|   740   |
+|          All Paths:|  3089   |
++--------------------+---------+
+
++----------------+-------------------------------+------------------+
+|                |              Real             |       Total      |
+|    DRVs        +------------------+------------+------------------|
+|                |  Nr nets(terms)  | Worst Vio  |  Nr nets(terms)  |
++----------------+------------------+------------+------------------+
+|   max_cap      |     61 (61)      |   -0.065   |     61 (61)      |
+|   max_tran     |     21 (82)      |   -0.547   |     21 (82)      |
+|   max_fanout   |      0 (0)       |     0      |      1 (1)       |
++----------------+------------------+------------+------------------+
+
+Density: 75.601%
+Routing Overflow: 0.00% H and 0.00% V
+------------------------------------------------------------
+**optDesign ... cpu = 0:00:02, real = 0:00:02, mem = 319.9M **
+*info: Start fixing DRV (Mem = 319.89M) ...
+*info: Options = -maxCap -maxTran -noMaxFanout -noSensitivity -backward -reduceBuffer -maxIter 1
+*info: Start fixing DRV iteration 1 ...
+*info: This drv fixing iteration uses only regular buffers .....
+*** Starting dpFixDRCViolation (319.9M)
+*info: 24 io nets excluded
+*info: 2 clock nets excluded
+*info: 2 special nets excluded.
+*info: 335 no-driver nets excluded.
+*** Starting multi-driver net buffering ***
+*summary: 0 non-ignored multi-driver nets.
+*** Finished buffering multi-driver nets (CPU=0:00:00.0, MEM=319.9M) ***
+*info: There are 16 candidate Buffer cells
+*info: There are 18 candidate Inverter cells
+Initializing placement sections/sites ...
+Density before buffering = 0.756012
+Start fixing design rules ... (0:00:00.5 320.0M)
+Done fixing design rule (0:00:01.5 320.6M)
+
+Summary:
+56 buffers added on 55 nets (with 48 drivers resized)
+
+Density after buffering = 0.757734
+default core: bins with density >  0.75 = 70.4 % ( 138 / 196 )
+Starting refinePlace ...
+move report: placeLevelShifters moves 0 insts, mean move: 0.00 um, max move: 0.00 um
+  Spread Effort: high, pre-route mode.
+Finished Phase I. CPU Time = 0:00:01.1, Real Time = 0:00:01.0
+move report: preRPlace moves 1871 insts, mean move: 0.54 um, max move: 5.07 um
+	max move on inst (FAS/FE_OFC42_result_r_13_): (809.14, 466.58) --> (810.52, 462.89)
+move report: rPlace moves 0 insts, mean move: 0.00 um, max move: 0.00 um
+move report: overall moves 1871 insts, mean move: 0.54 um, max move: 5.07 um
+	max move on inst (FAS/FE_OFC42_result_r_13_): (809.14, 466.58) --> (810.52, 462.89)
+Statistics of distance of Instance movement in detailed placement:
+  maximum (X+Y) =         5.07 um
+  inst (FAS/FE_OFC42_result_r_13_) with max move: (809.14, 466.58) -> (810.52, 462.89)
+  mean    (X+Y) =         0.54 um
+Total instances moved : 1871
+*** cpu=0:00:01.1   mem=321.0M  mem(used)=0.4M***
+Ripped up 0 affected routes.
+*** Completed dpFixDRCViolation (0:00:03.1 321.0M)
+
+Re-routed 158 nets
+Extraction called for design 'CHIP' of instances=9709 and nets=14126 using extraction engine 'preRoute' .
+**WARN: (ENCEXT-3530):	Use of command 'setDesignMode -process <process_node>' prior to extraction is recommended for maximum accuracy and optimal automatic threshold setting.
+Default RC Extraction called for design CHIP.
+RCMode: Default
+Capacitance Scaling Factor   : 1.50000
+Resistance Scaling Factor    : 1.50000
+Clock Cap. Scaling Factor    : 1.50000
+Clock Res Scaling Factor     : 1.50000
+Shrink Factor                : 1.00000
+Default RC extraction is honoring NDR/Shielding/ExtraSpace for clock nets.
+Default RC Extraction DONE (CPU Time: 0:00:00.0  Real Time: 0:00:00.0  MEM: 321.035M)
+Using new Cte TW Api base...#################################################################################
+# Design Stage: PreRoute
+# Design Mode: 90nm
+# Analysis Mode: non-MMMC non-OCV
+# Extraction Mode: default
+# Delay Calculation Options: engine=default signOff=true SIAware=false(opt)
+# Switching Delay Calculation Engine to feDC
+#################################################################################
+**WARN: Skipped set_input_transition constraints on port "clk" due to set_drive specified on same
+Calculate delays in Single mode...
+Topological Sorting (CPU = 0:00:00.0, MEM = 319.9M, InitMEM = 319.9M)
+Start delay calculation (mem=319.883M)...
+Delay calculation completed. (cpu=0:00:01.3 real=0:00:02.0 mem=319.883M 0)
+*** CDM Built up (cpu=0:00:01.9  real=0:00:02.0  mem= 319.9M) ***
+*info: DRV Fixing Iteration 1.
+*info: Remaining violations:
+*info:   Max cap violations:    0
+*info:   Max tran violations:   0
+*info:   Prev Max cap violations:    61
+*info:   Prev Max tran violations:   82
+*info:
+*info: Completed fixing DRV (CPU Time = 0:00:05, Mem = 319.88M).
+
+------------------------------------------------------------
+     Summary (cpu=0.08min real=0.08min mem=319.9M)                             
+------------------------------------------------------------
+
++--------------------+---------+
+|     Setup mode     |   all   |
++--------------------+---------+
+|           WNS (ns):| -7.991  |
+|           TNS (ns):| -2793.5 |
+|    Violating Paths:|   725   |
+|          All Paths:|  3089   |
++--------------------+---------+
+
++----------------+-------------------------------+------------------+
+|                |              Real             |       Total      |
+|    DRVs        +------------------+------------+------------------|
+|                |  Nr nets(terms)  | Worst Vio  |  Nr nets(terms)  |
++----------------+------------------+------------+------------------+
+|   max_cap      |      0 (0)       |   0.000    |      0 (0)       |
+|   max_tran     |      0 (0)       |   0.000    |      0 (0)       |
+|   max_fanout   |      0 (0)       |     0      |      1 (1)       |
++----------------+------------------+------------+------------------+
+
+Density: 75.773%
+Routing Overflow: 0.00% H and 0.00% V
+------------------------------------------------------------
+**optDesign ... cpu = 0:00:07, real = 0:00:07, mem = 319.9M **
+*** Starting optFanout (319.9M)
+*info: 24 io nets excluded
+*info: 2 clock nets excluded
+*info: 2 special nets excluded.
+*info: 335 no-driver nets excluded.
+*** Starting multi-driver net buffering ***
+*summary: 0 non-ignored multi-driver nets.
+*** Finished buffering multi-driver nets (CPU=0:00:00.0, MEM=319.9M) ***
+Start fixing timing ... (0:00:00.0 319.9M)
+*info: Buffered 0 large fanout net (> 100 terms)
+Done fixing timing (0:00:04.6 320.9M)
+
+Summary:
+147 buffers added on 145 nets (with 251 drivers resized)
+
+53 nets rebuffered with 53 inst removed and 53 inst added
+Density after buffering = 0.776728
+default core: bins with density >  0.75 = 70.4 % ( 138 / 196 )
+RPlace IncrNP: Rollback Lev = -3
+RPlace: Density =1.041250, incremental np is triggered.
+Checking spec file integrity...
+Clock gating cells determined by native netlist tracing.
+default core: bins with density >  0.75 =   77 % ( 151 / 196 )
+RPlace postIncrNP: Density = 1.041250 -> 0.983750.
+*** cpu time = 0:00:02.1.
+move report: incrNP moves 5583 insts, mean move: 6.07 um, max move: 45.63 um
+	max move on inst (FAS/mult_53/U99): (520.26, 533.00) --> (507.84, 566.21)
+Starting refinePlace ...
+move report: placeLevelShifters moves 0 insts, mean move: 0.00 um, max move: 0.00 um
+  Spread Effort: high, pre-route mode.
+Finished Phase I. CPU Time = 0:00:01.6, Real Time = 0:00:01.0
+move report: preRPlace moves 4601 insts, mean move: 1.01 um, max move: 8.29 um
+	max move on inst (FAS/mult_50/U103): (447.12, 599.42) --> (442.52, 595.73)
+move report: rPlace moves 0 insts, mean move: 0.00 um, max move: 0.00 um
+move report: overall moves 4601 insts, mean move: 1.01 um, max move: 8.29 um
+	max move on inst (FAS/mult_50/U103): (447.12, 599.42) --> (442.52, 595.73)
+Statistics of distance of Instance movement in detailed placement:
+  maximum (X+Y) =        45.63 um
+  inst (FAS/mult_53/U99) with max move: (520.26, 533) -> (507.84, 566.21)
+  mean    (X+Y) =         4.99 um
+Total instances flipped for legalization: 39
+Total instances moved : 7266
+*** cpu=0:00:01.6   mem=321.8M  mem(used)=0.0M***
+Ripped up 3511 affected routes.
+*** Completed optFanout (0:00:08.9 321.8M)
+
+Re-routed 3506 nets
+Extraction called for design 'CHIP' of instances=9803 and nets=14220 using extraction engine 'preRoute' .
+**WARN: (ENCEXT-3530):	Use of command 'setDesignMode -process <process_node>' prior to extraction is recommended for maximum accuracy and optimal automatic threshold setting.
+Default RC Extraction called for design CHIP.
+RCMode: Default
+Capacitance Scaling Factor   : 1.50000
+Resistance Scaling Factor    : 1.50000
+Clock Cap. Scaling Factor    : 1.50000
+Clock Res Scaling Factor     : 1.50000
+Shrink Factor                : 1.00000
+Default RC extraction is honoring NDR/Shielding/ExtraSpace for clock nets.
+Default RC Extraction DONE (CPU Time: 0:00:00.0  Real Time: 0:00:00.0  MEM: 321.828M)
+Using new Cte TW Api base...#################################################################################
+# Design Stage: PreRoute
+# Design Mode: 90nm
+# Analysis Mode: non-MMMC non-OCV
+# Extraction Mode: default
+# Delay Calculation Options: engine=default signOff=true SIAware=false(opt)
+# Switching Delay Calculation Engine to feDC
+#################################################################################
+**WARN: Skipped set_input_transition constraints on port "clk" due to set_drive specified on same
+Calculate delays in Single mode...
+Topological Sorting (CPU = 0:00:00.0, MEM = 321.8M, InitMEM = 321.8M)
+Start delay calculation (mem=321.828M)...
+Delay calculation completed. (cpu=0:00:01.8 real=0:00:01.0 mem=321.828M 0)
+*** CDM Built up (cpu=0:00:01.8  real=0:00:02.0  mem= 321.8M) ***
+
+------------------------------------------------------------
+     Summary (cpu=0.18min real=0.17min mem=321.8M)                             
+------------------------------------------------------------
+
++--------------------+---------+
+|     Setup mode     |   all   |
++--------------------+---------+
+|           WNS (ns):| -7.993  |
+|           TNS (ns):| -2631.7 |
+|    Violating Paths:|   702   |
+|          All Paths:|  3089   |
++--------------------+---------+
+
++----------------+-------------------------------+------------------+
+|                |              Real             |       Total      |
+|    DRVs        +------------------+------------+------------------|
+|                |  Nr nets(terms)  | Worst Vio  |  Nr nets(terms)  |
++----------------+------------------+------------+------------------+
+|   max_cap      |      0 (0)       |   0.000    |      0 (0)       |
+|   max_tran     |      0 (0)       |   0.000    |      0 (0)       |
+|   max_fanout   |      0 (0)       |     0      |      1 (1)       |
++----------------+------------------+------------+------------------+
+
+Density: 77.673%
+Routing Overflow: 0.00% H and 0.00% V
+------------------------------------------------------------
+**optDesign ... cpu = 0:00:18, real = 0:00:17, mem = 321.8M **
+*** Timing NOT met, worst failing slack is -7.993
+*** Check timing (0:00:00.0)
+************ Started Recovering Area and Global Resizing for Timing Improvement ***************
+Info: 24 io nets excluded
+Info: 2 clock nets excluded from IPO operation.
+** Density before transform = 77.673% **
+
+*** starting 1-st resizing pass: 11172 instances 
+*** starting 2-nd resizing pass: 9656 instances 
+*** starting 3-rd resizing pass: 7351 instances 
+*** starting 4-th resizing pass: 6923 instances 
+*** starting 5-th resizing pass: 983 instances 
+*** starting 6-th resizing pass: 24 instances 
+
+
+** Summary: Buffer Deletion = 18 Declone = 230 Downsize = 759 Upsize = 3590 **
+** Density Change = -1.967% **
+** Density after transform = 79.640% **
+*** Finish transform (0:00:29.0) ***
+*** Starting sequential cell resizing ***
+density before resizing = 79.640%
+*summary:    491 instances changed cell type
+density after resizing = 80.735%
+*** Finish sequential cell resizing (cpu=0:00:00.0 mem=322.8M) ***
+density before resizing = 80.735%
+* summary of transition time violation fixes:
+*summary:     90 instances changed cell type
+density after resizing = 80.802%
+************ Finished Recovering Area and Global Resizing for Timing Improvement ***************
+default core: bins with density >  0.75 = 80.6 % ( 158 / 196 )
+RPlace IncrNP: Rollback Lev = -3
+RPlace: Density =1.112500, incremental np is triggered.
+Checking spec file integrity...
+Clock gating cells determined by native netlist tracing.
+default core: bins with density >  0.75 = 86.2 % ( 169 / 196 )
+RPlace postIncrNP: Density = 1.112500 -> 0.943750.
+*** cpu time = 0:00:03.3.
+move report: incrNP moves 9208 insts, mean move: 6.68 um, max move: 72.32 um
+	max move on inst (FAS/mult_49/U81): (422.74, 477.65) --> (458.16, 514.55)
+Starting refinePlace ...
+move report: placeLevelShifters moves 0 insts, mean move: 0.00 um, max move: 0.00 um
+  Spread Effort: high, pre-route mode.
+Finished Phase I. CPU Time = 0:00:03.4, Real Time = 0:00:01.0
+move report: preRPlace moves 5611 insts, mean move: 1.12 um, max move: 11.05 um
+	max move on inst (FAS/add_83/U1_3): (451.26, 444.44) --> (458.62, 448.13)
+move report: rPlace moves 0 insts, mean move: 0.00 um, max move: 0.00 um
+move report: overall moves 5611 insts, mean move: 1.12 um, max move: 11.05 um
+	max move on inst (FAS/add_83/U1_3): (451.26, 444.44) --> (458.62, 448.13)
+Statistics of distance of Instance movement in detailed placement:
+  maximum (X+Y) =        73.70 um
+  inst (FAS/mult_49/U81) with max move: (422.74, 477.65) -> (459.54, 514.55)
+  mean    (X+Y) =         6.80 um
+Total instances flipped for legalization: 17
+Total instances moved : 9251
+*** cpu=0:00:03.4   mem=322.8M  mem(used)=0.0M***
+Ripped up 0 affected routes.
+*** Starting trialRoute (mem=322.8M) ***
+
+There are 0 pin guide points passed to trialRoute.
+Options:  -handlePreroute -keepMarkedOptRoutes -noPinGuide
+
+Nr of prerouted/Fixed nets = 24
+routingBox: (460 410) (2334500 2330030)
+coreBox:    (652280 652720) (1682820 1678540)
+Number of multi-gpin terms=3095, multi-gpins=8116, moved blk term=12/12
+
+Phase 1a route (0:00:00.0 328.3M):
+Est net length = 4.410e+05um = 2.124e+05H + 2.286e+05V
+Usage: (4.9%H 5.4%V) = (2.511e+05um 3.650e+05um) = (108953 98956)
+Obstruct: 85076 = 42538 (32.4%H) + 42538 (32.4%V)
+Overflow: 0 = 0 (0.00% H) + 0 (0.00% V)
+
+Phase 1b route (0:00:00.0 328.3M):
+Usage: (4.9%H 5.4%V) = (2.506e+05um 3.650e+05um) = (108755 98955)
+Overflow: 0 = 0 (0.00% H) + 0 (0.00% V)
+
+Phase 1c route (0:00:00.0 328.3M):
+Usage: (4.9%H 5.4%V) = (2.502e+05um 3.648e+05um) = (108559 98907)
+Overflow: 0 = 0 (0.00% H) + 0 (0.00% V)
+
+Phase 1d route (0:00:00.0 328.3M):
+Usage: (4.9%H 5.4%V) = (2.502e+05um 3.648e+05um) = (108559 98907)
+Overflow: 0 = 0 (0.00% H) + 0 (0.00% V)
+
+Phase 1e route (0:00:00.0 328.3M):
+Usage: (4.9%H 5.4%V) = (2.502e+05um 3.648e+05um) = (108559 98907)
+Overflow: 0 = 0 (0.00% H) + 0 (0.00% V)
+
+Usage: (4.9%H 5.4%V) = (2.502e+05um 3.648e+05um) = (108559 98907)
+Overflow: 0 = 0 (0.00% H) + 0 (0.00% V)
+
+Congestion distribution:
+
+Remain	cntH		cntV
+--------------------------------------
+--------------------------------------
+  2:	0	 0.00%	19	 0.02%
+  3:	234	 0.26%	379	 0.43%
+  5:	0	 0.00%	13	 0.01%
+  6:	470	 0.53%	502	 0.57%
+  7:	0	 0.00%	581	 0.66%
+  8:	3	 0.00%	235	 0.27%
+  9:	474	 0.54%	736	 0.83%
+ 10:	0	 0.00%	1366	 1.54%
+ 11:	2	 0.00%	2183	 2.46%
+ 12:	237	 0.27%	3414	 3.85%
+ 13:	7	 0.01%	5339	 6.03%
+ 14:	20	 0.02%	5620	 6.35%
+ 15:	156	 0.18%	5692	 6.43%
+ 16:	69	 0.08%	4874	 5.50%
+ 17:	153	 0.17%	33487	37.81%
+ 18:	578	 0.65%	0	 0.00%
+ 19:	778	 0.88%	0	 0.00%
+ 20:	85381	96.41%	24122	27.24%
+
+Global route (cpu=0.0s real=1.0s 328.3M)
+Phase 1l route (0:00:00.0 324.8M):
+
+
+*** After '-updateRemainTrks' operation: 
+
+Usage: (5.1%H 5.6%V) = (2.570e+05um 3.759e+05um) = (111537 101911)
+Overflow: 0 = 0 (0.00% H) + 0 (0.00% V)
+
+Congestion distribution:
+
+Remain	cntH		cntV
+--------------------------------------
+--------------------------------------
+  2:	6	 0.01%	23	 0.03%
+  3:	228	 0.26%	375	 0.42%
+  4:	0	 0.00%	2	 0.00%
+  5:	0	 0.00%	29	 0.03%
+  6:	470	 0.53%	552	 0.62%
+  7:	4	 0.00%	632	 0.71%
+  8:	2	 0.00%	343	 0.39%
+  9:	472	 0.53%	852	 0.96%
+ 10:	2	 0.00%	1498	 1.69%
+ 11:	1	 0.00%	2290	 2.59%
+ 12:	239	 0.27%	3310	 3.74%
+ 13:	8	 0.01%	5266	 5.95%
+ 14:	31	 0.04%	5412	 6.11%
+ 15:	168	 0.19%	5570	 6.29%
+ 16:	87	 0.10%	4804	 5.42%
+ 17:	182	 0.21%	33482	37.81%
+ 18:	606	 0.68%	0	 0.00%
+ 19:	869	 0.98%	0	 0.00%
+ 20:	85187	96.19%	24122	27.24%
+
+
+
+*** Completed Phase 1 route (0:00:00.0 324.8M) ***
+
+
+Total length: 4.520e+05um, number of vias: 86729
+M1(H) length: 8.667e+01um, number of vias: 40886
+M2(V) length: 1.416e+05um, number of vias: 38633
+M3(H) length: 1.937e+05um, number of vias: 6145
+M4(V) length: 8.826e+04um, number of vias: 777
+M5(H) length: 1.610e+04um, number of vias: 234
+M6(V) length: 1.122e+04um, number of vias: 30
+M7(H) length: 1.052e+03um, number of vias: 24
+M8(V) length: 2.666e+01um
+*** Completed Phase 2 route (0:00:00.0 322.8M) ***
+
+*** Finished all Phases (cpu=0:00:00.0 mem=322.8M) ***
+Peak Memory Usage was 332.3M 
+*** Finished trialRoute (cpu=0:00:00.0 mem=322.8M) ***
+
+Extraction called for design 'CHIP' of instances=9555 and nets=13977 using extraction engine 'preRoute' .
+**WARN: (ENCEXT-3530):	Use of command 'setDesignMode -process <process_node>' prior to extraction is recommended for maximum accuracy and optimal automatic threshold setting.
+Default RC Extraction called for design CHIP.
+RCMode: Default
+Capacitance Scaling Factor   : 1.50000
+Resistance Scaling Factor    : 1.50000
+Clock Cap. Scaling Factor    : 1.50000
+Clock Res Scaling Factor     : 1.50000
+Shrink Factor                : 1.00000
+Default RC extraction is honoring NDR/Shielding/ExtraSpace for clock nets.
+Default RC Extraction DONE (CPU Time: 0:00:00.0  Real Time: 0:00:00.0  MEM: 322.832M)
+Using new Cte TW Api base...#################################################################################
+# Design Stage: PreRoute
+# Design Mode: 90nm
+# Analysis Mode: non-MMMC non-OCV
+# Extraction Mode: default
+# Delay Calculation Options: engine=default signOff=true SIAware=false(opt)
+# Switching Delay Calculation Engine to feDC
+#################################################################################
+**WARN: Skipped set_input_transition constraints on port "clk" due to set_drive specified on same
+Calculate delays in Single mode...
+Topological Sorting (CPU = 0:00:00.0, MEM = 322.8M, InitMEM = 322.8M)
+Start delay calculation (mem=322.832M)...
+Delay calculation completed. (cpu=0:00:00.0 real=0:00:01.0 mem=322.832M 0)
+*** CDM Built up (cpu=0:00:00.0  real=0:00:01.0  mem= 322.8M) ***
+
+------------------------------------------------------------
+     Summary (cpu=0.65min real=0.62min mem=322.8M)                             
+------------------------------------------------------------
+
++--------------------+---------+
+|     Setup mode     |   all   |
++--------------------+---------+
+|           WNS (ns):| -4.862  |
+|           TNS (ns):| -1356.7 |
+|    Violating Paths:|   564   |
+|          All Paths:|  3089   |
++--------------------+---------+
+
++----------------+-------------------------------+------------------+
+|                |              Real             |       Total      |
+|    DRVs        +------------------+------------+------------------|
+|                |  Nr nets(terms)  | Worst Vio  |  Nr nets(terms)  |
++----------------+------------------+------------+------------------+
+|   max_cap      |      0 (0)       |   0.000    |      0 (0)       |
+|   max_tran     |      0 (0)       |   0.000    |      0 (0)       |
+|   max_fanout   |      0 (0)       |     0      |      1 (1)       |
++----------------+------------------+------------+------------------+
+
+Density: 80.802%
+Routing Overflow: 0.00% H and 0.00% V
+------------------------------------------------------------
+**optDesign ... cpu = 0:00:57, real = 0:00:54, mem = 322.8M **
+*** Timing NOT met, worst failing slack is -4.862
+*** Check timing (0:00:00.0)
+Started binary server on port 51743
+*** Starting optCritPath ***
+*info: 24 io nets excluded
+*info: 2 clock nets excluded
+*info: 2 special nets excluded.
+*info: 340 no-driver nets excluded.
+Density : 0.8080
+Max route overflow : 0.0000
+Current slack : -4.862 ns, density : 0.8080  End_Point: FAS/d25_reg_31_/D
+Current slack : -4.763 ns, density : 0.8081  Worst_View: default_view_setup  End_Point: FAS/d08_reg_31_/D
+Current slack : -4.763 ns, density : 0.8081  End_Point: FAS/d08_reg_31_/D
+Current slack : -4.749 ns, density : 0.8077  Worst_View: default_view_setup  End_Point: FAS/d08_reg_31_/D
+Current slack : -4.682 ns, density : 0.8077  Worst_View: default_view_setup  End_Point: FAS/d31_reg_31_/D
+Current slack : -4.661 ns, density : 0.8079  End_Point: FAS/d31_reg_31_/D
+Current slack : -4.661 ns, density : 0.8079  Worst_View: default_view_setup  End_Point: FAS/d31_reg_31_/D
+Current slack : -4.661 ns, density : 0.8079  End_Point: FAS/d31_reg_31_/D
+Current slack : -4.661 ns, density : 0.8080  Worst_View: default_view_setup  End_Point: FAS/d31_reg_31_/D
+Current slack : -4.661 ns, density : 0.8080  Worst_View: default_view_setup  End_Point: FAS/d31_reg_31_/D
+*** Starting refinePlace (0:00:07.7 mem=332.8M) ***
+default core: bins with density >  0.75 = 85.2 % ( 167 / 196 )
+RPlace IncrNP: Rollback Lev = -3
+RPlace: Density =1.001250, incremental np is triggered.
+Checking spec file integrity...
+Clock gating cells determined by native netlist tracing.
+default core: bins with density >  0.75 = 85.7 % ( 168 / 196 )
+RPlace postIncrNP: Density = 1.001250 -> 0.940000.
+*** cpu time = 0:00:02.4.
+move report: incrNP moves 8651 insts, mean move: 3.71 um, max move: 35.03 um
+	max move on inst (FAS/FE_OFC81_hd08_6_): (519.34, 687.98) --> (510.14, 662.15)
+Starting refinePlace ...
+move report: placeLevelShifters moves 0 insts, mean move: 0.00 um, max move: 0.00 um
+  Spread Effort: high, pre-route mode.
+Finished Phase I. CPU Time = 0:00:02.3, Real Time = 0:00:01.0
+move report: preRPlace moves 5159 insts, mean move: 1.05 um, max move: 7.37 um
+	max move on inst (FAS/add_78/U1_7): (429.64, 665.84) --> (433.32, 662.15)
+move report: rPlace moves 0 insts, mean move: 0.00 um, max move: 0.00 um
+move report: overall moves 5159 insts, mean move: 1.05 um, max move: 7.37 um
+	max move on inst (FAS/add_78/U1_7): (429.64, 665.84) --> (433.32, 662.15)
+Statistics of distance of Instance movement in detailed placement:
+  maximum (X+Y) =        33.19 um
+  inst (FAS/FE_OFC81_hd08_6_) with max move: (519.34, 687.98) -> (511.98, 662.15)
+  mean    (X+Y) =         3.83 um
+Total instances moved : 8742
+*** cpu=0:00:02.3   mem=332.8M  mem(used)=0.0M***
+*** maximum move = 33.2um ***
+*** Finished refinePlace (0:00:12.4 mem=332.8M) ***
+*** Done re-routing un-routed nets (332.8M) ***
+**WARN: (ENCEXT-3530):	Use of command 'setDesignMode -process <process_node>' prior to extraction is recommended for maximum accuracy and optimal automatic threshold setting.
+*** Starting delays update (0:00:12.4 mem=332.8M) ***
+**WARN: Skipped set_input_transition constraints on port "clk" due to set_drive specified on same
+*** Finished delays update (0:00:12.4 mem=332.8M) ***
+Current slack : -4.668 ns, density : 0.8080  Worst_View: default_view_setup  End_Point: FAS/d31_reg_31_/D
+Current slack : -4.668 ns, density : 0.8080  Worst_View: default_view_setup  End_Point: FAS/d31_reg_31_/D
+**WARN: (ENCEXT-3493):	Extraction mode changed by calling extraction setup command 'setExtractRCMode'. Therefore, parasitic data in the tool generated as per previous mode is deleted. Call of extractRC/spefIn will generate/bring parasitic data in the tool as per current mode.
+*** Starting placeDesign default flow ***
+*** Starting "NanoPlace(TM) placement v#1 (mem=334.0M)" ...
+*** Build Buffered Sizing Timing Model
+(cpu=0:00:03.9 mem=326.7M) ***
+*** Build Virtual Sizing Timing Model
+(cpu=0:00:03.9 mem=326.7M) ***
+Options: timingDriven clkGateAware ignoreScan ignoreSpare pinGuide gpeffort=medium 
+**WARN: (ENCSP-9042):	Scan chains were not defined, -ignoreScan option will be ignored. 
+Please first define the scan chains before using this option.
+**ERROR: (ENCSP-100):	Initialize non-Free memory pool <spgListMPool>.
+**ERROR: (ENCSP-100):	Initialize non-Free memory pool <spgSecHeadMPool>.
+**ERROR: (ENCSP-100):	Initialize non-Free memory pool <spgSecMPool>.
+**ERROR: (ENCSP-100):	Initialize non-Free memory pool <spgRegBoxMPool>.
+**ERROR: (ENCSP-100):	Initialize non-Free memory pool <spgSPListMPool>.
+**DIAG[dbLock.c:81:dbLock]: **: Trying to lock "dbcNetPExtra" at [spUtil.c:6856]
+Lock "dbcNetPExtra" was locked at [spUtil.c:6856]
+**DIAG[dbLock.c:81:dbLock]: **: Trying to lock "dbcInstPExtra" at [spUtil.c:6857]
+Lock "dbcInstPExtra" was locked at [spUtil.c:6857]
+**DIAG[dbLock.c:81:dbLock]: **: Trying to lock "dbcCellExtra" at [spUtil.c:6862]
+Lock "dbcCellExtra" was locked at [spUtil.c:6862]
+**ERROR: (ENCSP-100):	Initialize non-Free memory pool <spgExtCellMPool>.
+**ERROR: (ENCSP-100):	Initialize non-Free memory pool <spgExtMPool>.
+**ERROR: (ENCSP-100):	Initialize non-Free memory pool <spgExtInstMPool>.
+**ERROR: (ENCSP-100):	Initialize non-Free memory pool <spgExtNetMPool>.
+**ERROR: (ENCSP-100):	Initialize non-Free memory pool <spgInstArrMPool>.
+#std cell=10041 #block=0 (0 floating + 0 preplaced) #ioInst=36 #net=14098 #term=42451 #term/net=3.01, #fixedIo=36, #floatIo=0, #fixedPin=24, #floatPin=0
+stdCell: 10041 single + 0 double + 0 multi
+Total standard cell length = 59.0580 (mm), area = 0.2179 (mm^2)
+**DIAG[spSite.c:2624:spiSetGlobsForInitSiteArr]: Assert "!spiSiteArrMPool"
+Average module density = 0.825.
+Density for the design = 0.825.
+       = stdcell_area 128387 (217924 um^2) / alloc_area 155680 (264251 um^2).
+Pin Density = 0.331.
+            = total # of pins 42451 / total Instance area 128387.
+
+**WARN: Skipped set_input_transition constraints on port "clk" due to set_drive specified on same
+Checking spec file integrity...
+Clock gating cells determined by native netlist tracing.
+Iteration  1: Total net bbox = 2.579e+04 (1.24e+04 1.34e+04)
+              Est.  stn bbox = 2.579e+04 (1.24e+04 1.34e+04)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 343.1M
+Iteration  2: Total net bbox = 2.579e+04 (1.24e+04 1.34e+04)
+              Est.  stn bbox = 2.579e+04 (1.24e+04 1.34e+04)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 343.1M
+Iteration  3: Total net bbox = 2.489e+04 (1.29e+04 1.20e+04)
+              Est.  stn bbox = 2.489e+04 (1.29e+04 1.20e+04)
+              cpu = 0:00:00.0 real = 0:00:01.0 mem = 343.1M
+Iteration  4: Total net bbox = 2.494e+05 (9.55e+04 1.54e+05)
+              Est.  stn bbox = 2.494e+05 (9.55e+04 1.54e+05)
+              cpu = 0:00:02.3 real = 0:00:02.0 mem = 343.1M
+Iteration  5: Total net bbox = 3.129e+05 (1.35e+05 1.78e+05)
+              Est.  stn bbox = 3.129e+05 (1.35e+05 1.78e+05)
+              cpu = 0:00:01.8 real = 0:00:02.0 mem = 343.1M
+Iteration  6: Total net bbox = 3.261e+05 (1.42e+05 1.84e+05)
+              Est.  stn bbox = 3.261e+05 (1.42e+05 1.84e+05)
+              cpu = 0:00:03.9 real = 0:00:03.0 mem = 343.2M
+**DIAG[dbLock.c:81:dbLock]: **: Trying to lock "dbcIsCellMarked2" at [trSUtil.c:4669]
+Lock "dbcIsCellMarked2" was locked at [opResizeUtil.c:1286]
+Iteration  7: Total net bbox = 3.374e+05 (1.53e+05 1.84e+05)
+              Est.  stn bbox = 4.276e+05 (1.92e+05 2.36e+05)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 338.9M
+**WARN: Skipped set_input_transition constraints on port "clk" due to set_drive specified on same
+**WARN: Skipped set_input_transition constraints on port "clk" due to set_drive specified on same
+Iteration  8: Total net bbox = 3.557e+05 (1.69e+05 1.87e+05)
+              Est.  stn bbox = 4.459e+05 (2.08e+05 2.38e+05)
+              cpu = 0:00:03.9 real = 0:00:03.0 mem = 337.9M
+Iteration  9: Total net bbox = 3.508e+05 (1.59e+05 1.92e+05)
+              Est.  stn bbox = 4.445e+05 (2.00e+05 2.44e+05)
+              cpu = 0:00:01.9 real = 0:00:03.0 mem = 337.9M
+**WARN: Skipped set_input_transition constraints on port "clk" due to set_drive specified on same
+**WARN: Skipped set_input_transition constraints on port "clk" due to set_drive specified on same
+Iteration 10: Total net bbox = 3.690e+05 (1.75e+05 1.94e+05)
+              Est.  stn bbox = 4.627e+05 (2.16e+05 2.46e+05)
+              cpu = 0:00:04.2 real = 0:00:03.0 mem = 337.9M
+Iteration 11: Total net bbox = 3.599e+05 (1.67e+05 1.93e+05)
+              Est.  stn bbox = 4.512e+05 (2.07e+05 2.45e+05)
+              cpu = 0:00:04.2 real = 0:00:05.0 mem = 338.0M
+Iteration 12: Total net bbox = 3.599e+05 (1.67e+05 1.93e+05)
+              Est.  stn bbox = 4.512e+05 (2.07e+05 2.45e+05)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 338.2M
+Iteration 13: Total net bbox = 3.991e+05 (2.04e+05 1.96e+05)
+              Est.  stn bbox = 4.909e+05 (2.44e+05 2.47e+05)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 338.2M
+*** cost = 3.991e+05 (2.04e+05 1.96e+05) (cpu for global=0:00:22.4) real=0:00:22.0***
+Info: 1 clock gating cells identified, 0 (on average) moved
+Core Placement runtime cpu: 0:00:14.2 real: 0:00:16.0
+Encounter terminated by internal (SEGV) error/signal...
+*** Stack trace:
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(syStackTrace+0x145)[0xf58655d]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter[0x8f3b687]
+linux-gate.so.1(__kernel_rt_sigreturn+0x0)[0xf773d410]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(_Z8spRPlaceP7dbsHeadP6sysBoxcc+0x36b)[0xb4a2e8b]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(_Z6spMainP7dbsHead+0x2039)[0xb465499]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter[0x9098676]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclInvokeStringCommand+0x4f)[0x10bff10f]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclEvalObjvInternal+0x126)[0x10c00126]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter[0x10c265ce]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclCompEvalObj+0xa3)[0x10c25b33]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclObjInterpProc+0x3da)[0x10c5657a]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclEvalObjvInternal+0x126)[0x10c00126]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter[0x10c265ce]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclCompEvalObj+0xa3)[0x10c25b33]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_EvalObjEx+0x206)[0x10c01456]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_IfObjCmd+0x134)[0x10c08db4]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclEvalObjvInternal+0x126)[0x10c00126]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter[0x10c265ce]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclCompEvalObj+0xa3)[0x10c25b33]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_EvalObjEx+0x206)[0x10c01456]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_IfObjCmd+0x134)[0x10c08db4]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclEvalObjvInternal+0x126)[0x10c00126]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter[0x10c265ce]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclCompEvalObj+0xa3)[0x10c25b33]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclObjInterpProc+0x3da)[0x10c5657a]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclEvalObjvInternal+0x126)[0x10c00126]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_EvalEx+0x1f6)[0x10c00cd6]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_EvalObjEx+0x7b)[0x10c012cb]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_EvalObjCmd+0x57)[0x10c06027]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclEvalObjvInternal+0x126)[0x10c00126]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter[0x10c265ce]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclCompEvalObj+0xa3)[0x10c25b33]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclObjInterpProc+0x3da)[0x10c5657a]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclEvalObjvInternal+0x126)[0x10c00126]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_EvalEx+0x1f6)[0x10c00cd6]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_EvalObjEx+0x7b)[0x10c012cb]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_EvalObjCmd+0x57)[0x10c06027]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclEvalObjvInternal+0x126)[0x10c00126]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter[0x10c265ce]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclCompEvalObj+0xa3)[0x10c25b33]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclObjInterpProc+0x3da)[0x10c5657a]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclEvalObjvInternal+0x126)[0x10c00126]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter[0x10c265ce]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclCompEvalObj+0xa3)[0x10c25b33]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_EvalObjEx+0x206)[0x10c01456]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_CatchObjCmd+0x56)[0x10c059a6]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclEvalObjvInternal+0x126)[0x10c00126]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_EvalEx+0x1f6)[0x10c00cd6]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_EvalTokensStandard+0x307)[0x10c00a47]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_EvalEx+0x179)[0x10c00c59]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_Eval+0x3c)[0x10c0116c]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(_Z10qtfTclEvalPc+0x95)[0xd485bd5]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(_ZN8qtfsItem10fUpdateVarEv+0x2df)[0xd422d5f]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(_ZN8qtfsItem11qt_metacallEN11QMetaObject4CallEiPPv+0x12b)[0xd4d352b]
+/usr/cad/cadence/EDI/cur/tools/Qt/32bit/lib/libQtCore.so.4(_ZN11QMetaObject8activateEP7QObjectiiPPv+0x233)[0xf63a4583]
+/usr/cad/cadence/EDI/cur/tools/Qt/32bit/lib/libQtCore.so.4(_ZN11QMetaObject8activateEP7QObjectPKS_iiPPv+0x58)[0xf63a49f8]
+/usr/cad/cadence/EDI/cur/tools/Qt/32bit/lib/libQtGui.so.4(_ZN15QAbstractButton7clickedEb+0x51)[0xf6d34e91]
+/usr/cad/cadence/EDI/cur/tools/Qt/32bit/lib/libQtGui.so.4(_ZN22QAbstractButtonPrivate11emitClickedEv+0x49)[0xf6a5e079]
+/usr/cad/cadence/EDI/cur/tools/Qt/32bit/lib/libQtGui.so.4(_ZN22QAbstractButtonPrivate5clickEv+0x94)[0xf6a5fcd4]
+/usr/cad/cadence/EDI/cur/tools/Qt/32bit/lib/libQtGui.so.4(_ZN15QAbstractButton17mouseReleaseEventEP11QMouseEvent+0x91)[0xf6a5ff51]
+/usr/cad/cadence/EDI/cur/tools/Qt/32bit/lib/libQtGui.so.4(_ZN7QWidget5eventEP6QEvent+0x72a)[0xf66aeb2a]
+/usr/cad/cadence/EDI/cur/tools/Qt/32bit/lib/libQtGui.so.4(_ZN15QAbstractButton5eventEP6QEvent+0x3e)[0xf6a5df1e]
+/usr/cad/cadence/EDI/cur/tools/Qt/32bit/lib/libQtGui.so.4(_ZN11QPushButton5eventEP6QEvent+0x3d)[0xf6b0984d]
+/usr/cad/cadence/EDI/cur/tools/Qt/32bit/lib/libQtGui.so.4(_ZN19QApplicationPrivate13notify_helperEP7QObjectP6QEvent+0xb4)[0xf6658bc4]
+/usr/cad/cadence/EDI/cur/tools/Qt/32bit/lib/libQtGui.so.4(_ZN12QApplication6notifyEP7QObjectP6QEvent+0xbab)[0xf6660ddb]
+/usr/cad/cadence/EDI/cur/tools/Qt/32bit/lib/libQtCore.so.4(_ZN16QCoreApplication14notifyInternalEP7QObjectP6QEvent+0x7b)[0xf638deeb]
+/usr/cad/cadence/EDI/cur/tools/Qt/32bit/lib/libQtGui.so.4(_ZN19QApplicationPrivate14sendMouseEventEP7QWidgetP11QMouseEventS1_S1_PS1_R8QPointerIS0_E+0xde)[0xf665fcae]
+/usr/cad/cadence/EDI/cur/tools/Qt/32bit/lib/libQtGui.so.4(_ZN9QETWidget19translateMouseEventEPK7_XEvent+0x61e)[0xf66cec2e]
+/usr/cad/cadence/EDI/cur/tools/Qt/32bit/lib/libQtGui.so.4(_ZN12QApplication15x11ProcessEventEP7_XEvent+0x13ed)[0xf66ce0dd]
+/usr/cad/cadence/EDI/cur/tools/Qt/32bit/lib/libQtGui.so.4(_ZN19QEventDispatcherX1113processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE+0x335)[0xf66f7945]
+/usr/cad/cadence/EDI/cur/tools/lib/libtq.so(_ZN17TqEventDispatcher13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE+0x51)[0xf598706f]
+/usr/cad/cadence/EDI/cur/tools/Qt/32bit/lib/libQtCore.so.4(_ZN16QCoreApplication13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE+0x41)[0xf638ee91]
+/usr/cad/cadence/EDI/cur/tools/lib/libtq.so(+0x1800a)[0xf598700a]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_DoOneEvent+0x1ac)[0x10c4d9dc]
+/usr/cad/cadence/EDI/cur/tools/lib/libtq.so(_ZN17TqEventDispatcher13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE+0xae)[0xf59870cc]
+/usr/cad/cadence/EDI/cur/tools/Qt/32bit/lib/libQtCore.so.4(_ZN10QEventLoop13processEventsE6QFlagsINS_17ProcessEventsFlagEE+0x49)[0xf638c4d9]
+/usr/cad/cadence/EDI/cur/tools/Qt/32bit/lib/libQtCore.so.4(_ZN10QEventLoop4execE6QFlagsINS_17ProcessEventsFlagEE+0xfa)[0xf638c92a]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(_Z19uiAppStartEventLoopv+0x5e)[0xe14262e]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter[0xe142aeb]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(_ZN10tcmBaseCmd7executeEP10Tcl_InterpiPPc+0xfd)[0x1055a36d]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(_ZN6tcmMgr9cmdParserEPvP10Tcl_InterpiPPc+0xae)[0x1055318e]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclInvokeStringCommand+0x4f)[0x10bff10f]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclEvalObjvInternal+0x126)[0x10c00126]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter[0x10c265ce]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclCompEvalObj+0xa3)[0x10c25b33]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclObjInterpProc+0x3da)[0x10c5657a]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclEvalObjvInternal+0x126)[0x10c00126]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_EvalEx+0x1f6)[0x10c00cd6]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_EvalObjEx+0x7b)[0x10c012cb]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_UplevelObjCmd+0xa9)[0x10c55eb9]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclEvalObjvInternal+0x126)[0x10c00126]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter[0x10c265ce]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclCompEvalObj+0xa3)[0x10c25b33]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclObjInterpProc+0x3da)[0x10c5657a]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclEvalObjvInternal+0x126)[0x10c00126]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_EvalEx+0x1f6)[0x10c00cd6]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(_ZN15edpParallelBase11execCommandEP10Tcl_InterpPc+0x37)[0x98620c7]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(_ZN17edpParallelMaster16waitForOneResultEv+0x17e)[0x986490e]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(_ZN19dosFGParallelMaster13updateResultsEv+0x90)[0xa5c2610]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(_ZN17dosFGMasterLoopCL11sendMsgTaskER11dosFGTaskCLb+0x97)[0xa5c56e7]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(_ZN26lsFGRunMasterThreadProcess18runActionsOnThreadER12ddPtrListTPLIN19dosFGMasterThreadCL23dosFGMasterThreadFuncCLEES4_+0xf2)[0xa02b682]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(_ZN26lsFGRunMasterThreadProcess30execOneMandatoryActionOnThreadER25lsFGOCPMasterThreadFuncCL+0x1a2)[0xa02ba32]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(_ZN19lsFGOCPBaseTransfCL19runThreadExtractionER25lsFGOCPMasterThreadFuncCLi+0x5e)[0xa02bd0e]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter[0x9e5a94d]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter[0x9e5b499]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(_Z33lsGenericFrameWorkClusterOptForDPP7dbsCellP10tasClusterPidS3_S3_S3_cP18lssTransformStatusR6lssCmdc+0x135)[0x9e5b8a5]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter[0x9e81dc5]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(_ZN25lsDpBooleanMapTransformCL7executeEP7dbsCellP10tasClusterP12lsDpStatusCLPi+0x76)[0x9f457a6]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(_ZN15lsDpTransformCL3runEP7dbsCellP10tasClusterP12lsDpStatusCL+0x6d)[0x9f6697d]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(_ZN12lsDpTacticCL13runAllClusterEP15lsDpTransformCLP12lsDpStatusCLbbb+0x2b2)[0x9f55012]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(_ZN26lsDpTacticAllClusterModeCL3runEP12lsDpStatusCL+0x37)[0x9f3fc57]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(_ZN18lsDpStateMachineCL13executeTacticEi+0xcf)[0x9f3671f]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(_ZN18lsDpStateMachineCL3runEv+0x27e)[0x9f36a9e]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(_Z19lsDpLaunchAutomatonPKcP7dbsCellPcS3_+0x5b5)[0x9f3efd5]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(_ZN23lsOCPAutomatonManagerCL15runNewAutomatonERcS0_+0x54c)[0x9e8bd3c]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(_ZN23lsOCPAutomatonManagerCL3runERcS0_+0xe7)[0x9eb1bb7]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(_Z16lsOptCritPathCmdP7dbsCelliPPc+0x4ff)[0x9eb2b7f]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter[0x903ace8]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclInvokeStringCommand+0x4f)[0x10bff10f]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclEvalObjvInternal+0x126)[0x10c00126]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_EvalEx+0x1f6)[0x10c00cd6]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_Eval+0x3c)[0x10c0116c]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(_ZN9OptDesign17OptDesignMainStepEPc+0x95)[0xa7b0ef5]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter[0xa7b43fa]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclInvokeStringCommand+0x4f)[0x10bff10f]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclEvalObjvInternal+0x126)[0x10c00126]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter[0x10c265ce]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclCompEvalObj+0xa3)[0x10c25b33]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_EvalObjEx+0x206)[0x10c01456]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_IfObjCmd+0x134)[0x10c08db4]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclEvalObjvInternal+0x126)[0x10c00126]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter[0x10c265ce]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclCompEvalObj+0xa3)[0x10c25b33]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclObjInterpProc+0x3da)[0x10c5657a]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclEvalObjvInternal+0x126)[0x10c00126]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter[0x10c265ce]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_ExprObj+0x22f)[0x10c2574f]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_ExprBooleanObj+0x33)[0x10c01bf3]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_IfObjCmd+0x211)[0x10c08e91]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclEvalObjvInternal+0x126)[0x10c00126]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter[0x10c265ce]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclCompEvalObj+0xa3)[0x10c25b33]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_EvalObjEx+0x206)[0x10c01456]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_IfObjCmd+0x134)[0x10c08db4]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclEvalObjvInternal+0x126)[0x10c00126]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter[0x10c265ce]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclCompEvalObj+0xa3)[0x10c25b33]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_EvalObjEx+0x206)[0x10c01456]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_IfObjCmd+0x134)[0x10c08db4]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclEvalObjvInternal+0x126)[0x10c00126]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter[0x10c265ce]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclCompEvalObj+0xa3)[0x10c25b33]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_EvalObjEx+0x206)[0x10c01456]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_IfObjCmd+0x134)[0x10c08db4]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclEvalObjvInternal+0x126)[0x10c00126]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter[0x10c265ce]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclCompEvalObj+0xa3)[0x10c25b33]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclObjInterpProc+0x3da)[0x10c5657a]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclEvalObjvInternal+0x126)[0x10c00126]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_EvalEx+0x1f6)[0x10c00cd6]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_EvalObjEx+0x7b)[0x10c012cb]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_EvalObjCmd+0x57)[0x10c06027]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclEvalObjvInternal+0x126)[0x10c00126]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter[0x10c265ce]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclCompEvalObj+0xa3)[0x10c25b33]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_EvalObjEx+0x206)[0x10c01456]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_ForObjCmd+0xdb)[0x10c0799b]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclEvalObjvInternal+0x126)[0x10c00126]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter[0x10c265ce]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclCompEvalObj+0xa3)[0x10c25b33]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclObjInterpProc+0x3da)[0x10c5657a]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclEvalObjvInternal+0x126)[0x10c00126]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter[0x10c265ce]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclCompEvalObj+0xa3)[0x10c25b33]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_EvalObjEx+0x206)[0x10c01456]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_ForObjCmd+0xdb)[0x10c0799b]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclEvalObjvInternal+0x126)[0x10c00126]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter[0x10c265ce]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclCompEvalObj+0xa3)[0x10c25b33]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclObjInterpProc+0x3da)[0x10c5657a]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclEvalObjvInternal+0x126)[0x10c00126]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter[0x10c265ce]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclCompEvalObj+0xa3)[0x10c25b33]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_EvalObjEx+0x206)[0x10c01456]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_IfObjCmd+0x134)[0x10c08db4]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclEvalObjvInternal+0x126)[0x10c00126]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter[0x10c265ce]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclCompEvalObj+0xa3)[0x10c25b33]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_EvalObjEx+0x206)[0x10c01456]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_IfObjCmd+0x134)[0x10c08db4]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclEvalObjvInternal+0x126)[0x10c00126]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter[0x10c265ce]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclCompEvalObj+0xa3)[0x10c25b33]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclObjInterpProc+0x3da)[0x10c5657a]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclEvalObjvInternal+0x126)[0x10c00126]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter[0x10c265ce]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclCompEvalObj+0xa3)[0x10c25b33]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_EvalObjEx+0x206)[0x10c01456]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_IfObjCmd+0x134)[0x10c08db4]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclEvalObjvInternal+0x126)[0x10c00126]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter[0x10c265ce]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclCompEvalObj+0xa3)[0x10c25b33]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclObjInterpProc+0x3da)[0x10c5657a]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclEvalObjvInternal+0x126)[0x10c00126]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter[0x10c265ce]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclCompEvalObj+0xa3)[0x10c25b33]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_EvalObjEx+0x206)[0x10c01456]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_IfObjCmd+0x134)[0x10c08db4]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclEvalObjvInternal+0x126)[0x10c00126]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter[0x10c265ce]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclCompEvalObj+0xa3)[0x10c25b33]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclObjInterpProc+0x3da)[0x10c5657a]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclEvalObjvInternal+0x126)[0x10c00126]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter[0x10c265ce]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclCompEvalObj+0xa3)[0x10c25b33]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_EvalObjEx+0x206)[0x10c01456]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_CatchObjCmd+0x56)[0x10c059a6]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclEvalObjvInternal+0x126)[0x10c00126]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter[0x10c265ce]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_ExprObj+0x22f)[0x10c2574f]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_ExprBooleanObj+0x33)[0x10c01bf3]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_IfObjCmd+0x211)[0x10c08e91]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclEvalObjvInternal+0x126)[0x10c00126]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter[0x10c265ce]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclCompEvalObj+0xa3)[0x10c25b33]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclObjInterpProc+0x3da)[0x10c5657a]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclEvalObjvInternal+0x126)[0x10c00126]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_EvalEx+0x1f6)[0x10c00cd6]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_Eval+0x3c)[0x10c0116c]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(_ZNK14rdaOptDesignCL3runEv+0x42)[0x90321d2]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter[0x908aa9f]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(_ZN10tcmBaseCmd7executeEP10Tcl_InterpiPPc+0xfd)[0x1055a36d]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(_ZN6tcmMgr9cmdParserEPvP10Tcl_InterpiPPc+0xae)[0x1055318e]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclInvokeStringCommand+0x4f)[0x10bff10f]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclEvalObjvInternal+0x126)[0x10c00126]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_EvalEx+0x1f6)[0x10c00cd6]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_EvalObjEx+0x7b)[0x10c012cb]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_EvalObjCmd+0x57)[0x10c06027]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclEvalObjvInternal+0x126)[0x10c00126]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter[0x10c265ce]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclCompEvalObj+0xa3)[0x10c25b33]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_EvalObjEx+0x206)[0x10c01456]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_IfObjCmd+0x134)[0x10c08db4]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclEvalObjvInternal+0x126)[0x10c00126]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter[0x10c265ce]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclCompEvalObj+0xa3)[0x10c25b33]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclObjInterpProc+0x3da)[0x10c5657a]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclEvalObjvInternal+0x126)[0x10c00126]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter[0x10c265ce]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclCompEvalObj+0xa3)[0x10c25b33]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_EvalObjEx+0x206)[0x10c01456]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_CatchObjCmd+0x56)[0x10c059a6]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(TclEvalObjvInternal+0x126)[0x10c00126]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_EvalEx+0x1f6)[0x10c00cd6]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_EvalTokensStandard+0x307)[0x10c00a47]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_EvalEx+0x179)[0x10c00c59]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_Eval+0x3c)[0x10c0116c]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(_Z10qtfTclEvalPc+0x95)[0xd485bd5]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(_ZN8qtfsItem10fUpdateVarEv+0x2df)[0xd422d5f]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(_ZN8qtfsItem11qt_metacallEN11QMetaObject4CallEiPPv+0x12b)[0xd4d352b]
+/usr/cad/cadence/EDI/cur/tools/Qt/32bit/lib/libQtCore.so.4(_ZN11QMetaObject8activateEP7QObjectiiPPv+0x233)[0xf63a4583]
+/usr/cad/cadence/EDI/cur/tools/Qt/32bit/lib/libQtCore.so.4(_ZN11QMetaObject8activateEP7QObjectPKS_iiPPv+0x58)[0xf63a49f8]
+/usr/cad/cadence/EDI/cur/tools/Qt/32bit/lib/libQtGui.so.4(_ZN15QAbstractButton7clickedEb+0x51)[0xf6d34e91]
+/usr/cad/cadence/EDI/cur/tools/Qt/32bit/lib/libQtGui.so.4(_ZN22QAbstractButtonPrivate11emitClickedEv+0x49)[0xf6a5e079]
+/usr/cad/cadence/EDI/cur/tools/Qt/32bit/lib/libQtGui.so.4(_ZN22QAbstractButtonPrivate5clickEv+0x94)[0xf6a5fcd4]
+/usr/cad/cadence/EDI/cur/tools/Qt/32bit/lib/libQtGui.so.4(_ZN15QAbstractButton17mouseReleaseEventEP11QMouseEvent+0x91)[0xf6a5ff51]
+/usr/cad/cadence/EDI/cur/tools/Qt/32bit/lib/libQtGui.so.4(_ZN7QWidget5eventEP6QEvent+0x72a)[0xf66aeb2a]
+/usr/cad/cadence/EDI/cur/tools/Qt/32bit/lib/libQtGui.so.4(_ZN15QAbstractButton5eventEP6QEvent+0x3e)[0xf6a5df1e]
+/usr/cad/cadence/EDI/cur/tools/Qt/32bit/lib/libQtGui.so.4(_ZN11QPushButton5eventEP6QEvent+0x3d)[0xf6b0984d]
+/usr/cad/cadence/EDI/cur/tools/Qt/32bit/lib/libQtGui.so.4(_ZN19QApplicationPrivate13notify_helperEP7QObjectP6QEvent+0xb4)[0xf6658bc4]
+/usr/cad/cadence/EDI/cur/tools/Qt/32bit/lib/libQtGui.so.4(_ZN12QApplication6notifyEP7QObjectP6QEvent+0xbab)[0xf6660ddb]
+/usr/cad/cadence/EDI/cur/tools/Qt/32bit/lib/libQtCore.so.4(_ZN16QCoreApplication14notifyInternalEP7QObjectP6QEvent+0x7b)[0xf638deeb]
+/usr/cad/cadence/EDI/cur/tools/Qt/32bit/lib/libQtGui.so.4(_ZN19QApplicationPrivate14sendMouseEventEP7QWidgetP11QMouseEventS1_S1_PS1_R8QPointerIS0_E+0xde)[0xf665fcae]
+/usr/cad/cadence/EDI/cur/tools/Qt/32bit/lib/libQtGui.so.4(_ZN9QETWidget19translateMouseEventEPK7_XEvent+0x61e)[0xf66cec2e]
+/usr/cad/cadence/EDI/cur/tools/Qt/32bit/lib/libQtGui.so.4(_ZN12QApplication15x11ProcessEventEP7_XEvent+0x13ed)[0xf66ce0dd]
+/usr/cad/cadence/EDI/cur/tools/Qt/32bit/lib/libQtGui.so.4(_ZN19QEventDispatcherX1113processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE+0x335)[0xf66f7945]
+/usr/cad/cadence/EDI/cur/tools/lib/libtq.so(_ZN17TqEventDispatcher13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE+0x51)[0xf598706f]
+/usr/cad/cadence/EDI/cur/tools/Qt/32bit/lib/libQtCore.so.4(_ZN16QCoreApplication13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE+0x41)[0xf638ee91]
+/usr/cad/cadence/EDI/cur/tools/lib/libtq.so(+0x1800a)[0xf598700a]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(Tcl_DoOneEvent+0x1ac)[0x10c4d9dc]
+/usr/cad/cadence/EDI/cur/tools/lib/libtq.so(_ZN17TqEventDispatcher13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE+0xae)[0xf59870cc]
+/usr/cad/cadence/EDI/cur/tools/Qt/32bit/lib/libQtCore.so.4(_ZN10QEventLoop13processEventsE6QFlagsINS_17ProcessEventsFlagEE+0x49)[0xf638c4d9]
+/usr/cad/cadence/EDI/cur/tools/Qt/32bit/lib/libQtCore.so.4(_ZN10QEventLoop4execE6QFlagsINS_17ProcessEventsFlagEE+0xfa)[0xf638c92a]
+/usr/cad/cadence/EDI/cur/tools/Qt/32bit/lib/libQtCore.so.4(_ZN16QCoreApplication4execEv+0xaf)[0xf638ecef]
+/usr/cad/cadence/EDI/cur/tools/Qt/32bit/lib/libQtGui.so.4(_ZN12QApplication4execEv+0x27)[0xf6658a47]
+/usr/cad/cadence/EDI/cur/tools/lib/libtq.so(_ZN13TqApplication4execEv+0x318)[0xf59895e8]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(_Z7fe_mainiPPc+0x1ef)[0x8ebf67f]
+/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter(main+0x5f)[0x8ebf88f]
+/lib32/libc.so.6(__libc_start_main+0xf5)[0xf50c2ee5]
+========================================
+                gdb
+========================================
+Using: gdb
+[?1034hError while mapping shared library sections:
+linux-gate.so.1: No such file or directory.
+BFD: /lib32/libm.so.6: invalid relocation type 42
+BFD: BFD (GNU Binutils) 2.18.50.20080226 assertion fail ../../../src/gdb-6.3/bfd/elf32-i386.c:366
+BFD: /lib32/libm.so.6: invalid relocation type 42
+BFD: BFD (GNU Binutils) 2.18.50.20080226 assertion fail ../../../src/gdb-6.3/bfd/elf32-i386.c:366
+BFD: /lib32/libm.so.6: invalid relocation type 42
+BFD: BFD (GNU Binutils) 2.18.50.20080226 assertion fail ../../../src/gdb-6.3/bfd/elf32-i386.c:366
+BFD: /lib32/libm.so.6: invalid relocation type 42
+BFD: BFD (GNU Binutils) 2.18.50.20080226 assertion fail ../../../src/gdb-6.3/bfd/elf32-i386.c:366
+BFD: /lib32/libc.so.6: invalid relocation type 42
+BFD: BFD (GNU Binutils) 2.18.50.20080226 assertion fail ../../../src/gdb-6.3/bfd/elf32-i386.c:366
+BFD: /lib32/libc.so.6: invalid relocation type 42
+BFD: BFD (GNU Binutils) 2.18.50.20080226 assertion fail ../../../src/gdb-6.3/bfd/elf32-i386.c:366
+BFD: /lib32/libc.so.6: invalid relocation type 42
+BFD: BFD (GNU Binutils) 2.18.50.20080226 assertion fail ../../../src/gdb-6.3/bfd/elf32-i386.c:366
+BFD: /lib32/libc.so.6: invalid relocation type 42
+BFD: BFD (GNU Binutils) 2.18.50.20080226 assertion fail ../../../src/gdb-6.3/bfd/elf32-i386.c:366
+0xf773d430 in __kernel_vsyscall ()
+The program is running.  Quit anyway (and detach it)? (y or n) [answered Y; input not from terminal]
+
+*** INTERRUPTED *** [signal 1]
+16449: No such process

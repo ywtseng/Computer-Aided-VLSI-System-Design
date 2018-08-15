@@ -1,0 +1,143 @@
+#######################################################
+#                                                     #
+#  Encounter Command Logging File                     #
+#  Created on Fri Jan  6 17:51:24 2017                #
+#                                                     #
+#######################################################
+
+#@(#)CDS: Encounter v10.13-s272_1 (32bit) 04/18/2012 16:36 (Linux 2.6)
+#@(#)CDS: NanoRoute v10.13-s027 NR120403-1008/10_10_USR3-UB (database version 2.30, 132.4.1) {superthreading v1.16}
+#@(#)CDS: CeltIC v10.13-s063_1 (32bit) 02/29/2012 09:38:16 (Linux 2.6.9-89.0.19.ELsmp)
+#@(#)CDS: AAE 10.13-s008 (32bit) 04/18/2012 (Linux 2.6.9-89.0.19.ELsmp)
+#@(#)CDS: CTE 10.13-s018_1 (32bit) Feb 28 2012 22:08:25 (Linux 2.6.9-89.0.19.ELsmp)
+#@(#)CDS: CPE v10.13-s225
+
+win
+encMessage warning 0
+encMessage debug 0
+encMessage info 0
+restoreDesign placed.enc.dat CHIP
+setDrawView fplan
+encMessage warning 1
+encMessage debug 0
+encMessage info 1
+refinePlace -checkRoute 0 -honorSoftBlockage 0 -preserveRouting 0 -rmAffectedRouting 0 -swapEEQ 0 -checkPinLayerForAccess 1
+addRing -use_wire_group_bits 15 -spacing_bottom 0.24 -width_left 2 -width_bottom 2 -width_top 2 -spacing_top 0.24 -layer_bottom METAL7 -center 1 -stacked_via_top_layer METAL8 -width_right 2 -use_wire_group 1 -around core -jog_distance 0.23 -offset_bottom 0.23 -layer_top METAL7 -threshold 0.23 -offset_left 0.23 -spacing_right 0.24 -spacing_left 0.24 -offset_right 0.23 -offset_top 0.23 -layer_right METAL6 -nets {VDD VSS} -stacked_via_bottom_layer METAL1 -layer_left METAL6
+sroute -connect { padPin } -layerChangeRange { METAL1 METAL8 } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort allGeom } -checkAlignedSecondaryPin 1 -allowJogging 1 -crossoverViaBottomLayer METAL1 -allowLayerChange 1 -targetViaTopLayer METAL8 -crossoverViaTopLayer METAL8 -targetViaBottomLayer METAL1 -nets { VDD VSS }
+selectInst ipad_rst
+setDrawView place
+setDrawView ameba
+setDrawView fplan
+setDrawView place
+deselectAll
+addStripe -use_wire_group_bits 5 -block_ring_top_layer_limit METAL7 -max_same_layer_jog_length 0.88 -padcore_ring_bottom_layer_limit METAL5 -set_to_set_distance 100 -split_vias 1 -use_interleaving_wire_group 1 -same_sized_stack_vias 1 -stacked_via_top_layer METAL8 -use_wire_group 1 -padcore_ring_top_layer_limit METAL7 -spacing 0.24 -xleft_offset 150 -switch_layer_over_obs 1 -xright_offset 100 -merge_stripes_value 0.23 -layer METAL6 -block_ring_bottom_layer_limit METAL5 -width 1 -nets {VSS VDD} -stacked_via_bottom_layer METAL1 -break_stripes_at_block_rings 1
+setVerifyGeometryMode -area { 0 0 0 0 } -minWidth true -minSpacing true -minArea true -sameNet true -short true -overlap true -offRGrid false -offMGrid true -minHole true -implantCheck true -minimumCut true -minStep true -viaEnclosure true -antenna false -insuffMetalOverlap true -pinInBlkg false -diffCellViol true -sameCellViol false -padFillerCellsOverlap true -routingBlkgPinOverlap true -routingCellBlkgOverlap true -regRoutingOnly false -stackedViasOnRegNet false -wireExt true -viaOverlap false -useNonDefaultSpacing false -maxWidth true -maxNonPrefLength -1 -error 1000 -warning 50
+verifyGeometry
+saveDesign powerplan.enc
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+clearClockDomains
+setClockDomains -all
+timeDesign -preCTS -idealClock -pathReports -drvReports -slackReports -numPaths 50 -prefix CHIP_preCTS -outDir timingReports
+setTieHiLoMode -reset
+setTieHiLoMode -cell {  TIEHI TIELO } -maxDistance 100 -maxFanOut 10 -honorDontTouch false -createHierPort false
+addTieHiLo -cell {TIEHI TIELO} -prefix LTIE
+createClockTreeSpec -bufferList {CLKBUFX12 CLKBUFX16 CLKBUFX2 CLKBUFX20 CLKBUFX3 CLKBUFX4 CLKBUFX6 CLKBUFX8 CLKINVX1 CLKINVX12 CLKINVX16 CLKINVX2 CLKINVX20 CLKINVX3 CLKINVX4 CLKINVX6 CLKINVX8} -file Clock.ctstch
+clockDesign -specFile Clock.ctstch -outDir clock_report -fixedInstBeforeCTS
+displayClockTree -skew -allLevel -preRoute
+setDrawView fplan
+setDrawView place
+setDrawView ameba
+setDrawView place
+displayClockPhaseDelay -preRoute
+clearClockDisplay
+saveDesign cts.enc
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+clearClockDomains
+setClockDomains -all
+timeDesign -postCTS -pathReports -drvReports -slackReports -numPaths 50 -prefix CHIP_postCTS -outDir timingReports
+setOptMode -fixCap true -fixTran true -fixFanoutLoad false
+optDesign -postCTS
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+clearClockDomains
+setClockDomains -all
+timeDesign -postCTS -pathReports -drvReports -slackReports -numPaths 50 -prefix CHIP_postCTS -outDir timingReports
+sroute -connect { corePin } -layerChangeRange { METAL1 METAL8 } -blockPinTarget { nearestTarget } -checkAlignedSecondaryPin 1 -allowJogging 1 -crossoverViaBottomLayer METAL1 -allowLayerChange 1 -targetViaTopLayer METAL8 -crossoverViaTopLayer METAL8 -targetViaBottomLayer METAL1 -nets { VDD VSS }
+refinePlace -checkRoute 0 -honorSoftBlockage 0 -preserveRouting 0 -rmAffectedRouting 0 -swapEEQ 0 -checkPinLayerForAccess 1
+verifyConnectivity -type special -noUnroutedNet -error 1000 -warning 50
+addIoFiller -cell PFEED20Z -prefix IOFILLER
+addIoFiller -cell PFEED10Z -prefix IOFILLER
+addIoFiller -cell PFEED5Z -prefix IOFILLER
+addIoFiller -cell PFEED1Z -prefix IOFILLER
+addIoFiller -cell PFEED0_1Z -prefix IOFILLER
+addIoFiller -cell PFEED0_01Z -prefix IOFILLER
+addIoFiller -cell PFEED0_005Z -prefix IOFILLER -fillAnyGap
+redraw
+selectInst IOFILLER_N_105
+saveDesign powerroute.enc
+setAttribute -net clk_i__L4_N43 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L4_N42 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L4_N41 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L4_N40 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L4_N39 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L4_N38 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L4_N37 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L4_N36 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L4_N35 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L4_N34 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L4_N33 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L4_N32 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L4_N31 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L4_N30 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L4_N29 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L4_N28 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L4_N27 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L4_N26 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L4_N25 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L4_N24 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L4_N23 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L4_N22 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L4_N21 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L4_N20 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L4_N19 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L4_N18 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L4_N17 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L4_N16 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L4_N15 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L4_N14 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L4_N13 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L4_N12 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L4_N11 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L4_N10 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L4_N9 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L4_N8 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L4_N7 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L4_N6 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L4_N5 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L4_N4 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L4_N3 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L4_N2 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L4_N1 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L4_N0 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L3_N7 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L3_N6 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L3_N5 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L3_N4 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L3_N3 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L3_N2 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L3_N1 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L3_N0 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L2_N1 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L2_N0 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i__L1_N0 -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk -avoid_detour true -weight 10 -preferred_extra_space 1
+setAttribute -net clk_i -avoid_detour true -weight 10 -preferred_extra_space 1
+setNanoRouteMode -quiet -routeInsertAntennaDiode 1
+setNanoRouteMode -quiet -routeAntennaCellName ANTENNA
+setNanoRouteMode -quiet -routeWithTimingDriven 1
+setNanoRouteMode -quiet -routeWithSiDriven 1
+setNanoRouteMode -quiet -routeTopRoutingLayer default
+setNanoRouteMode -quiet -routeBottomRoutingLayer default
+setNanoRouteMode -quiet -drouteEndIteration default
+setNanoRouteMode -quiet -routeWithTimingDriven true
+setNanoRouteMode -quiet -routeWithSiDriven true
+routeDesign -globalDetail

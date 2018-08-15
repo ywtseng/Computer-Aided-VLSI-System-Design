@@ -1,0 +1,66 @@
+se::start_metric placeDesign {-noPrePlaceOpt}
+se::save_metric design.numStandardCell {160847}
+se::save_metric design.numNet {201690}
+se::save_metric design.numFloatBlock {0}
+se::save_metric design.numFixedBlock {0}
+se::save_metric design.numSingleRowCell {160847}
+se::save_metric design.numDoubleRowCell {0}
+se::save_metric design.numMultiRowCell {0}
+se::save_metric design.numIoInst {36}
+se::save_metric design.numFixedIo {36}
+se::save_metric design.numFloatIo {0}
+se::save_metric design.numTerm {665335}
+se::save_metric design.numTermPerNet {3.30}
+se::save_metric design.util {80.003 %}
+se::save_metric design.pinDensity {0.430}
+se::save_metric place.totalNetLength {7.52e+06 um}
+se::save_metric cputime {0:2:49}
+se::save_metric realtime {0:2:49}
+se::save_metric mem {538.3M}
+se::end_metric placeDesign {-noPrePlaceOpt}
+se::start_metric timeDesign {-prePlace}
+se::save_metric timing.setup.WNS.all {-3.198 ns }
+se::save_metric timing.setup.TNS.all {-130.157 ns }
+se::save_metric timing.setup.numPaths.all {7203}
+se::save_metric timing.setup.numViolatingPaths.all {92}
+se::save_metric timing.setup.WNS.in2out {N/A}
+se::save_metric timing.setup.TNS.in2out {N/A}
+se::save_metric timing.setup.numPaths.in2out {N/A}
+se::save_metric timing.setup.numViolatingPaths.in2out {N/A}
+se::save_metric timing.setup.WNS.in2reg {3.920 ns }
+se::save_metric timing.setup.TNS.in2reg {0.000 ns }
+se::save_metric timing.setup.numPaths.in2reg {4129}
+se::save_metric timing.setup.numViolatingPaths.in2reg {0}
+se::save_metric timing.setup.WNS.reg2out {17.196 ns }
+se::save_metric timing.setup.TNS.reg2out {0.000 ns }
+se::save_metric timing.setup.numPaths.reg2out {1}
+se::save_metric timing.setup.numViolatingPaths.reg2out {0}
+se::save_metric timing.setup.WNS.reg2reg {-3.198 ns }
+se::save_metric timing.setup.TNS.reg2reg {-130.157 ns }
+se::save_metric timing.setup.numPaths.reg2reg {3585}
+se::save_metric timing.setup.numViolatingPaths.reg2reg {92}
+se::save_metric design.util {80.003 %}
+se::save_metric cputime {0:00:24.8 }
+se::save_metric realtime {0:00:24.0 }
+se::save_metric mem {659.648 M}
+se::end_metric timeDesign {-prePlace}
+se::start_metric placeDesign {-noPrePlaceOpt}
+se::save_metric design.numStandardCell {160847}
+se::save_metric design.numNet {201690}
+se::save_metric design.numFloatBlock {0}
+se::save_metric design.numFixedBlock {0}
+se::save_metric design.numSingleRowCell {160847}
+se::save_metric design.numDoubleRowCell {0}
+se::save_metric design.numMultiRowCell {0}
+se::save_metric design.numIoInst {36}
+se::save_metric design.numFixedIo {36}
+se::save_metric design.numFloatIo {0}
+se::save_metric design.numTerm {665335}
+se::save_metric design.numTermPerNet {3.30}
+se::save_metric design.util {80.003 %}
+se::save_metric design.pinDensity {0.430}
+se::save_metric place.totalNetLength {7.52e+06 um}
+se::save_metric cputime {0:2:48}
+se::save_metric realtime {0:2:48}
+se::save_metric mem {605.7M}
+se::end_metric placeDesign {-noPrePlaceOpt}

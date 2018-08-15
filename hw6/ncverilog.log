@@ -1,0 +1,13 @@
+ncverilog: 10.20-s114: (c) Copyright 1995-2012 Cadence Design Systems, Inc.
+TOOL:	ncverilog	10.20-s114: Started on Jan 01, 2017 at 17:29:21 CST
+ncverilog
+	CHIP1.sdf
+	CHIP.v
+file: CHIP1.sdf
+(DELAYFILE
+|
+ncvlog: *E,EXPMPA (CHIP1.sdf,1|0): expecting the keyword 'module', 'macromodule' or 'primitive'[A.1].
+	Total errors/warnings found outside modules and primitives:
+		errors: 1, warnings: 0
+ncverilog: *E,VLGERR: An error occurred during parsing.  Review the log file for errors with the code *E and fix those identified problems to proceed.  Exiting with code (status 1).
+TOOL:	ncverilog	10.20-s114: Exiting on Jan 01, 2017 at 17:29:22 CST  (total: 00:00:01)

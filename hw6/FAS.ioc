@@ -1,0 +1,41 @@
+Version: 1 
+Pad: CORNER0        NW  PCORNERDGZ
+Pad: ipad_clk        N
+Pad: ipad_rst        N
+Pad: ipad_val        N
+Pad: ipad_CoreVDD1   N   PVDD1DGZ
+Pad: ipad_CoreVSS1   N   PVSS1DGZ
+Pad: ipad_data00     N
+Pad: ipad_data01     N
+Pad: ipad_data02     N   
+
+Pad: CORNER1        NE  PCORNERDGZ
+Pad: ipad_data03     W
+Pad: ipad_data04     W   
+Pad: ipad_data05     W
+Pad: ipad_data06     W
+Pad: ipad_data07     W
+Pad: ipad_data08     W
+Pad: ipad_IOVDD1     W   PVDD2POC
+Pad: ipad_IOVSS1     W   PVSS2DGZ
+
+Pad: CORNER2        SW  PCORNERDGZ
+Pad: ipad_data09     S
+Pad: ipad_data10     S
+Pad: ipad_data11     S
+Pad: ipad_data12     S   
+Pad: ipad_data13     S  
+Pad: ipad_data14     S   
+Pad: ipad_CoreVDD2   S   PVDD1DGZ
+Pad: ipad_IOVDD2     S   PVDD2DGZ
+ 
+Pad: CORNER3        SE  PCORNERDGZ
+Pad: ipad_data15     E 
+Pad: ipad_IOVSS2     E   PVSS2DGZ
+Pad: ipad_CoreVSS2   E   PVSS1DGZ
+Pad: opad_done       E   
+Pad: opad_freq0      E   
+Pad: opad_freq1      E   
+Pad: opad_freq2      E    
+Pad: opad_freq3      E
+

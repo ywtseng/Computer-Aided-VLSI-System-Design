@@ -1,0 +1,92 @@
+catch {set ::env(LS_COLORS) "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=01;05;37;41:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.pdf=00;32:*.ps=00;32:*.txt=00;32:*.patch=00;32:*.diff=00;32:*.log=00;32:*.tex=00;32:*.doc=00;32:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:"}
+catch {set ::env(CONFIG_PROTECT_MASK) "/etc/gentoo-release /etc/sandbox.d /etc/fonts/fonts.conf /etc/terminfo /etc/ca-certificates.conf /etc/revdep-rebuild"}
+catch {set ::env(HOME) "/home/ywtseng"}
+catch {set ::env(JDK_HOME) "/etc/java-config-2/current-system-vm"}
+catch {set ::env(GCC_SPECS) ""}
+catch {set ::env(LANG) "C"}
+catch {set ::env(ENCOUNTER) "/usr/cad/cadence/EDI/cur/tools/fe"}
+catch {set ::env(LOGNAME) "ywtseng"}
+catch {set ::env(SSH_CLIENT) "140.112.48.62 11304 22"}
+catch {set ::env(SHLIB_PATH) "/usr/cad/spring_soft/verdi/cur/share/PLI/IUS/LINUX"}
+catch {set ::env(CONFIG_PROTECT) "/usr/share/gnupg/qualified.txt"}
+catch {set ::env(DESKTOP_STARTUP_ID) ""}
+catch {set ::env(SHELL) "/bin/bash"}
+catch {set ::env(OA_HOME) "/usr/cad/cadence/EDI/cur/oa_v22.41.013"}
+catch {set ::env(OAHOME) "/usr/cad/cadence/EDI/cur/oa_v22.41.013"}
+catch {set ::env(MACHTYPE) "x86_64"}
+catch {set ::env(OSTYPE) "linux"}
+catch {set ::env(PRIMETIME) "/usr/cad/synopsys/primetime/cur"}
+catch {set ::env(W3264_ENV) "/home/ywtseng/.kshrc"}
+catch {set ::env(USER) "ywtseng"}
+catch {set ::env(HG) "/usr/bin/hg"}
+catch {set ::env(MANPATH) "/usr/cad/cadence/EDI/cur/share/fe/man:/usr/cad/cadence/EDI/cur/share/fe/man/internal/man:/etc/java-config-2/current-system-vm/man:/usr/local/share/man:/usr/share/man:/usr/share/gcc-data/x86_64-pc-linux-gnu/4.8.3/man:/usr/share/binutils-data/x86_64-pc-linux-gnu/2.24/man:/etc/java-config-2/current-system-vm/man/:/usr/cad/synopsys/synthesis/cur/doc/syn/man"}
+catch {set ::env(TCLTK_ROOT) "/usr/cad/cadence/EDI/cur/share/tcltools/icd8.4.11/lib"}
+catch {set ::env(OPENGL_PROFILE) "xorg-x11"}
+catch {set ::env(BLT_LIBRARY) "/usr/cad/cadence/EDI/cur/share/tcltools/icd8.4.11/lib/blt2.4"}
+catch {set ::env(OA_BIT) "32"}
+catch {set ::env(CADMOSHOME) "/usr/cad/cadence/EDI/cur/tools/fe/celtic"}
+catch {set ::env(SHLVL) "4"}
+catch {set ::env(USE_PIPE) "1"}
+catch {set ::env(QT_GRAPHICSSYSTEM) "native"}
+catch {set ::env(MGC_LOCATION_MAP) "NO_MAP"}
+catch {set ::env(SSH_CONNECTION) "140.112.48.62 11304 192.168.20.25 22"}
+catch {set ::env(PATH) "/usr/cad/cadence/EDI/cur/bin:/usr/cad/cadence/EDI/cur/tools/bin:/usr/cad/cadence/EDI/cur/oa_v22.41.013/bin:/usr/cad/cadence/CONFRML/cur/./bin:/usr/cad/cadence/CONFRML/cur/tools/bin:/usr/cad/mentor/calibre/cur/bin:/usr/cad/cadence/IC/cur/tools/dfII/bin:/usr/cad/cadence/IC/cur/tools/dracula/bin:/usr/cad/cadence/IC/cur/tools/bin:/usr/bin/X11:/usr/cad/synopsys/primetime/cur/amd64/syn/bin:/usr/cad/synopsys/tmax/cur/bin:/usr/cad/spring_soft/verdi/cur/bin:/usr/cad/spring_soft/verdi/cur/nLint/bin:/usr/cad/cadence/EDI/cur/tools/celtic/bin:/usr/cad/cadence/EDI/cur/tools/plato/bin:/usr/cad/cadence/EDI/cur/tools/dfII/bin:/usr/cad/cadence/EDI/cur/tools/fe/bin:/usr/cad/cadence/EDI/cur/tools/cdsdoc/bin:/usr/cad/cadence/EDI/cur//tools/tlfUtil/bin:/usr/cad/cadence/INCISIV/cur/tools/bin:/usr/cad/cadence/INCISIV/cur/tools/vtools/vfault/bin:/usr/cad/cadence/INCISIV/cur/tools/dfII/bin:/usr/bin/X11:/usr/cad/synopsys/synthesis/cur/amd64/syn/bin:/usr/local/bin:/usr/bin:/bin:/opt/bin:/usr/x86_64-pc-linux-gnu/gcc-bin/4.8.3"}
+catch {set ::env(SSH_TTY) "/dev/pts/15"}
+catch {set ::env(CDS_Netlisting_Mode) "Analog"}
+catch {set ::env(EDITOR) "/usr/bin/vi"}
+catch {set ::env(_) "*15329*/usr/cad/cadence/EDI/cur/tools/fe/bin/32bit/encounter"}
+catch {set ::env(LC_ALL) "C"}
+catch {set ::env(MULTIOSDIRS) "../lib64:../lib32"}
+catch {set ::env(PAGER) "/usr/bin/less"}
+catch {set ::env(LD_LIBRARY_PATH) "/usr/cad/cadence/EDI/cur/oa_v22.41.013/lib/linux_rhel40_gcc44x_32/opt:/usr/cad/cadence/EDI/cur/tools/tcltools/icd8.4.11/lib:/usr/cad/cadence/EDI/cur/tools/Qt/32bit/lib:/usr/cad/cadence/EDI/cur/tools/lib:/usr/cad/cadence/EDI/cur/tools/pvs/lib/32bit:/usr/cad/cadence/EDI/cur/tools/mesalib/lib:/usr/cad/cadence/EDI/cur/tools/lib/SuSE/SLES11:/usr/cad/cadence/CONFRML/cur/tools/lib:/usr/cad/cadence/IC/cur/tools/lib:/usr/cad/spring_soft/verdi/cur/share/PLI/IUS/LINUX/:/usr/cad/cadence/EDI/cur//tools/tlfUtil/lib:/usr/cad/cadence/INCISIV/cur/tools/lib:/usr/cad/cadence/INCISIV/cur/tools/vtools/vfault/lib:/usr/openwin/lib:/usr/dt/lib:/usr/local/lib"}
+catch {set ::env(LESSOPEN) "|lesspipe %s"}
+catch {set ::env(JAVA_HOME) "/etc/java-config-2/current-system-vm"}
+catch {set ::env(PWD) "/home/ywtseng/cvsd/hw6"}
+catch {set ::env(CDNS_QTDIR) "/usr/cad/cadence/EDI/cur/tools/Qt/32bit"}
+catch {set ::env(CDS_SET_LOCALE) "C"}
+catch {set ::env(RUBYOPT) "-rauto_gem"}
+catch {set ::env(JAVAC) "/etc/java-config-2/current-system-vm/bin/javac"}
+catch {set ::env(VERPLEX_HOME) "/usr/cad/cadence/CONFRML/cur"}
+catch {set ::env(VENDOR) "unknown"}
+catch {set ::env(DISPLAY) "localhost:23.0"}
+catch {set ::env(TK_TABLE_LIBRARY_FILE) "tkTable.tcl"}
+catch {set ::env(SYNOPSYS_TMAX) "/usr/cad/synopsys/tmax/cur"}
+catch {set ::env(FMS) "/usr/cad/cadence/EDI/cur/tools/fms"}
+catch {set ::env(MGC_TMPDIR) "/tmp"}
+catch {set ::env(TCL_LIBRARY) "/usr/cad/cadence/EDI/cur/share/tcltools/icd8.4.11/lib/tcl8.4"}
+catch {set ::env(TIX_LIBRARY) "/usr/cad/cadence/EDI/cur/share/tcltools/icd8.4.11/lib/Tix8.4"}
+catch {set ::env(INFOPATH) "/usr/share/info:/usr/share/gcc-data/x86_64-pc-linux-gnu/4.8.3/info:/usr/share/binutils-data/x86_64-pc-linux-gnu/2.24/info:/usr/share/info/emacs-24"}
+catch {set ::env(SYNTHESIS) "/usr/cad/synopsys/synthesis/cur"}
+catch {set ::env(LM_LICENSE_FILE) "5280@lsntu:5280@lsncku:5280@lsnchu:1717@lsntu:26585@lsntu:5219@lsntu"}
+catch {set ::env(TK_LIBRARY) "/usr/cad/cadence/EDI/cur/share/tcltools/icd8.4.11/lib/tk8.4"}
+catch {set ::env(MAIL) "/var/mail/ywtseng"}
+catch {set ::env(ES_BASHCOMP_DIRS) "/usr/share/bash-completion/completions"}
+catch {set ::env(GROUP) "stu105"}
+catch {set ::env(AMBIT_MSG_PATH) "/usr/cad/cadence/EDI/cur/etc/fe/cteng/msgc:/usr/cad/cadence/EDI/cur/etc/fe/syntechEtc/msgc:/usr/cad/cadence/EDI/cur/share/fe/man:/usr/cad/cadence/EDI/cur/share/fe/man/internal/man"}
+catch {set ::env(MGC_HOME) "/usr/cad/mentor/calibre/cur"}
+catch {set ::env(TERM) "xterm"}
+catch {set ::env(SYNOPSYS) "/usr/cad/synopsys/synthesis/cur"}
+catch {set ::env(CVS_RSH) "ssh"}
+catch {set ::env(A__z) ""*SHLVL"}
+catch {set ::env(TK_TABLE_LIBRARY) "EMBEDDED_RUNTIME"}
+catch {set ::env(SYN_MAN_DIR) "/usr/cad/synopsys/synthesis/cur/doc/syn/man"}
+catch {set ::env(AMBIT_BDF_PATH) "/usr/cad/cadence/EDI/cur/etc/fe/cteng/bdfc:/usr/cad/cadence/EDI/cur/etc/fe/syntechEtc/bdfc"}
+catch {set ::env(LESS) "-R -M --shift 5"}
+setBetaFeature soceSupportDifferentTripPoints 1
+setBetaFeature socePDAwareCGDecloning 1
+setBetaFeature soceSupportSeperateBidiSlew 1
+setBetaFeature soceSkipECSMTran 1
+setBetaFeature soceAllowTrilibFlow 1
+setBetaFeature soceSignoffExtraction 1
+setBetaFeature soceIlmSupportPreRouteFlow 1
+setBetaFeature soceWireEditPolygonDrc 1
+setBetaFeature soceGuaranteeSnodeSequence 1
+setBetaFeature socePreRouteUseImprovedClkRC 1
+setBetaFeature soceNewSpefInCapacitanceParser 1
+setBetaFeature soceUseDrawnWidthForRho 1
+setBetaFeature soceSupportRiseFallPinCap 1
+setBetaFeature socePrePostRouteExtrNameConvention 1
+setBetaFeature soceRunQRCIlmFlow 1
+setBetaFeature soceSupportSeparateBidiSlew 1
+setBetaFeature soceCteBudgeting 1
+startEdpSlave 0 eda25 48513 39373

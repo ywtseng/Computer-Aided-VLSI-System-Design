@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      ywtseng
+HostName                       eda25
+ProcessIdentifier              30816
+ProcessCreationTime_UTC        1483704411
+ProcessCreationTime_Readable   Fri Jan  6 20:06:51 2017 CST
+AppIdentifier                  /net/work/cad/cadence/IC/IC51.41.151/tools/dfII/bin/32bit/libManager.exe
+OSType                         lnx86
+ReasonForPlacingEditLock       log file
+FilePathUsedToEditLock         /net/home/ywtseng/cvsd/final/libManager.log
+TimeEditLocked                 Fri Jan  6 20:12:42 2017 CST

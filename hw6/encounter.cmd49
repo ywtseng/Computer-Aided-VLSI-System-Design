@@ -1,0 +1,100 @@
+#######################################################
+#                                                     #
+#  Encounter Command Logging File                     #
+#  Created on Sun Jan  1 17:13:40 2017                #
+#                                                     #
+#######################################################
+
+#@(#)CDS: Encounter v10.13-s272_1 (32bit) 04/18/2012 16:36 (Linux 2.6)
+#@(#)CDS: NanoRoute v10.13-s027 NR120403-1008/10_10_USR3-UB (database version 2.30, 132.4.1) {superthreading v1.16}
+#@(#)CDS: CeltIC v10.13-s063_1 (32bit) 02/29/2012 09:38:16 (Linux 2.6.9-89.0.19.ELsmp)
+#@(#)CDS: AAE 10.13-s008 (32bit) 04/18/2012 (Linux 2.6.9-89.0.19.ELsmp)
+#@(#)CDS: CTE 10.13-s018_1 (32bit) Feb 28 2012 22:08:25 (Linux 2.6.9-89.0.19.ELsmp)
+#@(#)CDS: CPE v10.13-s225
+
+win
+encMessage warning 0
+encMessage debug 0
+encMessage info 0
+restoreDesign finish.enc.dat CHIP
+setDrawView fplan
+encMessage warning 1
+encMessage debug 0
+encMessage info 1
+summaryReport -noHtml -outfile summaryReport.rpt
+streamOut CHIP.gds -mapFile streamOut.map -libName DesignLib -merge { tpz013g3_v1.1.gds tsmc13gfsg_fram.gds } -units 1000 -mode ALL
+selectInst IOFILLER_N_77
+setDrawView ameba
+deselectAll
+setDrawView place
+setDrawView fplan
+setDrawView place
+setDrawView fplan
+setDrawView place
+summaryReport -outdir summaryReport
+saveNetlist CHIP.v
+extractRC
+set_power_analysis_mode -reset
+set_power_analysis_mode -method static -corner max -create_binary_db true -write_static_currents true -honor_negative_energy true -ignore_control_signals true
+set_power_output_dir -reset
+set_power_output_dir ./
+set_default_switching_activity -reset
+set_default_switching_activity -input_activity 0.2 -period 10.0
+read_activity_file -reset
+set_power -reset
+set_powerup_analysis -reset
+set_powerup_analysis -mode accurate -ultrasim_simulation_mode ms
+set_dynamic_power_simulation -reset
+report_power -rail_analysis_format VS -outfile .//CHIP.rpt
+view_analysis_results
+view_analysis_results -display clear
+setDrawView place
+auto_fetch_dc_sources VDD
+setDrawView place
+auto_fetch_dc_sources VSS
+setDrawView place
+clear_pad_loc_display -editForm
+save_pad_location -file CHIP.pp
+setDrawView place
+analyze_early_rail -method static -type net_based -bias_voltage 1.080 -net_voltage 0.000 -volt_limit 0.108 -instance_current_file static_VSS.ptiavg -pad_location_file CHIP.pp -display_IR -net VSS
+setDrawView fplan
+selectInst opad_freq3
+deselectAll
+selectWire 1999.2000 1803.2100 2009.2000 1805.0500 1 _FILLS_RESERVED
+deselectAll
+selectWire 2000.8000 1801.2000 2002.8000 1806.6000 8 _FILLS_RESERVED
+windowSelect 2672.491 1832.834 2683.103 1418.967
+selectWire 332.7200 1967.4600 334.7200 1977.4600 8 _FILLS_RESERVED
+uiSetTool move
+deselectAll
+selectInst IOFILLER_W_66
+setObjFPlanBox Instance IOFILLER_W_66 640.433 957.7165 886.433 977.7165
+deselectAll
+selectWire 691.8400 955.8000 700.4000 957.8000 7 _FILLS_RESERVED
+editMove 0.0 -4.51
+deselectAll
+selectWire 1149.2000 891.2000 1150.3200 900.8000 8 _FILLS_RESERVED
+editMove -446.499 63.141
+deselectAll
+selectWire 670.0600 1269.0000 672.0600 1279.0000 8 _FILLS_RESERVED
+undo
+uiSetTool select
+deselectAll
+selectWire 1869.8000 1329.0400 1879.8000 1331.0400 7 _FILLS_RESERVED
+setDrawView ameba
+setDrawView place
+setDrawView ameba
+uiSetTool move
+uiSetTool select
+windowSelect 667.091 690.455 603.950 676.924
+deselectAll
+redo
+undo
+encMessage warning 0
+encMessage debug 0
+encMessage info 0
+restoreDesign finish.enc.dat CHIP
+setDrawView fplan
+encMessage warning 1
+encMessage debug 0
+encMessage info 1
